@@ -1,0 +1,16 @@
+{
+  "raw_replay_verified": true,
+  "training_target_disjoint": true,
+  "decoder_busy_cycle_prediction_exact": true,
+  "calibration_measurements": 12,
+  "held_out_measurements": 54,
+  "mean_absolute_error_pct": 0.2935592034490335,
+  "max_absolute_error_pct": 1.1165190281193733,
+  "latency_model_accepted": true,
+  "criteria": {
+    "mean_absolute_error_pct_max": 10,
+    "max_absolute_error_pct_max": 20,
+    "note": "Predeclared engineering tolerances; not statistical confidence bounds"
+  },
+  "source_result_sha256": "3402f974dcdf18c6bc469d69d2b352c208714fffbfc8a1ec944bbd72389f8d13"
+}

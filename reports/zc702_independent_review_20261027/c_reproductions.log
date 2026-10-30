@@ -1,0 +1,4 @@
+persistence_fresh_restore_rc=-2 sizeof=128 crc_offset=72
+selective_queue_first_failed_round=16 head=0 tail=1
+seq0_first_rc=0 seq0_replay_rc=0
+empty_type0_tag=6b554aeb27b994fa

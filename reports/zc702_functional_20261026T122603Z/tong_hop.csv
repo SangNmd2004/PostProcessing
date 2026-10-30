@@ -1,0 +1,4 @@
+﻿policy,cases,ir_success,early_discard,decoder_discard,pa_pass,tag_rejected
+efficiency,21,13,6,2,12,1
+throughput,21,13,6,2,13,0
+adaptive,21,13,6,2,13,0

@@ -1,0 +1,2 @@
+﻿input_bits,output_bits,split,tail_bits,passes,all_words_match,output_sha256
+1216600,104960,0,0,103,True,bb58248e35588ae9c70cd9c71ffad9b0f85104efd94ebf8a95e8135d1e83884b

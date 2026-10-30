@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 26 17:55:22 2026
+# Process ID: 26856
+# Current directory: C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026
+# Command line: xsim.exe -log review_ctx.log -mode tcl -source {xsim.dir/review_ctx/xsim_script.tcl}
+# Log file: C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026/review_ctx.log
+# Journal file: C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/review_ctx/xsim_script.tcl
+# xsim {review_ctx} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+CTX_W = 2, contexts used by this run: 4, RTT 10000 cycles
+[10266] block 0 -> context 0 (code 2, 0 pre-reveals)
+[10523] block 1 -> context 1 (code 2, 0 pre-reveals)
+[10775] block 2 -> context 2 (code 1, 0 pre-reveals)
+[11015] block 3 -> context 3 (code 3, 0 pre-reveals)
+[11247] block 0 (context 0): 1 attempt(s) match golden, key bit-exact, ERRCNT 16, 1228 cycles in flight
+[blk 1 ctx 1 att 0] ERROR: sum 02000201 ctxA 010b000f ctxB 40000000, golden conv=0 usc=149 it=30 pp=0
+[blk 2 ctx 2 att 0] ERROR: sum 04000601 ctxA 010b300f ctxB 40000000, golden conv=0 usc=295 it=60 pp=2
+[21512] block 4 -> context 0 (code 0, 0 pre-reveals)
+[23688] block 4 (context 0): 1 attempt(s) match golden, key bit-exact, ERRCNT 141, 2425 cycles in flight
+[blk 1 ctx 1 att 1] ERROR: sum 02000201 ctxA 0203a01c ctxB 40000000, golden conv=0 usc=60 it=26 pp=0
+[33946] block 5 -> context 0 (code 1, 0 pre-reveals)
+[blk 2 ctx 2 att 1] ERROR: sum 00040204 ctxA 02000016 ctxB 00000071, golden conv=1 usc=0 it=17 pp=0
+[35882] block 2 (context 2): 2 attempt(s) match golden, key bit-exact, ERRCNT 113, 25359 cycles in flight
+[blk 3 ctx 3 att 1] ERROR: sum 08000804 ctxA 0203d028 ctxB 41000000, golden conv=0 usc=73 it=15 pp=0
+[46131] block 6 -> context 2 (code 2, 0 pre-reveals)
+[54602] block 1 (context 1): 3 attempt(s) match golden, key bit-exact, ERRCNT 74, 44336 cycles in flight
+[blk 3 ctx 3 att 2] ERROR: sum 08000d02 ctxA 03040008 ctxB 40000000, golden conv=0 usc=64 it=15 pp=0
+[57318] block 3 (context 3) discarded as golden
+[64879] block 7 -> context 1 (code 0, 0 pre-reveals)
+[66864] block 5 (context 0): 2 attempt(s) match golden, key bit-exact, ERRCNT 105, 33164 cycles in flight
+[68801] block 8 -> context 3 (code 2, 200 pre-reveals)
+[blk 6 ctx 2 att 1] ERROR: sum 00040205 ctxA 02000028 ctxB 00000048, golden conv=0 usc=31 it=11 pp=0
+[81549] block 6 (context 2): 2 attempt(s) match golden, key bit-exact, ERRCNT 72, 35667 cycles in flight
+[84543] block 8 (context 3): 1 attempt(s) match golden, key bit-exact, ERRCNT 71, 17203 cycles in flight
+[blk 7 ctx 1 att 1] ERROR: sum 0002000f ctxA 02000011 ctxB 000000d0, golden conv=1 usc=0 it=14 pp=0
+[88923] block 7 (context 1): 2 attempt(s) match golden, key bit-exact, ERRCNT 208, 24299 cycles in flight
+TOTAL 9 blocks in 88932 cycles with 4 context(s), RTT 10000 cycles
+TB_RESULT: FAIL (8 errors)
+$finish called at time : 889435 ns : File "C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026/tb_qkd_ir_ctx_review.v" Line 277
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:58 . Memory (MB): peak = 923.719 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 26 17:56:25 2026...

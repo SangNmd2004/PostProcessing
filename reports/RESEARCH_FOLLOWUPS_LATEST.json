@@ -1,0 +1,52 @@
+{
+  "complete": true,
+  "plan": [
+    {
+      "id": "natural_wrong_key_tag",
+      "script": "run_wrong_codeword_test.py",
+      "kind": "wrong_codeword",
+      "marker": "WRONG_CODEWORD_EVIDENCE"
+    },
+    {
+      "id": "held_out_schedule_model",
+      "script": "run_schedule_validation.py",
+      "kind": "schedule_validation",
+      "marker": "SCHEDULE_VALIDATION_EVIDENCE"
+    }
+  ],
+  "stages": [
+    {
+      "id": "natural_wrong_key_tag",
+      "status": "VERIFIED_COMPLETE",
+      "pid": 20804,
+      "stdout": "build\\zc702\\research_followups\\20261027T032212Z\\natural_wrong_key_tag.stdout.log",
+      "stderr": "build\\zc702\\research_followups\\20261027T032212Z\\natural_wrong_key_tag.stderr.log",
+      "run": "build\\zc702\\wrong_codeword_runs\\20261027T044256Z",
+      "report": "reports\\zc702_wrong_codeword_20261027T044256Z",
+      "finished_utc": "2026-10-27T04:43:07.978019+00:00"
+    },
+    {
+      "id": "held_out_schedule_model",
+      "status": "VERIFIED_COMPLETE",
+      "pid": 19004,
+      "stdout": "build\\zc702\\research_followups\\20261027T032212Z\\held_out_schedule_model.stdout.log",
+      "stderr": "build\\zc702\\research_followups\\20261027T032212Z\\held_out_schedule_model.stderr.log",
+      "run": "build\\zc702\\schedule_validation_runs\\20261027T044317Z",
+      "report": "reports\\zc702_schedule_validation_20261027T044317Z",
+      "finished_utc": "2026-10-27T04:43:36.078738+00:00"
+    }
+  ],
+  "started_utc": "2026-10-27T03:22:12.073837+00:00",
+  "upstream": "build\\zc702\\research_stages\\20261027T024200Z",
+  "ablation": "build\\zc702\\board_ablation_runs\\20261027T024201Z",
+  "sources": {
+    "run_wrong_codeword_test.py": "05a7827b89129c030fd5c6942c4f26c8df26066b7f1d724fe0b00fc48513490f",
+    "run_schedule_validation.py": "edcd3075bd6282a7ded3b1c437462c3c995aedd5106d740c5d766f66e2895767"
+  },
+  "model_sha256": "09638d267f711d241ec1876d180af761a28a7e2490a06b9b9eddaf92eb27c4cf",
+  "status": "VERIFIED_COMPLETE",
+  "previous_controller_errors": [
+    "RuntimeError(\"Upstream stopped: PermissionError(13, 'Access is denied')\")"
+  ],
+  "finished_utc": "2026-10-27T04:43:36.094284+00:00"
+}

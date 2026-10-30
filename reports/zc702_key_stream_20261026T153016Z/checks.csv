@@ -1,0 +1,10 @@
+﻿case,pass,seq,words
+wrong_tag_not_appended,True,6,
+wrong_tag_not_appended,True,626,
+incomplete_seed_no_output,True,2556,
+retained_tail_readback,True,2584,128
+retained_tail_readback,True,2585,128
+retained_tail_readback,True,2586,128
+retained_tail_readback,True,2587,128
+retained_tail_readback,True,2588,93
+full_buffer_zero_crc,True,3002,

@@ -1,0 +1,28 @@
+=== CSV (WEAK->SEVERE, 16 blk)
+basic                                  ok 10/16  f=1.91  att=3.62  it=101.9  net= 19094 bit  thr@100MHz: RTT0   6.0 | RTT100us   2.7 | RTT1ms  0.44 Mbit/s
+dynamic pe_z=0.0 f*=1.15 alpha=0.5     ok  9/16  f=1.90  att=1.06  it= 26.3  net= 16893 bit  thr@100MHz: RTT0  25.5 | RTT100us   9.3 | RTT1ms  1.38 Mbit/s
+dynamic pe_z=0.0 f*=1.15 alpha=1.0     ok  9/16  f=2.08  att=0.94  it= 19.6  net= 16875 bit  thr@100MHz: RTT0  33.5 | RTT100us  11.1 | RTT1ms  1.58 Mbit/s
+dynamic pe_z=0.0 f*=1.3 alpha=0.5      ok  9/16  f=1.92  att=1.00  it= 24.7  net= 16627 bit  thr@100MHz: RTT0  26.9 | RTT100us   9.9 | RTT1ms  1.47 Mbit/s
+dynamic pe_z=0.0 f*=1.3 alpha=1.0      ok  9/16  f=1.94  att=0.88  it= 20.1  net= 16882 bit  thr@100MHz: RTT0  32.8 | RTT100us  11.5 | RTT1ms  1.69 Mbit/s
+dynamic pe_z=0.5 f*=1.15 alpha=0.5     ok  9/16  f=1.95  att=0.94  it= 23.1  net= 16846 bit  thr@100MHz: RTT0  28.6 | RTT100us  10.5 | RTT1ms  1.57 Mbit/s
+dynamic pe_z=0.5 f*=1.15 alpha=1.0     ok  9/16  f=2.01  att=0.88  it= 20.2  net= 16915 bit  thr@100MHz: RTT0  32.2 | RTT100us  11.5 | RTT1ms  1.68 Mbit/s
+dynamic pe_z=0.5 f*=1.3 alpha=0.5      ok  9/16  f=2.10  att=0.81  it= 15.1  net= 16447 bit  thr@100MHz: RTT0  42.5 | RTT100us  13.2 | RTT1ms  1.83 Mbit/s
+dynamic pe_z=0.5 f*=1.3 alpha=1.0      ok  9/16  f=2.17  att=0.81  it= 14.2  net= 16390 bit  thr@100MHz: RTT0  44.6 | RTT100us  13.4 | RTT1ms  1.84 Mbit/s
+dynamic pe_z=1.0 f*=1.15 alpha=0.5     ok  8/16  f=2.20  att=0.75  it= 14.4  net= 15426 bit  thr@100MHz: RTT0  39.9 | RTT100us  12.6 | RTT1ms  1.76 Mbit/s
+dynamic pe_z=1.0 f*=1.15 alpha=1.0     ok  8/16  f=2.28  att=0.75  it= 13.1  net= 15364 bit  thr@100MHz: RTT0  43.3 | RTT100us  12.9 | RTT1ms  1.77 Mbit/s
+dynamic pe_z=1.0 f*=1.3 alpha=0.5      ok  9/16  f=2.26  att=0.69  it= 11.1  net= 16907 bit  thr@100MHz: RTT0  55.5 | RTT100us  16.1 | RTT1ms  2.17 Mbit/s
+dynamic pe_z=1.0 f*=1.3 alpha=1.0      ok  9/16  f=2.35  att=0.69  it=  9.6  net= 16784 bit  thr@100MHz: RTT0  63.3 | RTT100us  16.7 | RTT1ms  2.18 Mbit/s
+=== synthetic drift 1-6-1% (40 blk)
+basic                                  ok 35/40  f=1.70  att=2.40  it= 66.3  net= 67886 bit  thr@100MHz: RTT0  15.2 | RTT100us   6.1 | RTT1ms  0.95 Mbit/s
+dynamic pe_z=0.0 f*=1.15 alpha=0.5     ok 35/40  f=1.85  att=1.98  it= 52.3  net= 63431 bit  thr@100MHz: RTT0  21.1 | RTT100us   7.7 | RTT1ms  1.16 Mbit/s
+dynamic pe_z=0.0 f*=1.15 alpha=1.0     ok 34/40  f=1.82  att=1.60  it= 36.9  net= 62080 bit  thr@100MHz: RTT0  28.2 | RTT100us   9.7 | RTT1ms  1.40 Mbit/s
+dynamic pe_z=0.0 f*=1.3 alpha=0.5      ok 35/40  f=1.86  att=1.98  it= 51.6  net= 63352 bit  thr@100MHz: RTT0  21.3 | RTT100us   7.8 | RTT1ms  1.16 Mbit/s
+dynamic pe_z=0.0 f*=1.3 alpha=1.0      ok 35/40  f=1.86  att=1.55  it= 34.8  net= 63304 bit  thr@100MHz: RTT0  30.6 | RTT100us  10.3 | RTT1ms  1.49 Mbit/s
+dynamic pe_z=0.5 f*=1.15 alpha=0.5     ok 37/40  f=1.93  att=1.75  it= 42.5  net= 65824 bit  thr@100MHz: RTT0  26.6 | RTT100us   9.4 | RTT1ms  1.39 Mbit/s
+dynamic pe_z=0.5 f*=1.15 alpha=1.0     ok 36/40  f=1.91  att=1.48  it= 31.9  net= 64520 bit  thr@100MHz: RTT0  34.0 | RTT100us  11.3 | RTT1ms  1.61 Mbit/s
+dynamic pe_z=0.5 f*=1.3 alpha=0.5      ok 37/40  f=1.94  att=1.73  it= 42.2  net= 65760 bit  thr@100MHz: RTT0  26.8 | RTT100us   9.5 | RTT1ms  1.40 Mbit/s
+dynamic pe_z=0.5 f*=1.3 alpha=1.0      ok 36/40  f=1.92  att=1.40  it= 30.0  net= 64567 bit  thr@100MHz: RTT0  36.1 | RTT100us  11.9 | RTT1ms  1.69 Mbit/s
+dynamic pe_z=1.0 f*=1.15 alpha=0.5     ok 38/40  f=2.01  att=1.62  it= 34.7  net= 66451 bit  thr@100MHz: RTT0  32.8 | RTT100us  10.8 | RTT1ms  1.54 Mbit/s
+dynamic pe_z=1.0 f*=1.15 alpha=1.0     ok 38/40  f=1.89  att=1.43  it= 26.8  net= 68626 bit  thr@100MHz: RTT0  40.7 | RTT100us  12.7 | RTT1ms  1.76 Mbit/s
+dynamic pe_z=1.0 f*=1.3 alpha=0.5      ok 38/40  f=2.02  att=1.60  it= 33.4  net= 66125 bit  thr@100MHz: RTT0  33.7 | RTT100us  11.0 | RTT1ms  1.57 Mbit/s
+dynamic pe_z=1.0 f*=1.3 alpha=1.0      ok 38/40  f=1.95  att=1.38  it= 24.4  net= 67492 bit  thr@100MHz: RTT0  44.8 | RTT100us  13.4 | RTT1ms  1.83 Mbit/s

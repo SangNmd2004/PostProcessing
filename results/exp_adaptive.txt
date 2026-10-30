@@ -1,0 +1,10 @@
+secret key Mbit/s vs sifted key rate (QBER drift [0.01, 0.02, 0.03, 0.045, 0.06, 0.045, 0.03, 0.02, 0.01] x 6, RTT 100 us, 100 MHz); adaptive: BACKLOG_HI=4 LO=1, [share of blocks in throughput mode]
+raw Mbit/s    basic_old      dyn_old   efficiency   throughput     adaptive
+         2         0.93         0.86         0.96         0.78   0.96 [ 0%]
+         5         2.32         2.14         2.40         1.94   2.40 [ 0%]
+         8         3.24         3.42         3.81         3.11   3.81 [ 0%]
+        11         3.28         4.54         5.05         4.27   5.05 [ 0%]
+        14         3.29         5.30         5.68         5.43   5.87 [24%]
+        18         3.30         5.41         5.77         6.94   7.03 [57%]
+        25         3.30         5.43         5.81         8.67   7.99 [87%]
+        40         3.30         5.43         5.81         8.67   8.12 [91%]

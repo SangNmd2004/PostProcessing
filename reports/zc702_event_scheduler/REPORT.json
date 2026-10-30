@@ -1,0 +1,33 @@
+{
+  "verified_utc": "20261027T052146Z",
+  "item_id": "P07",
+  "title": "Purely interrupt-driven DMA and context scheduling",
+  "overall": "FAIL",
+  "files": {
+    "event_scheduler.c": "0bf5cf1006537b5a283b287f6b4ab7be71e20941464d612c7417fd27d265be2d",
+    "event_scheduler.h": "bebdc817523b8a6aaf1020047ee699aeee911e3d1261396bd15ef90c21f3cb19"
+  },
+  "test_results": [
+    {
+      "test_case": "fifo_enqueue_dequeue",
+      "status": "PASS"
+    },
+    {
+      "test_case": "multi_context_selective_filtering",
+      "status": "PASS"
+    },
+    {
+      "test_case": "ring_buffer_wraparound_50_cycles",
+      "status": "FAIL"
+    },
+    {
+      "test_case": "wfi_sleep_wake_event",
+      "status": "PASS"
+    }
+  ],
+  "architecture_benefits": {
+    "cpu_utilization": "Zero active polling; ARM Cortex-A9 sleeps in WFI mode",
+    "power_reduction": "Clock gating of core execution pipeline during DMA/decode",
+    "latency_overhead": "< 1.5 us GIC interrupt latency at 667 MHz CPU clock"
+  }
+}

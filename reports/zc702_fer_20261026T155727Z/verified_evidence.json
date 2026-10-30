@@ -1,0 +1,12 @@
+{
+  "raw_receipts_verified": 64,
+  "independent_synthetic_trials": 256,
+  "FER": 0.0,
+  "wilson_two_sided_95": [
+    0,
+    0.01478385642587143
+  ],
+  "exact_zero_event_one_sided_95_upper": 0.011633876163163283,
+  "scope": "IR component; no tag or PA in this measurement",
+  "source_result_sha256": "f70c177e1077553cdf1343a75645a60c60c013f5248bff94491849eb1c4481c5"
+}

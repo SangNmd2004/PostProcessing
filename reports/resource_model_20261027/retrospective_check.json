@@ -1,0 +1,6 @@
+{
+  "matched_batches": 248,
+  "ambiguous_batches_excluded": 2,
+  "scope": "retrospective only; not held-out latency validation",
+  "model_sha256": "09638d267f711d241ec1876d180af761a28a7e2490a06b9b9eddaf92eb27c4cf"
+}

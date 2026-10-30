@@ -1,0 +1,13 @@
+{
+  "raw_replay_verified": true,
+  "actual_DMA_wrong_key_readback": true,
+  "genuine_Alice_tags": true,
+  "entry_points_verified": [
+    20,
+    60
+  ],
+  "residual_errors": 11,
+  "budget_checks_charged": 2,
+  "PA_or_append_after_wrong_key": false,
+  "source_result_sha256": "2ca91a08a0ac458e193652d3d7729bc152496a0984417b1505fabcfcd04954a7"
+}

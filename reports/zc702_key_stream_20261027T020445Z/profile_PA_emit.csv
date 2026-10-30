@@ -1,0 +1,2 @@
+﻿input_bits,output_bits,passes,tail_bits,PA_calls_us,PA_call_mean_us,PA_setup_us,PA_mm2s_start_us,PA_DMA_output_drain_us,prefix_prepare_us,tail_finalize_wipe_us,emit_command_snapshot_us,scope
+1213835,104768,103,0,342276.4400739832,3323.0722337279926,613.5119822081525,28721.720167070114,312878.50192652346,162.49499528764514,42179.08077680666,396962.1514880976,"PS-observed PA multi-pass calls include DMA/cache; excludes seed UART, IR and source accumulation"

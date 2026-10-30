@@ -1,0 +1,13 @@
+{
+  "raw_replay_verified": true,
+  "checks": 42,
+  "packets": 74,
+  "budget_states_verified": 17,
+  "tag_hashes_checked": 6,
+  "valid_tags": 2,
+  "rejected_tags": 4,
+  "blocked_on_exhaustion": 2,
+  "source_result_sha256": "7aa63fab50e03b52b02f0e1126d95f58a5c834a189ec07c749821bb3c465951e",
+  "source_uart_sha256": "9e88e6c9d65dbfde06fa95ab4762a288ae71696e36c27096aceee0c67eb7bf7c",
+  "scope": "Boot-lifetime engineering gate; persistent authenticated-session budget and security proof remain pending"
+}

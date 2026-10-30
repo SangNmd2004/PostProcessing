@@ -1,0 +1,4 @@
+﻿from_configuration,to_configuration,paired_inputs,mean_delta_attempts,normal_approx95_low,normal_approx95_high,common_success,mean_delta_f_common_success,failures_fixed,failures_introduced,mcnemar_exact_p
+OMS_random,OMS_GS,8,-0.5,-0.8703983772668733,-0.12960162273312664,8,-0.07090592057464845,0,0,1.0
+OMS_GS,NMS_GS,8,0,0.0,0.0,8,0.0,0,0,1.0
+NMS_GS,NMS_GS_ET_PP,8,0,0.0,0.0,8,0.0,0,0,1.0

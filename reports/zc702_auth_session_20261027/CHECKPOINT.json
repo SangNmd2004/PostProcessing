@@ -1,0 +1,14 @@
+{
+  "scope": "Volatile computational session prototype and ARM object compilation, no board deployment",
+  "previous_checkpoint": "reports/zc702_followthrough_20261027",
+  "previous_checkpoint_files_verified": 37,
+  "current_report": "reports/zc702_auth_session_20261027/REPORT.md",
+  "status": "PARTIAL",
+  "remaining_gates": [
+    "trusted fresh session provisioning",
+    "durable authenticated monotonic storage",
+    "PC Alice interoperability",
+    "separate board integration and regression"
+  ],
+  "known_reopen_replay_limitation_is_preserved": true
+}

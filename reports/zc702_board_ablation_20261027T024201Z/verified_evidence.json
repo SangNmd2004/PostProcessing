@@ -1,0 +1,12 @@
+{
+  "raw_replay_verified": true,
+  "paired_input_hashes_verified": true,
+  "independent_input_pairs": 1000,
+  "configuration_evaluations": 4000,
+  "batch_receipts_verified": 1000,
+  "sessions": 1,
+  "common_success": 997,
+  "KEY_comparison": "Every converged KEY compared in firmware against golden; raw log contains batch PASS, not literal DMA KEY words",
+  "tag_PA_applied": false,
+  "source_result_sha256": "835e17eb61683525754f0c40cb206356b3b3697e8522bf107a3e72b359e9de6b"
+}

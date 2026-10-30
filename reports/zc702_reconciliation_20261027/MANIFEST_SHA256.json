@@ -1,0 +1,70 @@
+{
+  "handoff_audit/AUDIT.json": {
+    "bytes": 5716,
+    "sha256": "2ac4632a6144494f64a6e234c1834b5029be7d860ea0746b9cdc72bd7aeede89"
+  },
+  "handoff_audit/checkpoint/closed_session_0_MANIFEST_RECOVERY.json": {
+    "bytes": 889,
+    "sha256": "c315c47d3d6a0bde382b900d73fbd8426bfac2283310fc5c38130fa1e7c2b19b"
+  },
+  "handoff_audit/checkpoint/closed_session_0_tx_manifest.json": {
+    "bytes": 271375,
+    "sha256": "4e735347a3b6e4b54a60d2db24ec92e2f9a5fa8e3c62a78b752a2605151bb7c9"
+  },
+  "handoff_audit/checkpoint/fer_journal_verified_prefix.jsonl": {
+    "bytes": 2998934,
+    "sha256": "1f16a7e1f8b8c43585e615a53c34ddc3a48e11e8633d65874beca0aeceecd8f5"
+  },
+  "handoff_audit/checkpoint/fer_result_partial_or_complete.json": {
+    "bytes": 3885665,
+    "sha256": "a20c8fa54ed0cc3b4f257e39dee8dd51cabb0c6d3b85b9760dd3eeb7a90634d0"
+  },
+  "handoff_audit/checkpoint/firmware_manifest.json": {
+    "bytes": 3213,
+    "sha256": "869becfc01a7af5362d32a794ec1e7795fbb1a8c3417956996344ed718318896"
+  },
+  "handoff_audit/checkpoint/follow.json": {
+    "bytes": 2193,
+    "sha256": "9310eaed13bc8b539d8797f2340b136f04680b6e8974e657af8953bd26ac65e8"
+  },
+  "handoff_audit/checkpoint/follow_jobs.json": {
+    "bytes": 141,
+    "sha256": "9779bcfb0e8e5152ba635b280363e872d5fc3620204c3f502e31867635bbe00d"
+  },
+  "handoff_audit/checkpoint/jobs.json": {
+    "bytes": 234,
+    "sha256": "8f1353fcf46bcf2e8c24675763d04e7fdbe97558d389b6ce00bb730126d51ecd"
+  },
+  "handoff_audit/checkpoint/main.json": {
+    "bytes": 5256,
+    "sha256": "db1c4cb7d3740823217f6480b02271b2a432cfcd68a8d55fc7b0620b758ca79e"
+  },
+  "handoff_audit/checkpoint/main_frozen_plan.json": {
+    "bytes": 1641,
+    "sha256": "614db3ea917fe886da5d6cc5f84afe95ca27550ebd3ef67e38e16b0bdee80e15"
+  },
+  "handoff_audit/REPORT.md": {
+    "bytes": 803,
+    "sha256": "880bc37d969286b26163bee27009cc4082dc456c58b591a2a362a203aa4cbe75"
+  },
+  "RECONCILIATION_RECEIPT.json": {
+    "bytes": 3225,
+    "sha256": "89ae350cea79c6101487b41c5a8374fc077714c5f97df1727dc9ab2cf951aefb"
+  },
+  "REPORT.md": {
+    "bytes": 27368,
+    "sha256": "7459511a4a6b9b82da9f6f1ac003c831f4dbf8db8a738cbca9bc9d8dbdb3dbbd"
+  },
+  "reproduce_c_issues_fixed.c": {
+    "bytes": 7065,
+    "sha256": "509b53be240602d2be35f2cca40da6736d90469315cf0182e3a8c0c7b7bc6780"
+  },
+  "reproduce_c_issues_fixed.exe": {
+    "bytes": 81865,
+    "sha256": "f73dc66a3d5cd19af36b3ae713cb0546ff085ccb2f746902eb22d818ec3e056a"
+  },
+  "run_reconciliation_probes.py": {
+    "bytes": 8956,
+    "sha256": "b84ba59bb4e1b212b98a99f33a7ed459bc2fc486c78c84a724ce4982b6fb1286"
+  }
+}

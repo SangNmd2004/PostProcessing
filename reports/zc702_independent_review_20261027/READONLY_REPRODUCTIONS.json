@@ -1,0 +1,34 @@
+{
+  "empty_type0_auth_tag_recovers_psk": true,
+  "expected_psk": "0x123456789abcdef",
+  "recovered_psk": "0x123456789abcdef",
+  "paced_simulation_lambda500": {
+    "arrival_rate_blocks_s": 500,
+    "arrived_blocks": 479,
+    "serviced_blocks": 478,
+    "dropped_blocks": 0,
+    "avg_queue_depth": 0.09,
+    "secret_bit_rate_bps": 660835.0,
+    "secret_bit_rate_mbps": 0.661,
+    "drop_ratio": 0.0
+  },
+  "report_static_lambda500_eff_mbps": 0.691,
+  "NTT_length_conditions": [
+    {
+      "N": 1048576,
+      "N_divides_q_minus_1": true
+    },
+    {
+      "N": 2097152,
+      "N_divides_q_minus_1": false
+    },
+    {
+      "N": 16777216,
+      "N_divides_q_minus_1": false
+    },
+    {
+      "N": 134217728,
+      "N_divides_q_minus_1": false
+    }
+  ]
+}

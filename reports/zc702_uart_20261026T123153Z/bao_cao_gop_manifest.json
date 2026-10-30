@@ -1,0 +1,16 @@
+{
+  "data_rows": 211,
+  "columns": 81,
+  "rows_by_record_type": {
+    "block": 84,
+    "summary": 27,
+    "source_row_coverage": 100
+  },
+  "inputs_sha256": {
+    "chi_tiet_block.csv": "f3be498bcea1cb11ed857beb3c7b46c1c9a2181b50f068cf0f5b9d8e25e9c093",
+    "tong_hop.csv": "4a461ed058477e810f9bdb033a1c3a46957911549bcc0322462d1815117a60ad",
+    "doi_chieu_tung_dong_csv.csv": "5b4af5040790e80535eb5ac54104bcb9a7337c3c35a43d6adf5f15dcc9dfac33"
+  },
+  "output_sha256": "39bf2c40e5f2b9ace56aed8f5d203a2eda2121ef4e3b3b6380fde2fd49248b38",
+  "note": "Views overlap; do not sum rows across record types. Blank columns are not applicable."
+}

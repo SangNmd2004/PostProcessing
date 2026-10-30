@@ -1,0 +1,6 @@
+{
+  "raw_receipts_verified": 36,
+  "physical_block_evaluations": 1152,
+  "scope": "DDR IR replay only; repeated vectors, no independent FER or secret-key throughput",
+  "source_result_sha256": "e2a51806267ead3035350445e4f8cf2728ad1afa120d7f686ed62cddf0965450"
+}

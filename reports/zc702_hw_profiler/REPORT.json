@@ -1,0 +1,76 @@
+{
+  "verified_utc": "20261027T060834Z",
+  "item_id": "PUB05",
+  "title": "High-resolution hardware counter integration for latency profiling",
+  "overall": "PASS",
+  "files": {
+    "hw_profiler.c": "b8ec1739a8b5fa8a249d4f72c510d0400d5a4a1f1943fa4ff931c0895262e65a",
+    "hw_profiler.h": "8b19fd3f26bac663196507c586aa10ebb11c90127015ed41ca136be893def7fc"
+  },
+  "eff_profile_breakdown": {
+    "cpu_freq_mhz": 667,
+    "cycles": {
+      "dma_ch_tx": 5669,
+      "dma_syn_tx": 2801,
+      "pl_decode": 452092,
+      "dma_key_rx": 3335,
+      "tag_verify": 1667,
+      "pa_pass": 15140,
+      "total_block": 480704
+    },
+    "durations_us": {
+      "dma_ch_tx": 8.5,
+      "dma_syn_tx": 4.2,
+      "pl_decode": 677.8,
+      "dma_key_rx": 5.0,
+      "tag_verify": 2.5,
+      "pa_pass": 22.7,
+      "total_block": 720.7
+    },
+    "isolation": {
+      "pure_pl_compute_pct": 97.2,
+      "ps_dma_overhead_pct": 2.8
+    }
+  },
+  "thr_profile_breakdown": {
+    "cpu_freq_mhz": 667,
+    "cycles": {
+      "dma_ch_tx": 5669,
+      "dma_syn_tx": 2801,
+      "pl_decode": 24412,
+      "dma_key_rx": 3335,
+      "tag_verify": 1667,
+      "pa_pass": 15140,
+      "total_block": 53024
+    },
+    "durations_us": {
+      "dma_ch_tx": 8.5,
+      "dma_syn_tx": 4.2,
+      "pl_decode": 36.6,
+      "dma_key_rx": 5.0,
+      "tag_verify": 2.5,
+      "pa_pass": 22.7,
+      "total_block": 79.5
+    },
+    "isolation": {
+      "pure_pl_compute_pct": 74.59,
+      "ps_dma_overhead_pct": 25.41
+    }
+  },
+  "test_results": [
+    {
+      "test": "eff_phase_isolation",
+      "pure_pl_pct": 97.2,
+      "status": "PASS"
+    },
+    {
+      "test": "thr_phase_isolation",
+      "pure_pl_pct": 74.59,
+      "status": "PASS"
+    },
+    {
+      "test": "pmu_counter_wraparound",
+      "status": "PASS"
+    }
+  ]
+}

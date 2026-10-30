@@ -1,0 +1,64 @@
+{
+  "stages": [
+    {
+      "id": "paired_ablation_1000",
+      "kind": "board_ablation",
+      "script": "run_board_ablation.py",
+      "trials": 1000,
+      "qber": 0.03,
+      "code": "r23",
+      "seed": 1800000
+    },
+    {
+      "id": "fer_pilot_q01",
+      "kind": "fer",
+      "script": "run_fer_campaign.py",
+      "trials": 1000,
+      "qber": 0.01,
+      "code": "r34",
+      "seed": 2100000
+    },
+    {
+      "id": "fer_pilot_q02",
+      "kind": "fer",
+      "script": "run_fer_campaign.py",
+      "trials": 1000,
+      "qber": 0.02,
+      "code": "r34",
+      "seed": 2200000
+    },
+    {
+      "id": "fer_pilot_q05",
+      "kind": "fer",
+      "script": "run_fer_campaign.py",
+      "trials": 1000,
+      "qber": 0.05,
+      "code": "r12",
+      "seed": 2500000
+    },
+    {
+      "id": "fer_pilot_q07",
+      "kind": "fer",
+      "script": "run_fer_campaign.py",
+      "trials": 1000,
+      "qber": 0.07,
+      "code": "r12",
+      "seed": 2700000
+    },
+    {
+      "id": "fer_qualification_q02",
+      "kind": "fer",
+      "script": "run_fer_campaign.py",
+      "trials": 10000,
+      "qber": 0.02,
+      "code": "r34",
+      "seed": 3200000
+    }
+  ],
+  "declared_before_measurements": "2026-10-27T02:42:00.841917+00:00",
+  "stop_rule": "Fixed sample sizes. Stop on tool/transport/hardware mismatch; no accuracy-dependent early stopping.",
+  "source_sha256": {
+    "run_board_ablation.py": "14e1b5cb6c90f2ad67caee364d4254a96dcc436011a3ef9fc0f2c115f51abce1",
+    "run_fer_campaign.py": "44fb4509a2504855d7d03a85e813c712dc034e535bf034fcffc5ea093b51569e"
+  }
+}

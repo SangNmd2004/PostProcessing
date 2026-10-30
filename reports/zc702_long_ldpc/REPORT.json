@@ -1,0 +1,138 @@
+{
+  "timestamp": "2026-10-27T06:32:25.386509+00:00",
+  "work_item": "R01",
+  "status": "PASS_VERIFIED",
+  "target_fpga": "Xilinx ZC702 (xc7z020clg484-1)",
+  "max_bram_available": 140,
+  "results": {
+    "r12": {
+      "nominal_rate": 0.5,
+      "syndrome_rate": 0.5,
+      "q_shannon_limit_pct": 11.0,
+      "lengths": {
+        "3072": {
+          "block_length": 3072,
+          "q_waterfall_threshold_pct": 9.896,
+          "operating_qber_pct": 8.906,
+          "reconciliation_efficiency_f": 1.154
+        },
+        "6144": {
+          "block_length": 6144,
+          "q_waterfall_threshold_pct": 10.22,
+          "operating_qber_pct": 9.198,
+          "reconciliation_efficiency_f": 1.129
+        },
+        "12288": {
+          "block_length": 12288,
+          "q_waterfall_threshold_pct": 10.449,
+          "operating_qber_pct": 9.404,
+          "reconciliation_efficiency_f": 1.112
+        }
+      }
+    },
+    "r23": {
+      "nominal_rate": 0.6667,
+      "syndrome_rate": 0.3333,
+      "q_shannon_limit_pct": 6.15,
+      "lengths": {
+        "3072": {
+          "block_length": 3072,
+          "q_waterfall_threshold_pct": 5.04,
+          "operating_qber_pct": 4.536,
+          "reconciliation_efficiency_f": 1.251
+        },
+        "6144": {
+          "block_length": 6144,
+          "q_waterfall_threshold_pct": 5.365,
+          "operating_qber_pct": 4.828,
+          "reconciliation_efficiency_f": 1.194
+        },
+        "12288": {
+          "block_length": 12288,
+          "q_waterfall_threshold_pct": 5.594,
+          "operating_qber_pct": 5.035,
+          "reconciliation_efficiency_f": 1.158
+        }
+      }
+    },
+    "r34": {
+      "nominal_rate": 0.75,
+      "syndrome_rate": 0.25,
+      "q_shannon_limit_pct": 4.17,
+      "lengths": {
+        "3072": {
+          "block_length": 3072,
+          "q_waterfall_threshold_pct": 3.109,
+          "operating_qber_pct": 2.798,
+          "reconciliation_efficiency_f": 1.357
+        },
+        "6144": {
+          "block_length": 6144,
+          "q_waterfall_threshold_pct": 3.42,
+          "operating_qber_pct": 3.078,
+          "reconciliation_efficiency_f": 1.261
+        },
+        "12288": {
+          "block_length": 12288,
+          "q_waterfall_threshold_pct": 3.639,
+          "operating_qber_pct": 3.275,
+          "reconciliation_efficiency_f": 1.202
+        }
+      }
+    },
+    "r56": {
+      "nominal_rate": 0.8333,
+      "syndrome_rate": 0.1667,
+      "q_shannon_limit_pct": 2.46,
+      "lengths": {
+        "3072": {
+          "block_length": 3072,
+          "q_waterfall_threshold_pct": 1.498,
+          "operating_qber_pct": 1.348,
+          "reconciliation_efficiency_f": 1.617
+        },
+        "6144": {
+          "block_length": 6144,
+          "q_waterfall_threshold_pct": 1.781,
+          "operating_qber_pct": 1.603,
+          "reconciliation_efficiency_f": 1.407
+        },
+        "12288": {
+          "block_length": 12288,
+          "q_waterfall_threshold_pct": 1.981,
+          "operating_qber_pct": 1.783,
+          "reconciliation_efficiency_f": 1.292
+        }
+      }
+    }
+  },
+  "hardware_scaling": {
+    "3072": {
+      "Zc": 128,
+      "shifter_width": 7,
+      "llr_bram_36k": 6,
+      "syndrome_bram_36k": 2,
+      "lut_estimate": 16500,
+      "fmax_pl_mhz": 50.0,
+      "status": "VERIFIED_ON_BOARD"
+    },
+    "6144": {
+      "Zc": 256,
+      "shifter_width": 8,
+      "llr_bram_36k": 12,
+      "syndrome_bram_36k": 4,
+      "lut_estimate": 21400,
+      "fmax_pl_mhz": 50.0,
+      "status": "FEASIBLE_ZC702"
+    },
+    "12288": {
+      "Zc": 512,
+      "shifter_width": 9,
+      "llr_bram_36k": 24,
+      "syndrome_bram_36k": 8,
+      "lut_estimate": 31200,
+      "fmax_pl_mhz": 45.0,
+      "status": "FEASIBLE_ZC702_HIGH_UTIL"
+    }
+  }
+}

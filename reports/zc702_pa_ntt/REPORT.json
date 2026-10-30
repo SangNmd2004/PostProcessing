@@ -1,0 +1,92 @@
+{
+  "verified_utc": "20261027T072418Z",
+  "item_id": "R04",
+  "title": "Large-block PA via NTT-based MMH-MH / Toeplitz hashing",
+  "correctness_verification": {
+    "test_block_length": 8,
+    "test_hash_length": 4,
+    "output_bits": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "status": "PASS"
+  },
+  "scaling_benchmarks": [
+    {
+      "scenario": "10 kbit (Micro)",
+      "input_bits_n": 10000,
+      "output_bits_ell": 1024,
+      "conv_length_N": 16384,
+      "hankel_time_ms": 1.6,
+      "ntt_time_ms": 3.44,
+      "ntt_speedup_factor": 0.5,
+      "ddr3_footprint_mb": 0.12,
+      "single_transform_supported": true,
+      "requires_block_partitioning": false,
+      "sub_block_count": 1
+    },
+    {
+      "scenario": "100 kbit (Small)",
+      "input_bits_n": 100000,
+      "output_bits_ell": 16384,
+      "conv_length_N": 131072,
+      "hankel_time_ms": 256.0,
+      "ntt_time_ms": 33.42,
+      "ntt_speedup_factor": 7.7,
+      "ddr3_footprint_mb": 1.0,
+      "single_transform_supported": true,
+      "requires_block_partitioning": false,
+      "sub_block_count": 1
+    },
+    {
+      "scenario": "1 Mbit (Medium)",
+      "input_bits_n": 1000000,
+      "output_bits_ell": 131072,
+      "conv_length_N": 2097152,
+      "hankel_time_ms": 20480.0,
+      "ntt_time_ms": 1258.29,
+      "ntt_speedup_factor": 16.3,
+      "ddr3_footprint_mb": 8.0,
+      "single_transform_supported": false,
+      "requires_block_partitioning": true,
+      "sub_block_count": 4
+    },
+    {
+      "scenario": "10 Mbit (Large-Block, Block-Partitioned)",
+      "input_bits_n": 10000000,
+      "output_bits_ell": 1048576,
+      "conv_length_N": 16777216,
+      "hankel_time_ms": 1638400.0,
+      "ntt_time_ms": 10066.33,
+      "ntt_speedup_factor": 162.8,
+      "ddr3_footprint_mb": 8.0,
+      "single_transform_supported": false,
+      "requires_block_partitioning": true,
+      "sub_block_count": 32
+    },
+    {
+      "scenario": "100 Mbit (Ultra, Block-Partitioned)",
+      "input_bits_n": 100000000,
+      "output_bits_ell": 10485760,
+      "conv_length_N": 134217728,
+      "hankel_time_ms": 163840000.0,
+      "ntt_time_ms": 80530.64,
+      "ntt_speedup_factor": 2034.5,
+      "ddr3_footprint_mb": 8.0,
+      "single_transform_supported": false,
+      "requires_block_partitioning": true,
+      "sub_block_count": 256
+    }
+  ],
+  "zc702_ddr3_bandwidth_budget": {
+    "target_block_size": "10^7 bits (10 Mbit)",
+    "ddr3_capacity": "1024 MB (ZC702 onboard MT41J256M8HX)",
+    "ddr3_axi_hp_bus_width": "64-bit @ 150 MHz",
+    "ddr3_burst_throughput_mbytes_per_s": 1200.0,
+    "dma_transfer_time_10mbit_ms": 106.67,
+    "total_ntt_pa_latency_10mbit_ms": 10173.0,
+    "speedup_over_hankel_10mbit": 162.8
+  }
+}

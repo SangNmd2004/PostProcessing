@@ -1,0 +1,132 @@
+﻿arm-none-eabi-gcc.exe : In file included from firmware/zc702_uart/hw_profiler.c:1:
+At line:2 char:97
++ ... i-gcc.exe'; & $gccPath -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard - ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (In file include...w_profiler.c:1::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+firmware/zc702_uart/hw_profiler.h:15:17: error: unknown type name 'XTime'
+   15 | typedef struct {XTime tick;uint32_t cycle;} hp_mark_t;
+      |                 ^~~~~
+firmware/zc702_uart/hw_profiler.h:15:28: error: unknown type name 'uint32_t'
+   15 | typedef struct {XTime tick;uint32_t cycle;} hp_mark_t;
+      |                            ^~~~~~~~
+firmware/zc702_uart/hw_profiler.h:16:17: error: unknown type name 'uint64_t'
+   16 | typedef struct {uint64_t ticks,cycles;uint32_t count,valid;} hp_phase_t;
+      |                 ^~~~~~~~
+firmware/zc702_uart/hw_profiler.h:16:39: error: unknown type name 'uint32_t'
+   16 | typedef struct {uint64_t ticks,cycles;uint32_t count,valid;} hp_phase_t;
+      |                                       ^~~~~~~~
+firmware/zc702_uart/hw_profiler.h:17:17: error: unknown type name 'uint32_t'
+   17 | typedef struct {uint32_t seq,op;uint64_t total_ticks;hp_phase_t phase[HP_PHASES];} hp_snapshot_t;
+      |                 ^~~~~~~~
+firmware/zc702_uart/hw_profiler.h:17:33: error: unknown type name 'uint64_t'
+   17 | typedef struct {uint32_t seq,op;uint64_t total_ticks;hp_phase_t phase[HP_PHASES];} hp_snapshot_t;
+      |                                 ^~~~~~~~
+firmware/zc702_uart/hw_profiler.h:19:8: error: unknown type name 'uint32_t'
+   19 | static uint32_t hp_enabled,hp_seen,hp_cal_ticks,hp_cal_cycles,hp_read_ticks;
+      |        ^~~~~~~~
+firmware/zc702_uart/hw_profiler.h:20:8: error: unknown type name 'uint32_t'
+   20 | static uint32_t hp_waiting;
+      |        ^~~~~~~~
+firmware/zc702_uart/hw_profiler.h:22:8: error: unknown type name 'uint32_t'
+   22 | static uint32_t hp_cycle(void)
+      |        ^~~~~~~~
+firmware/zc702_uart/hw_profiler.h: In function 'hp_cycle':
+firmware/zc702_uart/hw_profiler.h:24:5: error: unknown type name 'uint32_t'
+   24 |     uint32_t value;__asm__ volatile("mrc p15, 0, %0, c9, c13, 0":"=r"(value));return value;
+      |     ^~~~~~~~
+firmware/zc702_uart/hw_profiler.h: In function 'hp_mark':
+firmware/zc702_uart/hw_profiler.h:31:9: error: implicit declaration of function 'XTime_GetTime' 
+[-Werror=implicit-function-declaration]
+   31 |         XTime_GetTime(&value.tick);value.cycle=hp_cycle();
+      |         ^~~~~~~~~~~~~
+firmware/zc702_uart/hw_profiler.h: At top level:
+firmware/zc702_uart/hw_profiler.h:35:20: error: unknown type name 'uint32_t'
+   35 | static void hp_add(uint32_t phase,hp_mark_t start)
+      |                    ^~~~~~~~
+firmware/zc702_uart/hw_profiler.h: In function 'hp_begin_frame':
+firmware/zc702_uart/hw_profiler.h:45:22: error: implicit declaration of function 'memset' 
+[-Werror=implicit-function-declaration]
+   45 |     if (hp_enabled) {memset(&hp_work,0,sizeof(hp_work));hp_frame_start=hp_mark();}
+      |                      ^~~~~~
+firmware/zc702_uart/hw_profiler.h:45:22: error: incompatible implicit declaration of built-in function 'memset' 
+[-Werror]
+firmware/zc702_uart/hw_profiler.h:1:1: note: include '<string.h>' or provide a declaration of 'memset'
+  +++ |+#include <string.h>
+    1 | /* Opt-in PS wall-time/PMU profiler. UART replies are read after snapshots freeze.
+firmware/zc702_uart/hw_profiler.h: At top level:
+firmware/zc702_uart/hw_profiler.h:47:23: error: unknown type name 'uint32_t'
+   47 | static void hp_finish(uint32_t seq,uint32_t op)
+      |                       ^~~~~~~~
+firmware/zc702_uart/hw_profiler.h:47:36: error: unknown type name 'uint32_t'
+   47 | static void hp_finish(uint32_t seq,uint32_t op)
+      |                                    ^~~~~~~~
+firmware/zc702_uart/hw_profiler.h: In function 'hp_wait_end':
+firmware/zc702_uart/hw_profiler.h:55:49: error: implicit declaration of function 'hp_add' 
+[-Werror=implicit-function-declaration]
+   55 | static void hp_wait_end(void) {if (hp_waiting) {hp_add(HP_FAIL_TO_REVEAL,hp_wait_start);hp_waiting=0;}}
+      |                                                 ^~~~~~
+firmware/zc702_uart/hw_profiler.h: At top level:
+firmware/zc702_uart/hw_profiler.h:56:23: error: unknown type name 'uint32_t'
+   56 | static int hp_control(uint32_t seq,uint32_t enable)
+      |                       ^~~~~~~~
+firmware/zc702_uart/hw_profiler.h:56:36: error: unknown type name 'uint32_t'
+   56 | static int hp_control(uint32_t seq,uint32_t enable)
+      |                                    ^~~~~~~~
+firmware/zc702_uart/hw_profiler.h:76:20: error: unknown type name 'uint32_t'
+   76 | static int hp_read(uint32_t seq,uint32_t index)
+      |                    ^~~~~~~~
+firmware/zc702_uart/hw_profiler.h:76:33: error: unknown type name 'uint32_t'
+   76 | static int hp_read(uint32_t seq,uint32_t index)
+      |                                 ^~~~~~~~
+firmware/zc702_uart/hw_profiler.c: In function 'profiler_init':
+firmware/zc702_uart/hw_profiler.c:5:5: error: implicit declaration of function 'pmu_enable_counters' 
+[-Werror=implicit-function-declaration]
+    5 |     pmu_enable_counters();
+      |     ^~~~~~~~~~~~~~~~~~~
+firmware/zc702_uart/hw_profiler.c: At top level:
+firmware/zc702_uart/hw_profiler.c:8:27: error: unknown type name 'block_profile_t'
+    8 | void profiler_start_phase(block_profile_t *prof, profile_phase_t phase)
+      |                           ^~~~~~~~~~~~~~~
+firmware/zc702_uart/hw_profiler.c:8:50: error: unknown type name 'profile_phase_t'
+    8 | void profiler_start_phase(block_profile_t *prof, profile_phase_t phase)
+      |                                                  ^~~~~~~~~~~~~~~
+firmware/zc702_uart/hw_profiler.c:16:26: error: unknown type name 'block_profile_t'
+   16 | void profiler_stop_phase(block_profile_t *prof, profile_phase_t phase)
+      |                          ^~~~~~~~~~~~~~~
+firmware/zc702_uart/hw_profiler.c:16:49: error: unknown type name 'profile_phase_t'
+   16 | void profiler_stop_phase(block_profile_t *prof, profile_phase_t phase)
+      |                                                 ^~~~~~~~~~~~~~~
+firmware/zc702_uart/hw_profiler.c:32:30: error: unknown type name 'block_profile_t'
+   32 | void profiler_finalize_block(block_profile_t *prof, uint32_t cpu_freq_mhz)
+      |                              ^~~~~~~~~~~~~~~
+firmware/zc702_uart/hw_profiler.c:32:53: error: unknown type name 'uint32_t'
+   32 | void profiler_finalize_block(block_profile_t *prof, uint32_t cpu_freq_mhz)
+      |                                                     ^~~~~~~~
+In file included from firmware/zc702_uart/hw_profiler.c:1:
+firmware/zc702_uart/hw_profiler.h:55:13: error: 'hp_wait_end' defined but not used [-Werror=unused-function]
+   55 | static void hp_wait_end(void) {if (hp_waiting) {hp_add(HP_FAIL_TO_REVEAL,hp_wait_start);hp_waiting=0;}}
+      |             ^~~~~~~~~~~
+firmware/zc702_uart/hw_profiler.h:54:13: error: 'hp_wait_begin' defined but not used [-Werror=unused-function]
+   54 | static void hp_wait_begin(void) {if (hp_enabled) {hp_wait_start=hp_mark();hp_waiting=1;}}
+      |             ^~~~~~~~~~~~~
+firmware/zc702_uart/hw_profiler.h:43:13: error: 'hp_begin_frame' defined but not used [-Werror=unused-function]
+   43 | static void hp_begin_frame(void)
+      |             ^~~~~~~~~~~~~~
+firmware/zc702_uart/hw_profiler.h:19:63: error: 'hp_read_ticks' defined but not used [-Werror=unused-variable]
+   19 | static uint32_t hp_enabled,hp_seen,hp_cal_ticks,hp_cal_cycles,hp_read_ticks;
+      |                                                               ^~~~~~~~~~~~~
+firmware/zc702_uart/hw_profiler.h:19:49: error: 'hp_cal_cycles' defined but not used [-Werror=unused-variable]
+   19 | static uint32_t hp_enabled,hp_seen,hp_cal_ticks,hp_cal_cycles,hp_read_ticks;
+      |                                                 ^~~~~~~~~~~~~
+firmware/zc702_uart/hw_profiler.h:19:36: error: 'hp_cal_ticks' defined but not used [-Werror=unused-variable]
+   19 | static uint32_t hp_enabled,hp_seen,hp_cal_ticks,hp_cal_cycles,hp_read_ticks;
+      |                                    ^~~~~~~~~~~~
+firmware/zc702_uart/hw_profiler.h:19:28: error: 'hp_seen' defined but not used [-Werror=unused-variable]
+   19 | static uint32_t hp_enabled,hp_seen,hp_cal_ticks,hp_cal_cycles,hp_read_ticks;
+      |                            ^~~~~~~
+firmware/zc702_uart/hw_profiler.h:18:30: error: 'hp_history' defined but not used [-Werror=unused-variable]
+   18 | static hp_snapshot_t hp_work,hp_history[HP_HISTORY];
+      |                              ^~~~~~~~~~
+cc1.exe: all warnings being treated as errors

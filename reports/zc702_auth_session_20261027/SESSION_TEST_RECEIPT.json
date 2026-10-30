@@ -1,0 +1,82 @@
+{
+  "status": "HOST_SESSION_REGRESSION_AND_ARM_COMPILE_PASS",
+  "commands": [
+    {
+      "name": "host_compile",
+      "argv": [
+        "C:/msys64/mingw64/bin/gcc.exe",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\syn\\zc702\\tests\\auth_session_test.c",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\firmware\\zc702_uart\\auth_session.c",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\firmware\\crypto\\siphash.c",
+        "-o",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_auth_session_20261027\\session_tests.exe"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "host_tests",
+      "argv": [
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_auth_session_20261027\\session_tests.exe"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "arm_session",
+      "argv": [
+        "D:/Xilinx/Vitis/2020.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe",
+        "-std=c11",
+        "-mcpu=cortex-a9",
+        "-mfpu=vfpv3",
+        "-mfloat-abi=hard",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-c",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\firmware\\zc702_uart\\auth_session.c",
+        "-o",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_auth_session_20261027\\session_arm.o"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "arm_siphash",
+      "argv": [
+        "D:/Xilinx/Vitis/2020.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe",
+        "-std=c11",
+        "-mcpu=cortex-a9",
+        "-mfpu=vfpv3",
+        "-mfloat-abi=hard",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-c",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\firmware\\crypto\\siphash.c",
+        "-o",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_auth_session_20261027\\siphash_arm.o"
+      ],
+      "returncode": 0
+    }
+  ],
+  "source_sha256": {
+    "firmware/zc702_uart/auth_session.c": "82b23ae842434a56632adb8ec1b3eeda437e08fe09fa39e92a7b8f4359351048",
+    "firmware/zc702_uart/auth_session.h": "9a0be5dba2195ab7d3bd845ae72237b8b85d5cd2a0eecd6991630d92107f452f",
+    "firmware/crypto/siphash.c": "94b6c1f3a24072a8a5afc4fea7fb9e95c5fc2e99657b6b712d991029ffdaa88c",
+    "firmware/crypto/siphash.h": "30d4269093e5886cb9e7ea826899ef02daddac682e73c335c53dd748b9e20bfb",
+    "firmware/crypto/SOURCE.json": "9e15c5d1c9cb96e193215fce1660ba955e529898e802f2b8d326972004eb6028",
+    "syn/zc702/tests/auth_session_test.c": "7932fc5cbcb58f2ce0fe3c868c50b380490614a44f7daccd73ef18534dc6e617",
+    "syn/zc702/test_auth_session.py": "211ff62b6934b726e925670092485d87897c7602fda1fab9003e362568176d91"
+  },
+  "baseline_manifest_verified_files": 27,
+  "hardware_rerun": false,
+  "scope": "Volatile computational session framing only; no trusted handshake, durable anti-rollback or QKD security certification",
+  "known_limitation": "Reprovisioning the old SID/keys after reset can accept old frames; caller must enforce freshness externally",
+  "project_status": "PARTIAL",
+  "host_output": "KNOWN_LIMITATION trusted_reopen_with_old_SID_keys_can_accept_old_frame=1\nAUTH_SESSION_HOST_PASS checks=518 tampered_bytes=104 sizes=9 scope=volatile_session_only\n"
+}

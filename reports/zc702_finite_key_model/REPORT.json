@@ -1,0 +1,18 @@
+{
+  "verified_utc": "20261027T045657Z",
+  "item_id": "PUB03",
+  "title": "Finite-key accumulation model ell(N) and ABORT/split empirical validation",
+  "board_source_run": "20261026T153858Z",
+  "decisions_evaluated": 18,
+  "action_agreement_rate": 1.0,
+  "final_decision": {
+    "predicted_action": "emit",
+    "board_action": "emit",
+    "predicted_ell": 104768,
+    "board_ell": 104768,
+    "accumulated_bits": 1213835,
+    "ell_difference": 0
+  },
+  "emissions_matched": true,
+  "model_accepted": true
+}

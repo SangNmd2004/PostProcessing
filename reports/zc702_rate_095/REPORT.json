@@ -1,0 +1,93 @@
+{
+  "verified_utc": "20261027T072417Z",
+  "item_id": "R02",
+  "title": "High rate (~0.95) and low rate (~0.40) LDPC mother codes",
+  "matrix_dimensions": {
+    "rate_095": {
+      "nc": 40,
+      "mb": 2,
+      "zc": 128,
+      "block_length_n": 5120,
+      "syndrome_bits_m": 256,
+      "nominal_rate": 0.95
+    },
+    "rate_040": {
+      "nc": 24,
+      "mb": 14,
+      "zc": 128,
+      "block_length_n": 3072,
+      "syndrome_bits_m": 1792,
+      "nominal_rate": 0.4167
+    }
+  },
+  "efficiency_comparison": [
+    {
+      "qber_pct": 0.1,
+      "binary_entropy_h2": 0.01141,
+      "f_efficiency_r56": 14.613,
+      "f_efficiency_r95": 4.383,
+      "f_reduction": 10.23,
+      "leakage_saved_pct": 70.0
+    },
+    {
+      "qber_pct": 0.2,
+      "binary_entropy_h2": 0.02081,
+      "f_efficiency_r56": 8.009,
+      "f_efficiency_r95": 2.402,
+      "f_reduction": 5.607,
+      "leakage_saved_pct": 70.0
+    },
+    {
+      "qber_pct": 0.3,
+      "binary_entropy_h2": 0.02946,
+      "f_efficiency_r56": 5.658,
+      "f_efficiency_r95": 1.697,
+      "f_reduction": 3.961,
+      "leakage_saved_pct": 70.0
+    },
+    {
+      "qber_pct": 0.4,
+      "binary_entropy_h2": 0.03762,
+      "f_efficiency_r56": 4.431,
+      "f_efficiency_r95": 1.329,
+      "f_reduction": 3.102,
+      "leakage_saved_pct": 70.0
+    },
+    {
+      "qber_pct": 0.5,
+      "binary_entropy_h2": 0.04541,
+      "f_efficiency_r56": 3.671,
+      "f_efficiency_r95": 1.101,
+      "f_reduction": 2.57,
+      "leakage_saved_pct": 70.0
+    },
+    {
+      "qber_pct": 0.7,
+      "binary_entropy_h2": 0.06017,
+      "f_efficiency_r56": 2.77,
+      "f_efficiency_r95": 0.831,
+      "f_reduction": 1.939,
+      "leakage_saved_pct": 70.0
+    },
+    {
+      "qber_pct": 1.0,
+      "binary_entropy_h2": 0.08079,
+      "f_efficiency_r56": 2.063,
+      "f_efficiency_r95": 0.619,
+      "f_reduction": 1.444,
+      "leakage_saved_pct": 70.0
+    }
+  ],
+  "abi_expansion_plan": {
+    "cfg_code_bits": "Expanded from 2 bits [1:0] to 3 bits [2:0]",
+    "code_enum": {
+      "0": "r12 (R=0.50, Mb=12, Nb=24)",
+      "1": "r23 (R=0.67, Mb=8, Nb=24)",
+      "2": "r34 (R=0.75, Mb=6, Nb=24)",
+      "3": "r56 (R=0.83, Mb=4, Nb=24)",
+      "4": "r95 (R=0.95, Mb=2, Nb=40)",
+      "5": "r40 (R=0.42, Mb=14, Nb=24)"
+    },
+    "hardware_impact": "Increases column count register to 6 bits, syndrome buffer to 56 words for r40, distributed RAM table expansion"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "trials": 256,
+  "discard": 0,
+  "wrong_codeword_ground_truth": 0,
+  "success": 256,
+  "FER": 0.0,
+  "FER_Wilson_two_sided_95": [
+    0,
+    0.01478385642587143
+  ],
+  "zero_failure_exact_one_sided_95_upper": 0.011633876163163283,
+  "hardware_errors_in_completed_batches": 0,
+  "tag_rejections": "NOT_TESTED",
+  "scope": "synthetic IID BSC; one code/QBER stratum"
+}

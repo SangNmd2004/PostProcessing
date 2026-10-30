@@ -1,0 +1,33 @@
+{
+  "review_scope": "Read-only deployment review; no UART/JTAG; no modifications to canonical sources or trackers",
+  "status_counts": {
+    "PASS_FUNCTIONAL_BOARD": 13,
+    "PARTIAL": 20,
+    "TODO_RESEARCH": 1,
+    "TODO": 1
+  },
+  "tested_source_sha256": {
+    "firmware/zc702_uart/auth_channel.c": "d963b417d6152f156dd4839891349fe05a04f47e7d20eede10b14a09fc61e1e9",
+    "firmware/zc702_uart/auth_channel.h": "790efaf34c067ce615aeda32d45485b96ed31a47fedbbd8a8df8584e3301a59f",
+    "firmware/zc702_uart/session_persistence.c": "885d907518c9c9e9b241a7fa094ca73c6a59b345be059bc61e8e1421e8552349",
+    "firmware/zc702_uart/session_persistence.h": "9ce389db54eada81da0395760fef0a5019e5a7bbb68086bee644793f55e3f1e9",
+    "firmware/zc702_uart/event_scheduler.c": "2c3c348e490827aa056a5c37ad1efc42ebeaa1dc9fe58c7037fa392f1b20738d",
+    "firmware/zc702_uart/event_scheduler.h": "bebdc817523b8a6aaf1020047ee699aeee911e3d1261396bd15ef90c21f3cb19",
+    "firmware/zc702_uart/hw_profiler.c": "fa9ec32f627c749126e3e699b4ee94a0dbf5ddc3e0e545f69bf75427552066b7",
+    "firmware/zc702_uart/arm_pmu_profiler.h": "45b08a349b06bc9e0bf7fcaf1edcea79336b5d1930bb60e4759b880262a2f11b",
+    "model/test_syndrome_encoder.py": "cce8dfc71b2bc442e1296cb369af0887af332c7ed3335d263cc64b17a9c98245",
+    "model/ldpc_rate_095_matrix.py": "ba1d6439a11e7054df2193f76137e7dc4ba2ec37b304a31205a6e57d75f384bf",
+    "model/pa_ntt_model.py": "97b7250f876d348622ad81301e1e7cc5c712e37ea033b0abd794d4e2a4290645",
+    "syn/zc702/prepare_research_tasks.py": "eaf4ff25b8966d0bab680cea4c5c17cc8f22f3ee9747fe34e47568b374771c0a"
+  },
+  "reference_sources": {
+    "siphash.c": "https://raw.githubusercontent.com/veorq/SipHash/master/siphash.c",
+    "siphash.h": "https://raw.githubusercontent.com/veorq/SipHash/master/siphash.h"
+  },
+  "reference_sha256": {
+    "siphash.c": "94b6c1f3a24072a8a5afc4fea7fb9e95c5fc2e99657b6b712d991029ffdaa88c",
+    "siphash.h": "30d4269093e5886cb9e7ea826899ef02daddac682e73c335c53dd748b9e20bfb"
+  },
+  "cortex_a9_profiler_compile_returncode": 0,
+  "all_14_original_findings_fully_closed": false
+}

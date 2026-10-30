@@ -1,0 +1,45 @@
+{
+  "verified_utc": "20261027T045353Z",
+  "item_id": "P02",
+  "title": "PE sample leakage removal and exact error counting",
+  "overall": "PASS",
+  "files": {
+    "pe_accounting.c": "fc27d509c1c104e29917abeaaf8a16ededf7e04a0f04b02fd204dde061b65027",
+    "pe_accounting.h": "e4b370c18c621f89c3eb68256b915a0b0d6bc0cd255514c7ddbb6f33342c5988"
+  },
+  "modes_verified": {
+    "mode_a_independent_x_basis": {
+      "description": "PE sampled from independent X basis pulses; 0 disclosed Z-key bits",
+      "disclosed_key_bits": 0,
+      "charged_pe_leakage": 0,
+      "pa_input_length_bits": 2765,
+      "status": "PASS"
+    },
+    "mode_b1_z_basis_physical_removal": {
+      "description": "256 PE bits excised from Z-basis prior to PA compression",
+      "raw_reconciled_bits": 2765,
+      "excised_pe_bits": 256,
+      "compacted_pa_input_bits": 2509,
+      "charged_pe_leakage": 0,
+      "bitwise_compaction_verified": true,
+      "status": "PASS"
+    },
+    "mode_b2_z_basis_leakage_inflation": {
+      "description": "256 PE bits retained in PA input; leak_EC inflated by 256 bits",
+      "raw_reconciled_bits": 2765,
+      "charged_pe_leakage": 256,
+      "pa_input_length_bits": 2765,
+      "status": "PASS"
+    }
+  },
+  "statistical_fluctuation_analysis": {
+    "n_test": 2600,
+    "n_key": 2600,
+    "observed_errors": 31,
+    "observed_qber": 0.011923076923076923,
+    "epsilon_pe": 1e-10,
+    "fluctuation_delta": 0.09410683562587555,
+    "upper_bound_phase_error": 0.10602991254895247,
+    "status": "VALIDATED"
+  }
+}

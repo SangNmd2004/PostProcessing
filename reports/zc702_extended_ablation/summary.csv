@@ -1,0 +1,7 @@
+﻿layer,name,short_name,trials,success,discard,wrong,fer,mean_attempts,mean_f_ir,ddr_throughput_mbps,relative_speedup,leakage_reduction_pct,verification_tier,scope
+1,Baseline Blind (OMS Random),OMS_random,1000,998,2,0,0.002,1.727,1.4434152677496834,8.63086878872517,1.0,0.0,BOARD_VERIFIED_FOUR_STAGE,ZC702 PL Hardware (50 MHz) · Single Context · No ET/PP
+2,+GS Puncturing (Degree-matched),OMS_GS,1000,999,0,1,0.001,1.203,1.3713895038508743,18.346894178910173,2.125729706710107,4.989954416312838,BOARD_VERIFIED_FOUR_STAGE,ZC702 PL Hardware (50 MHz) · Single Context · Degree-matched GS
+3,+NMS-0.75 Decode Processing,NMS_GS,1000,999,0,1,0.001,1.146,1.3637564636364359,24.17605356439543,2.801114714659725,5.518772448447037,BOARD_VERIFIED_FOUR_STAGE,ZC702 PL Hardware (50 MHz) · Single Context · NMS-0.75
+4,+ET & PP (Early Term + Post-Proc),NMS_GS_ET_PP,1000,999,0,1,0.001,1.155,1.3649524207962587,27.476723366159355,3.183540850725623,5.435916378780591,BOARD_VERIFIED_FOUR_STAGE,"ZC702 PL Hardware (50 MHz) · Single Context · ET=12, PP=(1,2,16)"
+5,+Adaptive Backlog Switching (Analytical Projection),ADAPTIVE_SWITCH_MODEL,,,,,,,,37.28591360787824,4.32006493443467,5.64,ANALYTICAL_MODEL_PROJECTION,Analytical Projection · Queue Simulation Gain (+35.7%) · Not Measured Board Trials
+6,+4-Context RTT Hiding Architecture (Analytical Projection),4_CONTEXT_RTT_HIDE_MODEL,,,,,,,,121.17921922560429,14.040211036912677,5.64,ANALYTICAL_MODEL_PROJECTION,Analytical Projection · DDR RTT Model (3.250x) · Not Measured Board Trials

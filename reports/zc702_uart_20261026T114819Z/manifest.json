@@ -1,0 +1,10 @@
+{
+  "source_result_sha256": "75d5cf3a716628ffb5e2538b471da06094c6f4d06f5e04168a580a97f141944c",
+  "block_rows": 243,
+  "summary_rows": 44,
+  "files": {
+    "chi_tiet_block.csv": "6fe77415cc6f262413380f7f06105a0a490d17c60011b9778bc6eabe175a5717",
+    "tong_hop.csv": "f05342c86f787ca2edf4f3e5aee79775a576d1cce5b9453ad6a08b1143112a63",
+    "README.md": "05291b1c8d73d7ad3e0a5c35d532a03794082d5c75d42fbcf68ec7ff1fd82d94"
+  }
+}

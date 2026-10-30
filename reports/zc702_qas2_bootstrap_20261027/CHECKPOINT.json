@@ -1,0 +1,14 @@
+{
+  "scope": "Host bootstrap only; derived-key host C data tests",
+  "baseline_manifest_files_verified": 27,
+  "previous_checkpoint_files_verified": 22,
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "physical_board_rerun": false,
+  "project_status": "PARTIAL",
+  "remaining_gates": [
+    "independent handshake review",
+    "C/ARM HMAC-HKDF and state machine",
+    "trusted PSK provisioning and board entropy",
+    "durable accounting and UART dispatcher"
+  ]
+}

@@ -1,0 +1,2 @@
+# Preserve exact source/fixture/report bytes for SHA-256 evidence replay.
+* -text

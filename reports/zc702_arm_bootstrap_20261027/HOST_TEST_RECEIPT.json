@@ -1,0 +1,25 @@
+{
+  "status": "HOST_C_BOOTSTRAP_PASS",
+  "checks": 1731,
+  "primitive_cases": 180,
+  "completed_c_bob_handshakes": 100,
+  "tampered_c_input_bytes": 174,
+  "source_sha256": {
+    "firmware/crypto/rfc6234/sha224-256.c": "aee77a5962b0da8e84b7d7d14e51cfad6fe5c60318bb28bf354b254675a555dd",
+    "firmware/crypto/qcrypto.c": "ccaed76b9639deffef49a5e140afc1502abe30839512f0de528e8e326b5c7ff1",
+    "firmware/crypto/siphash.c": "94b6c1f3a24072a8a5afc4fea7fb9e95c5fc2e99657b6b712d991029ffdaa88c",
+    "firmware/zc702_uart/auth_session.c": "82b23ae842434a56632adb8ec1b3eeda437e08fe09fa39e92a7b8f4359351048",
+    "firmware/zc702_uart/qas2_bootstrap.c": "ed489139747410f583ce89f89d9037eaae5e76ea67a32416968b81b48990fc02",
+    "syn/zc702/tests/auth_session_bridge.c": "7d486c5d619619aac5003538be41d9fc45fe577200a8a8d430e98770edd47f45",
+    "syn/zc702/tests/bootstrap_bridge.c": "c7a1b6c0c5b0c39a79b642c333b9023bc477927e3a2fa9a17b147d936a3b8288",
+    "firmware/crypto/qcrypto.h": "575e04c242d2c78921120c28f973a41df690ffb0bcc647020a1951c9139a499a",
+    "firmware/crypto/rfc6234/sha.h": "3eed0839e9ddc2c3fc8b960ec5f4f1eb6782c86d78be3c6aa837ce2e57ccc245",
+    "firmware/crypto/rfc6234/sha-private.h": "b4274b917dd0516842d0e47f4614287ab0ef3260518ee7fbbd84526472b6340c",
+    "firmware/zc702_uart/qas2_bootstrap.h": "a40ff678a73edf6686d5b2296c71c0191749799c50b6cb6e76566dcd990e3b7a",
+    "firmware/zc702_uart/auth_session.h": "9a0be5dba2195ab7d3bd845ae72237b8b85d5cd2a0eecd6991630d92107f452f",
+    "syn/zc702/qas2_bootstrap.py": "7ed608527032cf180ef49353efa8e42ee48eda7340094f140eaaa04005525aa3",
+    "syn/zc702/qas2_pc.py": "c324860f741003e19f0cb54dfe23458ee2980d3697e4c1330f5262f79f8b8fd1",
+    "syn/zc702/test_c_bootstrap.py": "35edc333d155593ae183f53375a41d0ea07eb7decc5107ed94108df172a2bfbd"
+  },
+  "scope": "Real C crypto and Bob state machine on PC; not physical board proof"
+}

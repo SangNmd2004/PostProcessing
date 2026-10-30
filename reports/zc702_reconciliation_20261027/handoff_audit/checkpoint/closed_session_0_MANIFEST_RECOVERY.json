@@ -1,0 +1,15 @@
+{
+  "recovered_at_utc": "2026-10-27T03:57:30.421343+00:00",
+  "session": "build/zc702/fer_runs/20261027T032458Z/sessions/20261027T032458Z",
+  "source": "Stored packets plus UART ACCEPT/final ACK/response and existing FER journal records",
+  "metadata_reconstructed_after_abrupt_process_termination": true,
+  "new_hardware_execution": false,
+  "packet_count": 1300,
+  "verified_trials": 1040,
+  "first_trial_id": 0,
+  "last_trial_id_exclusive": 1040,
+  "source_uart_sha256": "07f6466779153d6c769563ee4e44134cf037360f94a49c187081948cee9f8ee9",
+  "source_xsct_sha256": "e95f65fc3ce0fecc22e68cc9ea1fa750eb6a5a364fbf32772d1f8689de03f271",
+  "limits": "CRC32 is recomputed from stored payload, not an independently captured original wire header; no missing ACK/receipt accepted",
+  "recovered_manifest_sha256": "4e735347a3b6e4b54a60d2db24ec92e2f9a5fa8e3c62a78b752a2605151bb7c9"
+}

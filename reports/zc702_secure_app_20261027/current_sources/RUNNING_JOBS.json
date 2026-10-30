@@ -1,0 +1,9 @@
+{
+  "status": "VERIFIED_COMPLETE",
+  "script": "syn/zc702/run_secure_app_board.py",
+  "run_directory": "build/zc702/secure_app_runs/20261027T103117Z",
+  "port": "COM3",
+  "port_released": true,
+  "baseline_restored": true,
+  "report": "reports/zc702_secure_app_20261027T103117Z/verified_evidence.json"
+}

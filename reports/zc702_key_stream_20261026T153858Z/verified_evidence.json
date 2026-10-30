@@ -1,0 +1,25 @@
+{
+  "raw_replay_verified": true,
+  "packets": 2543,
+  "verified_blocks": 439,
+  "emissions": [
+    {
+      "input_bits": 1213835,
+      "output_bits": 104768,
+      "split": 0,
+      "tail_bits": 0,
+      "passes": 103,
+      "all_words_match": true,
+      "output_sha256": "096bf9e7f8c4ab9375d2c9bdcac18a4eb31facf4f54aaa3689837edbfddc839f"
+    }
+  ],
+  "checks": 4,
+  "negative_transcript_reused_blocks": 0,
+  "security_certified": false,
+  "source_hashes": {
+    "result.json": "05c723e2d63bf5b3a6dca7afbb9b7f03ca2897b6d718f37a1afab4eedc5c306e",
+    "uart.log": "ed7a1a775bef242f21e923a82626dc0ab92afcebac7edc33c9a92fa6a0c9fa38",
+    "tx_manifest.json": "deaebbde906bff00ae21a626585582c98a1501259146e4a4a2cefaa46e5ed132",
+    "firmware_manifest.json": "d106425bcadd2cc80e9df5fe5a1fd87314114cc60369d78ebffe9edee859e958"
+  }
+}

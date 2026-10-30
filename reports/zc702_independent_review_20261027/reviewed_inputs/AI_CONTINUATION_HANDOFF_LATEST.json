@@ -1,0 +1,10 @@
+{
+  "status": "VERIFIED_CHECKPOINT_DELTA",
+  "bundle": "artifacts/ZC702_AI_CONTINUATION_20261027T063356Z",
+  "start_here": "artifacts/ZC702_AI_CONTINUATION_20261027T063356Z/00_START_HERE.md",
+  "audit": "artifacts/ZC702_AI_CONTINUATION_20261027T063356Z/audit/AUDIT.json",
+  "files_verified": 265,
+  "manifest_sha256": "26d3913ae082fcd47f7daf1947d6da3b5f65d141a12fa8a6715fca70c4d9cd20",
+  "physical_board_rerun": false,
+  "active_fer_snapshot_records": 10000
+}

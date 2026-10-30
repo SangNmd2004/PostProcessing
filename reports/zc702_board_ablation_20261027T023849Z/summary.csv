@@ -1,0 +1,5 @@
+﻿configuration,trials,success,discard,wrong_codeword,FER,FER_Wilson95_low,FER_Wilson95_high,mean_attempts_all,mean_f_ir_success,DDR_IR_elapsed_us,DDR_IR_corrected_Mbit_s,PL_decode_active_us,scope
+OMS_random,8,8,0,0,0.0,0,0.32440756488388023,1.625,1.43813029845998,2356,9.388794567062819,2030.2,K1 DDR batches of four; includes PS/DMA/golden checks; no UART/tag/PA inside timing
+OMS_GS,8,8,0,0,0.0,0,0.32440756488388023,1.125,1.3672243778853315,1072,20.634328358208954,864.54,K1 DDR batches of four; includes PS/DMA/golden checks; no UART/tag/PA inside timing
+NMS_GS,8,8,0,0,0.0,0,0.32440756488388023,1.125,1.3672243778853315,843,26.23962040332147,632.44,K1 DDR batches of four; includes PS/DMA/golden checks; no UART/tag/PA inside timing
+NMS_GS_ET_PP,8,8,0,0,0.0,0,0.32440756488388023,1.125,1.3672243778853315,744,29.731182795698924,535.38,K1 DDR batches of four; includes PS/DMA/golden checks; no UART/tag/PA inside timing

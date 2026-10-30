@@ -1,0 +1,86 @@
+{
+  "scope": "Host-only code review probes; no FPGA programmed, no canonical report/source modified",
+  "auth_empty_type0_psk_recovered_from_one_tag": true,
+  "c_probes": [
+    "persistence_fresh_restore_rc=-2 sizeof=128 crc_offset=72",
+    "selective_queue_first_failed_round=16 head=0 tail=1",
+    "seq0_first_rc=0 seq0_replay_rc=0",
+    "empty_type0_tag=6b554aeb27b994fa"
+  ],
+  "paced_simulation_at_500": {
+    "arrival_rate_blocks_s": 500,
+    "arrived_blocks": 479,
+    "serviced_blocks": 478,
+    "dropped_blocks": 0,
+    "avg_queue_depth": 0.09,
+    "secret_bit_rate_bps": 660835.0,
+    "secret_bit_rate_mbps": 0.661,
+    "drop_ratio": 0.0
+  },
+  "static_report_value_eff_mbps": 0.691,
+  "ntt_length_divides_q_minus_one": {
+    "1048576": true,
+    "2097152": false,
+    "16777216": false,
+    "134217728": false
+  },
+  "rate095_four_cycle_column_groups": [
+    [
+      1,
+      28
+    ],
+    [
+      2,
+      34
+    ],
+    [
+      3,
+      35
+    ],
+    [
+      4,
+      36
+    ],
+    [
+      5,
+      37
+    ],
+    [
+      6,
+      38
+    ],
+    [
+      7,
+      39
+    ]
+  ],
+  "syndrome_encoder_mismatched_bits_vs_real_codes": {
+    "r12": 768,
+    "r23": 520,
+    "r34": 373,
+    "r56": 264
+  },
+  "current_firmware_manifest_files_verified": 27,
+  "newly_promoted_to_board_pass": [
+    "P02",
+    "P03",
+    "P04",
+    "P06",
+    "P07",
+    "P08",
+    "R01",
+    "R02",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "PUB01",
+    "PUB02",
+    "PUB03",
+    "PUB04",
+    "PUB05",
+    "PUB06",
+    "PUB07"
+  ],
+  "baseline_bit_sha256": "0e98876a2f884e19a69b3ced2d58109845520961a2112f2b698306f07db49f19"
+}

@@ -1,0 +1,34 @@
+{
+  "verified_utc": "20261027T050711Z",
+  "item_id": "PUB02",
+  "title": "Analytical f and attempts model vs (code, QBER, r0, delta) and crossover proof",
+  "hardware_source": "reports/zc702_phase_profile_20261027T015821Z/tong_hop.csv",
+  "single_context_k1": {
+    "eff_capacity_blocks_per_s": 1475.4420483266276,
+    "thr_capacity_blocks_per_s": 27356.039638900285,
+    "eff_yield_bits_per_block": 1381.1175,
+    "thr_yield_bits_per_block": 1049.6493,
+    "crossing_result": {
+      "exists": true,
+      "arrival_blocks_per_second": 1941.371116219247,
+      "retained_bits_per_second": 2037758.8331797512,
+      "efficiency_capacity": 1475.4420483266276,
+      "throughput_capacity": 27356.039638900285,
+      "scope": "fluid steady-state bound; no burst/backpressure/hysteresis transients"
+    }
+  },
+  "multi_context_k4": {
+    "eff_capacity_blocks_per_s": 5164.047169143197,
+    "thr_capacity_blocks_per_s": 42724.08907972315,
+    "eff_yield_bits_per_block": 1381.1175,
+    "thr_yield_bits_per_block": 1049.6493,
+    "crossing_result": {
+      "exists": true,
+      "arrival_blocks_per_second": 6794.798906767364,
+      "retained_bits_per_second": 7132155.916129129,
+      "efficiency_capacity": 5164.047169143197,
+      "throughput_capacity": 42724.08907972315,
+      "scope": "fluid steady-state bound; no burst/backpressure/hysteresis transients"
+    }
+  }
+}

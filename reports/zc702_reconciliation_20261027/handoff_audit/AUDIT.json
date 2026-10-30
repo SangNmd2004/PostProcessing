@@ -1,0 +1,155 @@
+{
+  "verified_at": "2026-10-27T14:28:34.902957+07:00",
+  "overall": "PASS",
+  "checks": [
+    {
+      "check": "capture_live_controller_state",
+      "status": "PASS",
+      "detail": "Four separately timestamped live-state snapshots; not a global atomic snapshot"
+    },
+    {
+      "check": "baseline_bit_xsa_firmware_hashes",
+      "status": "PASS",
+      "detail": {
+        "baseline_clock_mhz": 50,
+        "firmware_files_verified": 27,
+        "physical_board_rerun": false
+      }
+    },
+    {
+      "check": "frozen_plan_and_source_guards",
+      "status": "PASS",
+      "detail": {
+        "main_plan_and_leaf_sources_unchanged": true,
+        "followup_sources_and_model_unchanged": true
+      }
+    },
+    {
+      "check": "completed_research_raw_proof_hashes",
+      "status": "PASS",
+      "detail": [
+        {
+          "kind": "fer",
+          "run_id": "20261026T155727Z",
+          "raw_sha256": "f70c177e1077553cdf1343a75645a60c60c013f5248bff94491849eb1c4481c5"
+        },
+        {
+          "kind": "fer",
+          "run_id": "20261026T160301Z",
+          "raw_sha256": "b4169af42ba462821df5c90322c918d887c2638b8c93ad1d7b52f292df1cc2bc"
+        },
+        {
+          "kind": "fer",
+          "run_id": "20261026T160934Z",
+          "raw_sha256": "8db987f4d83fe562b3831b8f91b35c530eac75fb7e6c762d98efb86e05620993"
+        },
+        {
+          "kind": "fer",
+          "run_id": "20261027T030546Z",
+          "raw_sha256": "7dec8d1630fb8a621a2026364bb24f995fd52b5be6819edfe1bfc6850ba7a6f9"
+        },
+        {
+          "kind": "fer",
+          "run_id": "20261027T030919Z",
+          "raw_sha256": "090868372a7fe8525ff5c6658bb7be26ef4ad1194837bdfdff509f88f2562a72"
+        },
+        {
+          "kind": "fer",
+          "run_id": "20261027T031549Z",
+          "raw_sha256": "82196692bf21b5dca3bd261f4fd284c784c7052414b919580d674ed0882a8c10"
+        },
+        {
+          "kind": "fer",
+          "run_id": "20261027T031934Z",
+          "raw_sha256": "8f565f72ff327972b8fb9f58b497b68d823dcc35367695d8f311a34d680d006a"
+        },
+        {
+          "kind": "fer",
+          "run_id": "20261027T032458Z",
+          "raw_sha256": "a20c8fa54ed0cc3b4f257e39dee8dd51cabb0c6d3b85b9760dd3eeb7a90634d0"
+        },
+        {
+          "kind": "board_ablation",
+          "run_id": "20261027T023849Z",
+          "raw_sha256": "cd61b0cb16e2e38439fdaf9358724549429a085cd1b19b33e8990e4bb4579df7"
+        },
+        {
+          "kind": "board_ablation",
+          "run_id": "20261027T024201Z",
+          "raw_sha256": "835e17eb61683525754f0c40cb206356b3b3697e8522bf107a3e72b359e9de6b"
+        },
+        {
+          "kind": "wrong_codeword",
+          "run_id": "20261027T044256Z",
+          "raw_sha256": "2ca91a08a0ac458e193652d3d7729bc152496a0984417b1505fabcfcd04954a7"
+        },
+        {
+          "kind": "schedule_validation",
+          "run_id": "20261027T044317Z",
+          "raw_sha256": "3402f974dcdf18c6bc469d69d2b352c208714fffbfc8a1ec944bbd72389f8d13"
+        }
+      ]
+    },
+    {
+      "check": "active_fer_seed_records_journal",
+      "status": "PASS",
+      "detail": {
+        "records": 10000,
+        "planned": 10000,
+        "complete": true,
+        "unique_seeds": true,
+        "contiguous_trial_ids": true,
+        "journal_prefix_matches": true,
+        "independent_raw_postverification": "SEE_COMPLETED_PROOF_CHECK",
+        "closed_sessions_with_manifests": 2,
+        "manifest_recoveries": [
+          {
+            "recovered_at_utc": "2026-10-27T03:57:30.421343+00:00",
+            "session": "build/zc702/fer_runs/20261027T032458Z/sessions/20261027T032458Z",
+            "source": "Stored packets plus UART ACCEPT/final ACK/response and existing FER journal records",
+            "metadata_reconstructed_after_abrupt_process_termination": true,
+            "new_hardware_execution": false,
+            "packet_count": 1300,
+            "verified_trials": 1040,
+            "first_trial_id": 0,
+            "last_trial_id_exclusive": 1040,
+            "source_uart_sha256": "07f6466779153d6c769563ee4e44134cf037360f94a49c187081948cee9f8ee9",
+            "source_xsct_sha256": "e95f65fc3ce0fecc22e68cc9ea1fa750eb6a5a364fbf32772d1f8689de03f271",
+            "limits": "CRC32 is recomputed from stored payload, not an independently captured original wire header; no missing ACK/receipt accepted",
+            "recovered_manifest_sha256": "4e735347a3b6e4b54a60d2db24ec92e2f9a5fa8e3c62a78b752a2605151bb7c9"
+          }
+        ],
+        "outcomes": {
+          "SUCCESS": 9996,
+          "DISCARD": 4
+        },
+        "raw_result_sha256": "a20c8fa54ed0cc3b4f257e39dee8dd51cabb0c6d3b85b9760dd3eeb7a90634d0",
+        "journal_scope": "Only prefix covered by captured result; live tail deliberately excluded"
+      }
+    },
+    {
+      "check": "work_item_ids_paths_and_claim_boundaries",
+      "status": "PASS",
+      "detail": {
+        "total": 35,
+        "status_counts": {
+          "PASS_FUNCTIONAL_BOARD": 13,
+          "PARTIAL": 20,
+          "TODO_RESEARCH": 1,
+          "TODO": 1
+        },
+        "core_claim_boundaries_preserved": true,
+        "uncreated_planned_targets": []
+      }
+    },
+    {
+      "check": "live_process_identity_and_no_current_controller_error",
+      "status": "PASS",
+      "detail": {
+        "process_identity_receipts": [],
+        "scope": "CIM process identity and controller declarations; not an OS handle-level exclusive-port audit"
+      }
+    }
+  ],
+  "scope": "Checkpoint/integrity/progress audit only; no new hardware run and no protocol-security certification"
+}

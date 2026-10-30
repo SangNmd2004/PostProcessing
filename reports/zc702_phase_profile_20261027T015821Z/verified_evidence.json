@@ -1,0 +1,16 @@
+{
+  "raw_replay_verified": true,
+  "repeated_blocks": 36,
+  "command_snapshots": 288,
+  "phase_rows": 1908,
+  "packets_verified": 649,
+  "all_KEY_and_PA_words_match": true,
+  "PMU_vs_global_timer_consistency": true,
+  "scope": "K1 repeated public UART workload; PMU is PS CPU cycles; PL counter separate; not FER or secret-key throughput",
+  "source_hashes": {
+    "result.json": "0de764770cef78f01215491670af1e2c5ca50e0c631cd0a816d9a0aa4d0b4f0b",
+    "uart.log": "cc79e9e5675a4c10f2ca37d9b81eafd657c5fc0cf7746b1a96bcd70e63a34b14",
+    "tx_manifest.json": "9c0149228c0695bf4752f2b10fc52bb5ec688a000311bac031968cf42c4958a5",
+    "host_timings.json": "ec5de18c5aaca353646b34eda469069e44f7983774977779e0f03399b09cc195"
+  }
+}

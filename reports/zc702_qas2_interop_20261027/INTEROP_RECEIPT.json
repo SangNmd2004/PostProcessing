@@ -1,0 +1,81 @@
+{
+  "status": "HOST_PYTHON_C_INTEROP_PASS",
+  "checks": 21951,
+  "categories": {
+    "known_answers": 2,
+    "primitive_reference": 600,
+    "wire_equality": 1024,
+    "bidirectional_receive": 1024,
+    "tamper_differential": 104,
+    "rejection_state": 104,
+    "replay": 2,
+    "reset_closed": 1,
+    "cross_session": 1,
+    "reflection": 1,
+    "failed_tag_budget": 4,
+    "known_reprovision_limitation": 1,
+    "bounded_stream_buffer": 19071,
+    "stream_chunking": 5,
+    "partial_stream": 2,
+    "malformed_length": 1,
+    "provision_argument_types": 4
+  },
+  "primitive_reference_cases": 300,
+  "bit_exact_bidirectional_frames": 1024,
+  "tampered_frame_bytes": 104,
+  "maximum_observed_partial_buffer_bytes": 16423,
+  "source_sha256": {
+    "syn/zc702/qas2_pc.py": "c324860f741003e19f0cb54dfe23458ee2980d3697e4c1330f5262f79f8b8fd1",
+    "syn/zc702/test_qas2_interop.py": "be2aaf8b103719e169b932e4cd56c5172e798af702bad7e12a97f5fe23e99765",
+    "syn/zc702/tests/auth_session_bridge.c": "7d486c5d619619aac5003538be41d9fc45fe577200a8a8d430e98770edd47f45",
+    "firmware/zc702_uart/auth_session.c": "82b23ae842434a56632adb8ec1b3eeda437e08fe09fa39e92a7b8f4359351048",
+    "firmware/zc702_uart/auth_session.h": "9a0be5dba2195ab7d3bd845ae72237b8b85d5cd2a0eecd6991630d92107f452f",
+    "firmware/crypto/siphash.c": "94b6c1f3a24072a8a5afc4fea7fb9e95c5fc2e99657b6b712d991029ffdaa88c",
+    "firmware/crypto/siphash.h": "30d4269093e5886cb9e7ea826899ef02daddac682e73c335c53dd748b9e20bfb"
+  },
+  "fixture_seed": 2026102701,
+  "fixtures": [
+    {
+      "file": "fixture_00.bin",
+      "bytes": 40,
+      "sha256": "2d5dcdcb73d628592c833e7d4e94d73f2d38de23a3296c5c8e2b4361b2d4eef1",
+      "scope": "Public deterministic host-only fixture"
+    },
+    {
+      "file": "fixture_01.bin",
+      "bytes": 40,
+      "sha256": "647cff83ca8b05e847ae691f8a2af1ed5dffadbedee93e269677192a2b565bb1",
+      "scope": "Public deterministic host-only fixture"
+    },
+    {
+      "file": "fixture_02.bin",
+      "bytes": 41,
+      "sha256": "c2b0c89c152009c3f1d7b210b119da2f21d65a8f5c2d48ff58b5506975e70047",
+      "scope": "Public deterministic host-only fixture"
+    },
+    {
+      "file": "fixture_03.bin",
+      "bytes": 41,
+      "sha256": "aa8b4060bc84c55efc826c242165b7820e9c30abb9c995d958b8ced8a22fa4a5",
+      "scope": "Public deterministic host-only fixture"
+    }
+  ],
+  "compiler_command": [
+    "C:/msys64/mingw64/bin/gcc.exe",
+    "-std=c11",
+    "-shared",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\syn\\zc702\\tests\\auth_session_bridge.c",
+    "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\firmware\\zc702_uart\\auth_session.c",
+    "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\firmware\\crypto\\siphash.c",
+    "-o",
+    "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_qas2_interop_20261027\\qas2_bridge.dll"
+  ],
+  "hardware_capture": false,
+  "scope": "PC simulation and real host C library; no UART/ARM execution/handshake/durable state",
+  "known_limitation": "Reopening old SID and keys after reset can permit replay",
+  "project_status": "PARTIAL"
+}

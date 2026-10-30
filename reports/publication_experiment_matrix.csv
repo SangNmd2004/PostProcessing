@@ -1,0 +1,47 @@
+﻿stage,contexts,rtt_us,policy,qber_pct,independent_blocks,status,transport,dependency
+pilot_timing,1,0,efficiency,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,1,0,throughput,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,1,0,adaptive,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,1,100,efficiency,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,1,100,throughput,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,1,100,adaptive,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,1,1000,efficiency,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,1,1000,throughput,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,1,1000,adaptive,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,1,10000,efficiency,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,1,10000,throughput,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,1,10000,adaptive,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,2,0,efficiency,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,2,0,throughput,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,2,0,adaptive,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,2,100,efficiency,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,2,100,throughput,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,2,100,adaptive,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,2,1000,efficiency,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,2,1000,throughput,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,2,1000,adaptive,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,2,10000,efficiency,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,2,10000,throughput,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,2,10000,adaptive,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,4,0,efficiency,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,4,0,throughput,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,4,0,adaptive,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,4,100,efficiency,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,4,100,throughput,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,4,100,adaptive,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,4,1000,efficiency,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,4,1000,throughput,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,4,1000,adaptive,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,4,10000,efficiency,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,4,10000,throughput,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+pilot_timing,4,10000,adaptive,2,100,PLANNED_NOT_RUN,DDR replay for compute; separate UART end-to-end,P1 + measured event scheduler; public seed and raw traces saved
+FER_after_pilot,1,100,efficiency,1,10000,PLANNED_NOT_RUN,Resumeable finite dataset; no duplicated/overlapping trials,Pilot validated + explicit FER definitions and independent seeds
+FER_after_pilot,1,100,throughput,1,10000,PLANNED_NOT_RUN,Resumeable finite dataset; no duplicated/overlapping trials,Pilot validated + explicit FER definitions and independent seeds
+FER_after_pilot,1,100,efficiency,2,10000,PLANNED_NOT_RUN,Resumeable finite dataset; no duplicated/overlapping trials,Pilot validated + explicit FER definitions and independent seeds
+FER_after_pilot,1,100,throughput,2,10000,PLANNED_NOT_RUN,Resumeable finite dataset; no duplicated/overlapping trials,Pilot validated + explicit FER definitions and independent seeds
+FER_after_pilot,1,100,efficiency,3,10000,PLANNED_NOT_RUN,Resumeable finite dataset; no duplicated/overlapping trials,Pilot validated + explicit FER definitions and independent seeds
+FER_after_pilot,1,100,throughput,3,10000,PLANNED_NOT_RUN,Resumeable finite dataset; no duplicated/overlapping trials,Pilot validated + explicit FER definitions and independent seeds
+FER_after_pilot,1,100,efficiency,5,10000,PLANNED_NOT_RUN,Resumeable finite dataset; no duplicated/overlapping trials,Pilot validated + explicit FER definitions and independent seeds
+FER_after_pilot,1,100,throughput,5,10000,PLANNED_NOT_RUN,Resumeable finite dataset; no duplicated/overlapping trials,Pilot validated + explicit FER definitions and independent seeds
+FER_after_pilot,1,100,efficiency,7,10000,PLANNED_NOT_RUN,Resumeable finite dataset; no duplicated/overlapping trials,Pilot validated + explicit FER definitions and independent seeds
+FER_after_pilot,1,100,throughput,7,10000,PLANNED_NOT_RUN,Resumeable finite dataset; no duplicated/overlapping trials,Pilot validated + explicit FER definitions and independent seeds

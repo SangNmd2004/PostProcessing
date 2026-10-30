@@ -1,0 +1,12 @@
+{
+  "scope": "Review-only; no deployment/source fixes; raw verifier outputs isolated",
+  "original_inputs": {
+    "AI_CONTINUATION_HANDOFF_LATEST.json": "1351c845d2eb357134663e7533436077e50eab65b811f15c76b8829a9e32eda5",
+    "TIEN_DO_TOAN_BO_DU_AN.md": "fbc09c11d8e71fd0d30c3a5b6371570596d8139182a26b53719c1cfe89f92e30",
+    "zc702_claim_evidence.csv": "64b581745dc9542bda1907c66295ddcc71b7f5bb7a3d0f86e10cb0ad1b488511",
+    "zc702_work_items.csv": "51c8699461618b78994c61021099c73ae5c73403f41f4e544e2927554687c6b7"
+  },
+  "raw_replay_receipt": "RAW_REPLAY_RECEIPT.json",
+  "host_probe_receipt": "PROBE_RECEIPT.json",
+  "canonical_trackers_modified_by_review": false
+}

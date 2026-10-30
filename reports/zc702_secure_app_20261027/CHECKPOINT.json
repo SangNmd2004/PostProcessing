@@ -1,0 +1,17 @@
+{
+  "status": "MAC_GATED_PL_IR_PA_FIXTURE_VERIFIED",
+  "raw_run": "build/zc702/secure_app_runs/20261027T103117Z",
+  "source_result_sha256": "5256c197a24696d88d01245c18fcc38a72942693b79cb186c1b5ef22d9174564",
+  "baseline_restored": true,
+  "baseline_files_verified": 27,
+  "previous_checkpoint_files_verified": 46,
+  "scope": "4 golden blocks, per-block PA1024, public lab trust/reset/debug controls; no production security or full finite-key accumulator gate",
+  "remaining_gates": [
+    "trusted provisioning and board nonce source",
+    "authenticated control/error policy without lab bypass",
+    "durable correctness accounting",
+    "authenticated accumulator EMIT/split and multi-context fault tests"
+  ],
+  "metadata_correction": "First raw blocks.input_key_words is a mislabeled PA list; preserved raw, correct hashes reconstructed in blocks.csv; future runner fixed",
+  "dependencies": "Baseline bit/XSA/BSP remain workspace/parent dependencies; delta only"
+}

@@ -1,0 +1,2 @@
+KNOWN_LIMITATION trusted_reopen_with_old_SID_keys_can_accept_old_frame=1
+AUTH_SESSION_HOST_PASS checks=518 tampered_bytes=104 sizes=9 scope=volatile_session_only

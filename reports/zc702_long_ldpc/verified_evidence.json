@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-27T06:32:25.388509+00:00",
+  "hardware_capture": false,
+  "model_co_simulation_verified": true,
+  "delta_f_r23": 0.093,
+  "delta_f_r34": 0.155,
+  "files": {
+    "ldpc_decoder_long.v": "8c21741c29fa28a25068db3cb61ef743a650681187967ebd85fd8c670a7001b4",
+    "ldpc_long_codes.py": "9801b3f20770479a4e42330ffabc281a7029d5b4874bd6d2c0c8e5bd14d92f28",
+    "REPORT.json": "0b8a8211a03f5cffa82fb1811031c657eb7433a874491a6368e55b3ad3ed26b5",
+    "waterfall_summary.csv": "6f0f05846096f4fed8abbc26f0a18beffd433819ae9b71d5441866ccc86f7119"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": "FUNCTIONAL_ARM_UART_FIXTURE_VERIFIED",
+  "raw_run": "build/zc702/bootstrap_board_runs/20261027T101719Z",
+  "raw_result_sha256": "d86310a07ef954e4e6389fe21e79a5e4bfc00eb84cd96a11fc5e725745e1e5f6",
+  "baseline_restored": true,
+  "baseline_manifest_files_verified": 27,
+  "previous_checkpoint_files_verified": 23,
+  "scope": "LAB fixture only; public PSK and host nonce, unprotected reset/provision; not secure production channel, entropy evidence, durable accounting or IR-PA application authentication",
+  "remaining_gates": [
+    "trusted PSK provisioning",
+    "board freshness/entropy",
+    "durable budget and atomic authenticated commit",
+    "production QAS2 dispatcher protecting actual IR/PA commands"
+  ],
+  "dependencies": "Workspace baseline XSA/bit/BSP/libs required for rebuild; this folder is a delta, not a standalone toolchain"
+}

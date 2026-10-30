@@ -1,0 +1,3 @@
+﻿from,to,paired_trials,delta_mean_attempts,approx_95_lower,approx_95_upper,common_success_trials,delta_mean_f_ir_common_success,failures_fixed,failures_introduced,mcnemar_exact_two_sided_p,scope
+OMS_random,OMS_GS,1000,-0.587,-0.6256475785335581,-0.5483524214664418,997,-0.08184973787752055,1,2,1.0,MODEL_ONLY_NOT_BOARD
+OMS_GS,NMS_GS,1000,-0.066,-0.08596353427408922,-0.04603646572591079,997,-0.007918060224773149,2,0,0.5,MODEL_ONLY_NOT_BOARD

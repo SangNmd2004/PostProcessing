@@ -1,0 +1,14 @@
+[
+  {
+    "file": "siphash.c",
+    "source": "https://raw.githubusercontent.com/veorq/SipHash/master/siphash.c",
+    "sha256": "94b6c1f3a24072a8a5afc4fea7fb9e95c5fc2e99657b6b712d991029ffdaa88c",
+    "license": "CC0 as stated in original source"
+  },
+  {
+    "file": "siphash.h",
+    "source": "https://raw.githubusercontent.com/veorq/SipHash/master/siphash.h",
+    "sha256": "30d4269093e5886cb9e7ea826899ef02daddac682e73c335c53dd748b9e20bfb",
+    "license": "CC0 as stated in original source"
+  }
+]

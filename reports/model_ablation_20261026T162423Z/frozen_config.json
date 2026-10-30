@@ -1,0 +1,28 @@
+{
+  "scope": "MODEL_ONLY_NOT_BOARD",
+  "trials": 1000,
+  "code": "r23",
+  "qber": 0.03,
+  "seed_base": 1600000,
+  "fixed": {
+    "n": 3072,
+    "d": 307,
+    "lq": 8,
+    "iter_max": 50,
+    "PP": [
+      1,
+      2,
+      16
+    ],
+    "ET": 12,
+    "r0": 0,
+    "reveal_step": 77
+  },
+  "source_sha256": {
+    "model\\eval_csv.py": "03d9bf22aa81da17735f6a0c2d8978abd46d8035d6138868f654e1f735bb189d",
+    "model\\ir_model.py": "8830b0d81f5e15951cc7a690a00c929dd98c2c50b7ba3ee039184138a93cd1e2",
+    "model\\codes.json": "97589266f24409ab0d4ca3f847becb2f51f6d7822430fbe78bb43be7c3c9b040",
+    "model\\punct.json": "ef9f98f0274ac6124c4ed17fc7b37eb8dfbb150b0538863e040f03a23a1969ed",
+    "syn\\zc702\\run_model_ablation.py": "697c629c7b644e5376662d5cfd386f6e13f11e4b8b0909613e51b91953bdee14"
+  }
+}

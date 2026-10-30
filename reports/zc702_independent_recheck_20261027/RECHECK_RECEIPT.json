@@ -1,0 +1,19 @@
+{
+  "encoder_model_mismatched_bits": {
+    "r12": 0,
+    "r23": 0,
+    "r34": 0,
+    "r56": 0
+  },
+  "rate095_duplicate_shift_differences": 0,
+  "baseline_files_verified": 27,
+  "baseline_mismatches": [],
+  "fixed_cases.exe": {
+    "returncode": 0,
+    "stdout": "=== ZC702 C FIRMWARE RECONCILIATION VERIFICATION ===\n[REV05] persistence_fresh_restore_rc=0 sizeof=128 crc_offset=72\nPASS: Persistence descriptor restore succeeded with exact CRC offset (72 bytes)\n[REV05] rollback_attempt_rc=-4 (expected -4 for rollback lockout)\nPASS: Anti-rollback correctly detected epoch downgrade and triggered LOCKOUT\n[REV06] selective_queue_failed_round=-1 head=16 tail=16\nPASS: 40 rounds of selective polling completed with zero false queue-full stalls\n[REV04] seq0_first_rc=0 seq0_replay_rc=-2\nPASS: seq 0 accepted once, second attempt rejected with AUTH_ERR_REPLAY_SEQ (-2)\n[REV04] hardened_empty_type0_tag=3809132b30086ef9\n[REV04] tampered_tag_rc=-3 (expected -3)\nPASS: Tampered tag rejected fail-closed\n[REV12] profiler_total_cycles=200 pure_pl_cycles=100 pl_pct=50.0%\nPASS: Profiler API compiles cleanly and tracks block phases correctly\n=== SUMMARY: total_failures=0 ===\n"
+  },
+  "auth_cases.exe": {
+    "returncode": 0,
+    "stdout": "siphash_reference=93f5f5799a932462 project=ab0200f58b01d137 equal=0\ncold_restore_old_snapshot_rc=0 used_after_restore=0 previous_used=10\n"
+  }
+}

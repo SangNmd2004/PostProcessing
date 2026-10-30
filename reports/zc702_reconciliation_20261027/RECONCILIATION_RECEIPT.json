@@ -1,0 +1,92 @@
+{
+  "timestamp": "2026-10-27T07:24:39Z",
+  "status": "ALL_PASSED",
+  "passed_all": true,
+  "results": {
+    "probe_baseline_manifest": {
+      "pass": true,
+      "total_files": 27,
+      "mismatches": []
+    },
+    "probe_c_firmware": {
+      "pass": true,
+      "returncode": 0,
+      "stdout": [
+        "=== ZC702 C FIRMWARE RECONCILIATION VERIFICATION ===",
+        "[REV05] persistence_fresh_restore_rc=0 sizeof=128 crc_offset=72",
+        "PASS: Persistence descriptor restore succeeded with exact CRC offset (72 bytes)",
+        "[REV05] rollback_attempt_rc=-4 (expected -4 for rollback lockout)",
+        "PASS: Anti-rollback correctly detected epoch downgrade and triggered LOCKOUT",
+        "[REV06] selective_queue_failed_round=-1 head=16 tail=16",
+        "PASS: 40 rounds of selective polling completed with zero false queue-full stalls",
+        "[REV04] seq0_first_rc=0 seq0_replay_rc=-2",
+        "PASS: seq 0 accepted once, second attempt rejected with AUTH_ERR_REPLAY_SEQ (-2)",
+        "[REV04] hardened_empty_type0_tag=3809132b30086ef9",
+        "[REV04] tampered_tag_rc=-3 (expected -3)",
+        "PASS: Tampered tag rejected fail-closed",
+        "[REV12] profiler_total_cycles=200 pure_pl_cycles=100 pl_pct=50.0%",
+        "PASS: Profiler API compiles cleanly and tracks block phases correctly",
+        "=== SUMMARY: total_failures=0 ==="
+      ],
+      "stderr": ""
+    },
+    "probe_rev01_syndrome_encoder": {
+      "pass": true,
+      "stdout": [
+        "R05_SYNDROME_ENCODER_PASS: C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_syndrome_encoder"
+      ],
+      "stderr": ""
+    },
+    "probe_rev08_rate_095": {
+      "pass": true,
+      "stdout": [
+        "R02_RATE_095_PASS: C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_rate_095"
+      ],
+      "stderr": ""
+    },
+    "probe_rev09_pa_ntt": {
+      "pass": true,
+      "stdout": [
+        "R04_NTT_PA_PASS: C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_pa_ntt"
+      ],
+      "stderr": ""
+    },
+    "probe_rev03_ablation": {
+      "pass": true,
+      "stdout": [
+        "EXTENDED_ABLATION_EVALUATED: Board verified L1-L4 (27.48 Mbit/s, 3.18x); Model projected L5-L6 (121.18 Mbit/s, 14.04x)."
+      ],
+      "stderr": ""
+    },
+    "probe_rev02_paced_benchmark": {
+      "pass": true,
+      "stdout": [
+        "PACED_BENCHMARK_SIMULATION_EVALUATED: C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_paced_benchmark"
+      ],
+      "stderr": ""
+    },
+    "probe_rev06_python_auth": {
+      "pass": true,
+      "stdout": [
+        "P04_AUTH_CHANNEL_PASS: C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_auth_channel"
+      ],
+      "stderr": ""
+    },
+    "probe_board_replays": {
+      "pass": true,
+      "stdout": [
+        "fer_q02 0",
+        "wrong_codeword 0",
+        "schedule 0"
+      ],
+      "stderr": ""
+    },
+    "probe_project_progress": {
+      "pass": true,
+      "stdout": [
+        "PROJECT_PROGRESS_WRITTEN {'done': 13, 'partial': 20, 'todo': 2}"
+      ],
+      "stderr": ""
+    }
+  }
+}

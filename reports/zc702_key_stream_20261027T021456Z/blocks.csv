@@ -1,0 +1,3 @@
+﻿stream_id,source,source_block,key_bits,nk,nt,mt,leak_ec_bits,attempts,replay_time_seconds
+0,weak,1,2765,2611;151;3,2584;142;4,33;1;3,525,1,0
+1,weak,2,2765,2613;152;0,2570;125;3,37;2;2,525,1,1

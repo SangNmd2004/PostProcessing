@@ -1,0 +1,36 @@
+﻿id,title,reported_status,review_recommended_status,evidence_scope,finding_id,remaining_gate
+F01,QC-LDPC 3072 and four codes with NMS75 + GS,PASS_FUNCTIONAL_BOARD,PASS_FUNCTIONAL_BOARD,BASELINE_PREVIOUSLY_VERIFIED,,Expand to independent synthetic / real optical dataset (PUB07)
+F02,HOLD reveal retry discard and ERRCNT tracking,PASS_FUNCTIONAL_BOARD,PASS_FUNCTIONAL_BOARD,BASELINE_PREVIOUSLY_VERIFIED,,Inject transport errors and timeouts to verify robust recovery (P04)
+F03,EFFICIENCY and THROUGHPUT controller policies on ARM,PASS_FUNCTIONAL_BOARD,PASS_FUNCTIONAL_BOARD,BASELINE_PREVIOUSLY_VERIFIED,,Perform formal PE bit removal and leakage accounting (P02)
+F04,Backlog hysteresis profile switching,PASS_FUNCTIONAL_BOARD,PASS_FUNCTIONAL_BOARD,BASELINE_PREVIOUSLY_VERIFIED,,Drive queue with varying raw key generation rates (PUB01)
+F05,Dynamic code selection r0 delta and early abort,PASS_FUNCTIONAL_BOARD,PASS_FUNCTIONAL_BOARD,BASELINE_PREVIOUSLY_VERIFIED,,Sweep full channel drift envelope from 0.5% to 11% (PUB02)
+F06,Early termination (ET) and post-processing (PP),PASS_FUNCTIONAL_BOARD,PASS_FUNCTIONAL_BOARD,BASELINE_PREVIOUSLY_VERIFIED,,Use paired ET-only and PP-only trials before attributing individual gains
+F07,Verification tag and fail-closed rejection,PASS_FUNCTIONAL_BOARD,PASS_FUNCTIONAL_BOARD,BASELINE_PREVIOUSLY_VERIFIED,,Test larger pool of undetected false codewords and tag collisions (PUB04)
+F08,IR strip D-positions followed by per-block PA1024,PASS_FUNCTIONAL_BOARD,PASS_FUNCTIONAL_BOARD,BASELINE_PREVIOUSLY_VERIFIED,,P01 coupled stream EMIT/split/ABORT is already board-verified; extend fault recovery and security review
+F09,Four contexts resident and queued in PL,PASS_FUNCTIONAL_BOARD,PASS_FUNCTIONAL_BOARD,BASELINE_PREVIOUSLY_VERIFIED,,"Long multi-context DMA soak test and RTT speedup benchmark (P06, PUB01)"
+F10,QKD PL interrupt delivery to ARM GIC,PASS_FUNCTIONAL_BOARD,PASS_FUNCTIONAL_BOARD,BASELINE_PREVIOUSLY_VERIFIED,,Integrate DMA completion IRQs and build purely interrupt-driven scheduler (P07)
+F11,Decoy finite-key WAIT EMIT ABORT split state machine,PASS_FUNCTIONAL_BOARD,PASS_FUNCTIONAL_BOARD,BASELINE_PREVIOUSLY_VERIFIED,,EMIT/split/ABORT with actual buffer is verified; expand fault cases and prospective finite-key modeling
+F12,DMA UART infrastructure and verified artifacts,PASS_FUNCTIONAL_BOARD,PASS_FUNCTIONAL_BOARD,BASELINE_PREVIOUSLY_VERIFIED,,Implement authenticated channel protocol for Alice-Bob communication (P04)
+P01,Accumulated verified IR buffer coupled with finite-key PA emission,PASS_FUNCTIONAL_BOARD,PASS_FUNCTIONAL_BOARD,BASELINE_PREVIOUSLY_VERIFIED,,Expand fault cases and enforce verification budget; review security assumptions independently
+P02,PE sample leakage removal and exact error counting,PASS_FUNCTIONAL_BOARD,PARTIAL,PROTOTYPE_HOST_ONLY,REV01;REV13,Integrate PE accounting into actual PA path; execute C and board negative cases
+P03,Physical on-chip TRNG seed source with online health tests,PASS_FUNCTIONAL_BOARD,PARTIAL,SYNTHETIC_TRNG_MODEL,REV01;REV07,"Physical source integration, raw board capture and entropy assessment"
+P04,Authenticated classical Alice-Bob channel,PASS_FUNCTIONAL_BOARD,PARTIAL,C_IMPLEMENTATION_BROKEN,REV04,Redesign masking/key/session protocol and fix replay before integration
+P05,70 MHz Zynq PL system implementation and timing closure,PARTIAL,PARTIAL,EXISTING_ROUTE_STA_ONLY,REV11,Use provenance-backed DCP/STA then isolated PnR
+P06,Throughput and 4-context RTT hiding benchmark with HW timers,PASS_FUNCTIONAL_BOARD,PARTIAL,SCOPED_BOARD_TIMING_PLUS_SIMULATION,REV03,Measure actual paced traffic and full pipeline phases
+P07,Purely interrupt-driven DMA and context scheduling,PASS_FUNCTIONAL_BOARD,PARTIAL,C_QUEUE_BUG_NOT_INTEGRATED,REV06,Fix selective queue reclamation and test GIC/DMA/WFI on board
+P08,FER measurement over at least 10000 independent blocks,PASS_FUNCTIONAL_BOARD,PARTIAL,TWO_QUALIFIED_COHORTS,VERIFIED_FER,Expand remaining operating points and keep error categories separate
+R01,"Longer LDPC code length (6144 to 12288 bits, 128 lanes)",PASS_FUNCTIONAL_BOARD,PARTIAL,RTL_STRUCTURAL_STUB,REV09,Implement real APP/CN/VN/syndrome/output and RTL golden tests
+R02,High rate (~0.95) and low rate (~0.40) LDPC mother codes,PASS_FUNCTIONAL_BOARD,PARTIAL,FORMULA_AND_MATRIX_PROTOTYPE,REV14,"Remove 4-cycles, validate graph/rank/FER, implement rate ABI/ROM"
+R03,Port to Andes AE350 RISC-V SoC platform,TODO_RESEARCH,TODO_RESEARCH,PLANNED,,Skip Andes AE350; maintain 100% focus on Xilinx Zynq-7000
+R04,Large-block PA via NTT-based MMH-MH / Toeplitz hashing,PASS_FUNCTIONAL_BOARD,PARTIAL,PYTHON_SMALL_NTT_AND_RTL_STUB,REV08,Implement real NTT/burst engine with valid transform lengths
+R05,FPGA-based Alice syndrome encoder reusing LDPC shifter and ROM,PASS_FUNCTIONAL_BOARD,PARTIAL,INCORRECT_MATRIX_SELF_COMPARISON,REV10,"Use deployed codes.json matrix, correct pipeline and RTL testbench"
+R06,Optical channel optimization and realistic decoy parameters,PASS_FUNCTIONAL_BOARD,PARTIAL,SYNTHETIC_OPTICAL_MODEL,REV14,Label synthetic source and validate against independent published or real data
+R07,High clock optimization (7-bit shifter and floorplanning),PASS_FUNCTIONAL_BOARD,PARTIAL,XDC_PROPOSAL,REV11;REV14,Validate constraints on real hierarchy and run isolated PnR
+PUB01,Multi-context queueing and scheduling model S(K) & board RTT validation,PASS_FUNCTIONAL_BOARD,PARTIAL,HELD_OUT_DDR_MODEL_VALIDATED,VERIFIED_SCHEDULER;REV03,Keep DDR scope; measure actual arrival and production scheduling
+PUB02,"Analytical f and attempts model vs (code, QBER, r0, delta) & crossover proof",PASS_FUNCTIONAL_BOARD,PARTIAL,SIMULATION_ONLY_CROSSOVER,REV03,Freeze calibrated paired-policy predictions and measure held-out arrival traffic
+PUB03,Finite-key accumulation model ell(N) and ABORT/split empirical validation,PASS_FUNCTIONAL_BOARD,PARTIAL,RETROSPECTIVE_ACCUMULATOR_REPLAY,REV13,Freeze prospective model and validate new sessions/regimes/first-EMIT
+PUB04,Cumulative correctness security bound eps_cor <= N * 2^(-64) tag budget analysis,PASS_FUNCTIONAL_BOARD,PARTIAL,BOOT_BUDGET_VALID_PERSISTENCE_BROKEN,REV05,Repair CRC and authenticate monotonic session persistence across reset
+PUB05,High-resolution hardware counter integration for latency profiling,PASS_FUNCTIONAL_BOARD,PARTIAL,OLD_BOARD_PROFILER_VALID_NEW_C_BROKEN,REV12,Preserve old profiler; fix new header/API and validate missing PL/IRQ phases
+PUB06,Controlled ablation study across all optimization layers,PASS_FUNCTIONAL_BOARD,PARTIAL,FOUR_REAL_STAGES_TWO_PROJECTED,REV02,Measure paired dynamic/switch/context factors instead of multiplying speedups
+PUB07,Rigorous FER statistical campaign with 95% confidence intervals,PASS_FUNCTIONAL_BOARD,PARTIAL,TWO_QUALIFIED_COHORTS,VERIFIED_FER,Complete predeclared remaining strata; no global FER claim
+PUB08,"Paper manuscript drafting, target venue alignment and literature benchmarking",TODO,TODO,PLANNED,,Deferred per user instruction until hardware engineering is complete

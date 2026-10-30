@@ -1,0 +1,2 @@
+QKD_PA_VECTOR_PASS bits=4096
+QKD_UART_READY version=1 max_words=4096

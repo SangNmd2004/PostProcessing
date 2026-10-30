@@ -1,0 +1,12 @@
+{
+  "status": "VERIFIED_COMPLETE",
+  "report": "reports/zc702_profiling_20261027/REPORT.md",
+  "phase_report": "reports\\zc702_phase_profile_20261027T015821Z\\REPORT.md",
+  "phase_proof_sha256": "1bf0585d4a3872efda77138b3993ece84a43c73ef3cb8c02105ce5219a3def9c",
+  "stream_profile_report": "reports\\zc702_key_stream_20261027T020445Z\\PROFILE_REPORT.md",
+  "stream_profile_proof_sha256": "260ceda7e6a8e55bbf5e49607eee311fdf354462083f4894d7841eb6b1639350",
+  "budget_regression": "reports/zc702_verification_budget_20261027T021157Z/REPORT.md",
+  "smoke_regression": "reports/zc702_key_stream_20261027T021456Z/REPORT.md",
+  "PA_output_matches_previous_verified_session": true,
+  "scope": "PS-observed phases and one multipass PA session; production crossover remains pending"
+}

@@ -1,0 +1,38 @@
+﻿case,seq,op,reply,pass
+budget_state,0,73,QKD_FUNC_BUDGET_STATE seq=0 used=0 limit=18446 remaining=18446,True
+lower_initial_cap,1,72,QKD_FUNC_BUDGET_SET seq=1 used=0 limit=8,True
+cannot_raise_cap,2,72,QKD_FUNC_BUDGET_REJECT seq=2 used=0 limit=8,True
+invalid_block_no_charge,7,60,QKD_STREAM_REJECT seq=7 reason=BLOCK_ID bits=0,True
+budget_state,8,73,QKD_FUNC_BUDGET_STATE seq=8 used=0 limit=8 remaining=8,True
+stream_bad_tag_charged,9,60,QKD_STREAM_TAG_REJECT seq=9 bits=0,True
+budget_state,10,73,QKD_FUNC_BUDGET_STATE seq=10 used=1 limit=8 remaining=7,True
+stream_state,11,67,QKD_STREAM_STATE seq=11 bits=0 next_id=0 pending=0 out_bits=0 rejected=1 retired=0 aborted=0,True
+rejected_key_not_reusable,12,60,QKD_STREAM_REJECT seq=12 reason=NO_VERIFIED_INPUT bits=0,True
+budget_state,13,73,QKD_FUNC_BUDGET_STATE seq=13 used=1 limit=8 remaining=7,True
+perblock_bad_tag_charged,17,20,QKD_FUNC_TAG_REJECT seq=17 pa_emitted=0,True
+budget_state,18,73,QKD_FUNC_BUDGET_STATE seq=18 used=2 limit=8 remaining=6,True
+lower_after_use,19,72,QKD_FUNC_BUDGET_SET seq=19 used=2 limit=6,True
+cannot_lower_below_used,20,72,QKD_FUNC_BUDGET_REJECT seq=20 used=2 limit=6,True
+budget_state,24,73,QKD_FUNC_BUDGET_STATE seq=24 used=2 limit=6 remaining=4,True
+stream_success_charged,28,60,QKD_STREAM_ADDED seq=28 block=0 bits=2765 leak=1293,True
+budget_state,29,73,QKD_FUNC_BUDGET_STATE seq=29 used=3 limit=6 remaining=3,True
+stream_state,30,67,QKD_STREAM_STATE seq=30 bits=2765 next_id=1 pending=0 out_bits=0 rejected=0 retired=0 aborted=0,True
+incomplete_seed_no_charge,31,64,QKD_STREAM_REJECT seq=31 reason=INCOMPLETE_SEED bits=2765,True
+budget_state,32,73,QKD_FUNC_BUDGET_STATE seq=32 used=3 limit=6 remaining=3,True
+perblock_success_all_pa_words,36,20,QKD_FUNC_PIPE_PASS seq=36 input_bits=2765 output_bits=1024,True
+budget_state,37,73,QKD_FUNC_BUDGET_STATE seq=37 used=4 limit=6 remaining=2,True
+budget_state,39,73,QKD_FUNC_BUDGET_STATE seq=39 used=4 limit=6 remaining=2,True
+second_stream_reject_charged,43,60,QKD_STREAM_TAG_REJECT seq=43 bits=0,True
+budget_state,44,73,QKD_FUNC_BUDGET_STATE seq=44 used=5 limit=6 remaining=1,True
+last_perblock_reject_charged,48,20,QKD_FUNC_TAG_REJECT seq=48 pa_emitted=0,True
+budget_state,49,73,QKD_FUNC_BUDGET_STATE seq=49 used=6 limit=6 remaining=0,True
+stream_exhausted_blocked,53,60,QKD_FUNC_VERIFY_LIMIT seq=53 used=6 limit=6,True
+budget_state,54,73,QKD_FUNC_BUDGET_STATE seq=54 used=6 limit=6 remaining=0,True
+stream_state,55,67,QKD_STREAM_STATE seq=55 bits=0 next_id=0 pending=0 out_bits=0 rejected=1 retired=0 aborted=0,True
+exhausted_stream_input_consumed,56,60,QKD_STREAM_REJECT seq=56 reason=NO_VERIFIED_INPUT bits=0,True
+perblock_exhausted_blocked,60,20,QKD_FUNC_VERIFY_LIMIT seq=60 used=6 limit=6,True
+budget_state,61,73,QKD_FUNC_BUDGET_STATE seq=61 used=6 limit=6 remaining=0,True
+exhausted_perblock_input_consumed,62,60,QKD_STREAM_REJECT seq=62 reason=NO_VERIFIED_INPUT bits=0,True
+budget_state,66,73,QKD_FUNC_BUDGET_STATE seq=66 used=6 limit=6 remaining=0,True
+exhausted_cap_cannot_raise,67,72,QKD_FUNC_BUDGET_REJECT seq=67 used=6 limit=6,True
+stream_buffers_zero,,,,True

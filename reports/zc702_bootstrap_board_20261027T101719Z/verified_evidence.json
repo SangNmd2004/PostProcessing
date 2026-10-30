@@ -1,0 +1,28 @@
+{
+  "raw_replay_verified": true,
+  "hardware_capture": true,
+  "raw_commands_verified": 189,
+  "handshakes": 22,
+  "authenticated_echoes": 21,
+  "runner_checks": 149,
+  "outcomes": {
+    "I:0": 34,
+    "H:0": 28,
+    "F:0": 22,
+    "D:0": 21,
+    "D:-6": 20,
+    "D:-4": 19,
+    "H:-1": 6,
+    "D:-1": 13,
+    "F:-1": 6,
+    "D:-7": 17,
+    "D:-5": 1,
+    "R:0": 1,
+    "D:-8": 1
+  },
+  "source_result_sha256": "d86310a07ef954e4e6389fe21e79a5e4bfc00eb84cd96a11fc5e725745e1e5f6",
+  "uart_sha256": "11d7ecc6b51d184caed7a473035da1bba922c2cfdca804ddfc0038254acbb6a9",
+  "runner_at_execution_sha256": "dc87e6063ea22cf24102ba3a6c6b8ae87ae5b5d6cee5d22982381d7b32e860ff",
+  "baseline_restored": true,
+  "scope": "Real ARM/UART lab fixture with public PSK, host nonce and plaintext reset/provision; not secure enrollment/entropy/durable accounting or IR-PA authenticated integration"
+}

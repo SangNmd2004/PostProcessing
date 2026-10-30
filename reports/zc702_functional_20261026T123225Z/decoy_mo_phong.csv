@@ -1,0 +1,9 @@
+﻿case,action,ell_rounded,split,reason,hardware_match,synthetic_metadata
+empty_wait,wait,0,False,empty,True,True
+finite_positive_wait_for_growth,wait,0,False,,True,True
+age_limit_emit,emit,166080,False,age limit,True,True
+reset_after_emit,wait,0,False,empty,True,True
+asymptotic_abort,abort,0,False,no key even with infinite data (asymptotic fraction <= 0),True,True
+good_snapshot,wait,0,False,,True,True
+channel_degradation_split_emit,emit,166080,True,"ell dropped: channel got worse, emit the block at its best point",True,True
+bad_tail_abort_after_split,abort,0,False,no key even with infinite data (asymptotic fraction <= 0),True,True

@@ -1,0 +1,59 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 26 17:53:52 2026
+# Process ID: 11928
+# Current directory: C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026
+# Command line: xsim.exe -log review_basic.log -mode tcl -source {xsim.dir/review_basic/xsim_script.tcl}
+# Log file: C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026/review_basic.log
+# Journal file: C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/review_basic/xsim_script.tcl
+# xsim {review_basic} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+ID = 49520080
+[blk 0 att 0] conv=1 pp_used=0 n_usc=0 iters=4 cycles=823  (matches golden)
+[blk 0] ERRCNT = 16 corrected channel errors (matches golden)
+[blk 0] key 3072 bits bit-exact with golden model, block time 1215 cycles
+[blk 1 att 0] conv=0 pp_used=0 n_usc=149 iters=30 cycles=6123  (matches golden)
+[blk 1 att 1] conv=0 pp_used=0 n_usc=60 iters=26 cycles=11451  (matches golden)
+[blk 1 att 2] conv=1 pp_used=0 n_usc=0 iters=7 cycles=12872  (matches golden)
+[blk 1] ERRCNT = 74 corrected channel errors (matches golden)
+[blk 1] key 3072 bits bit-exact with golden model, block time 15158 cycles
+[blk 2 att 0] conv=0 pp_used=2 n_usc=295 iters=60 cycles=13511  (matches golden)
+[blk 2 att 1] conv=1 pp_used=0 n_usc=0 iters=17 cycles=17126  (matches golden)
+[blk 2] ERRCNT = 113 corrected channel errors (matches golden)
+[blk 2] key 3072 bits bit-exact with golden model, block time 18476 cycles
+[blk 3 att 0] conv=0 pp_used=0 n_usc=107 iters=15 cycles=2818  (matches golden)
+[blk 3 att 1] conv=0 pp_used=0 n_usc=73 iters=15 cycles=5637  (matches golden)
+[blk 3 att 2] conv=0 pp_used=0 n_usc=64 iters=15 cycles=8456  (matches golden)
+[blk 3] discarded after 3 attempts (as golden)
+[blk 4 att 0] conv=1 pp_used=0 n_usc=0 iters=8 cycles=2011  (matches golden)
+[blk 4] ERRCNT = 141 corrected channel errors (matches golden)
+[blk 4] key 3072 bits bit-exact with golden model, block time 2408 cycles
+[blk 5 att 0] conv=0 pp_used=1 n_usc=184 iters=40 cycles=8950  (matches golden)
+[blk 5 att 1] conv=1 pp_used=0 n_usc=0 iters=14 cycles=11932  (matches golden)
+[blk 5] ERRCNT = 105 corrected channel errors (matches golden)
+[blk 5] key 3072 bits bit-exact with golden model, block time 13277 cycles
+[blk 6 att 0] conv=0 pp_used=0 n_usc=234 iters=8 cycles=1745  (matches golden)
+[blk 6 att 1] conv=0 pp_used=0 n_usc=31 iters=11 cycles=4088  (matches golden)
+[blk 6 att 2] conv=1 pp_used=0 n_usc=0 iters=7 cycles=5509  (matches golden)
+[blk 6] ERRCNT = 72 corrected channel errors (matches golden)
+[blk 6] key 3072 bits bit-exact with golden model, block time 7797 cycles
+[blk 7 att 0] conv=0 pp_used=0 n_usc=92 iters=27 cycles=6893  (matches golden)
+[blk 7 att 1] conv=1 pp_used=0 n_usc=0 iters=14 cycles=10393  (matches golden)
+[blk 7] ERRCNT = 208 corrected channel errors (matches golden)
+[blk 7] key 3072 bits bit-exact with golden model, block time 11742 cycles
+[blk 8] HOLD: 200 bits revealed with the syndrome, attempt 1 started
+[blk 8 att 0] conv=1 pp_used=0 n_usc=0 iters=14 cycles=2813  (matches golden)
+[blk 8] ERRCNT = 71 corrected channel errors (matches golden)
+[blk 8] key 3072 bits bit-exact with golden model, block time 4419 cycles
+[PA] 4096 input bits -> 1024 hash bits, 587 cycles,    word count OK
+TB_RESULT: PASS (9 IR blocks + 1 PA pass bit-exact vs golden model)
+$finish called at time : 858185 ns : File "C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026/tb_qkd_ir_review.v" Line 326
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:01:05 . Memory (MB): peak = 923.758 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 26 17:55:01 2026...

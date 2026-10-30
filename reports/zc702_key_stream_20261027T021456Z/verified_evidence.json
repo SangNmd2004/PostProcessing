@@ -1,0 +1,15 @@
+{
+  "raw_replay_verified": true,
+  "packets": 23,
+  "verified_blocks": 2,
+  "emissions": [],
+  "checks": 2,
+  "negative_transcript_reused_blocks": 0,
+  "security_certified": false,
+  "source_hashes": {
+    "result.json": "c1346b2f1fd7af00fa79e3f4d1ba0b47fe58b6613359a759ae54fbc6b0cf1fed",
+    "uart.log": "0a5ae1bf454826297ad28c289761e14ec838006007d704d5dd185f8b5eff667d",
+    "tx_manifest.json": "1587f061558a65c2af29f810469115dacc0e3f1bc44124bab93511b1dd237b6a",
+    "firmware_manifest.json": "869becfc01a7af5362d32a794ec1e7795fbb1a8c3417956996344ed718318896"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "status": "HOST_REGRESSION_AND_ARM_COMPILE_PASS",
+  "checks": 8262,
+  "independent_reference_pairs": 4096,
+  "python_known_answer_pass": true,
+  "baseline_manifest_files_verified": 27,
+  "commands": [
+    {
+      "label": "host_compile",
+      "command": [
+        "C:\\msys64\\mingw64\\bin\\gcc.exe",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-IC:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\syn\\zc702\\tests\\reference",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\syn\\zc702\\tests\\auth_prototype_test.c",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\syn\\zc702\\tests\\reference\\siphash.c",
+        "-o",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_followthrough_20261027\\auth_prototype_test.exe"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "host_tests",
+      "command": [
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_followthrough_20261027\\auth_prototype_test.exe"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "arm_compile",
+      "command": [
+        "D:\\Xilinx\\Vitis\\2020.2\\gnu\\aarch32\\nt\\gcc-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe",
+        "-mcpu=cortex-a9",
+        "-mfpu=vfpv3",
+        "-mfloat-abi=hard",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-IC:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\firmware\\zc702_uart",
+        "-c",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\firmware\\zc702_uart\\auth_channel.c",
+        "-o",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_followthrough_20261027\\auth_channel_arm.o"
+      ],
+      "returncode": 0
+    }
+  ],
+  "source_sha256": {
+    "firmware/zc702_uart/auth_channel.c": "7de13b3e10935cc8ce04a5a92f111fd8cdde0947c97c78684fc211e2fa35f5df",
+    "firmware/zc702_uart/auth_channel.h": "91daf33d53c7830c6a7176d4d5ba8c0d3271ab5c4c7f75cc31bd97808f9f38b9",
+    "syn/zc702/test_auth_channel.py": "c5dd22d57aefbabd18794aaa0b53d67eb7f1ef535fa66c25f8f1b792266b5da9",
+    "syn/zc702/tests/auth_prototype_test.c": "806984c3fe7c84510a65e4a6714733d973e3c59e84cbbb91f7c01213ffa0a58d",
+    "syn/zc702/test_auth_prototype.py": "397fb592ff269868f89a1533a61af2444080ef23ed026a9feec0d0f1c79ffa24"
+  },
+  "scope": "Eight-byte SipHash algorithm and prototype packet regressions; ARM compile only; no board run or security certification",
+  "persistence_after_reset": "UNIMPLEMENTED",
+  "project_status": "PARTIAL"
+}

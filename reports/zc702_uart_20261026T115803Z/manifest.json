@@ -1,0 +1,11 @@
+{
+  "source_result_sha256": "957518c91205283af87b3cc287cf91b94dadfea3d55b6636af10cf9b7b88af4e",
+  "block_rows": 84,
+  "summary_rows": 27,
+  "files": {
+    "chi_tiet_block.csv": "e1d43e9e7fd2d5f5352afcc10aa7f11e647d0e0af469f738046ad93a588e482a",
+    "tong_hop.csv": "3c95233f64b8f314fba8f96961a01b24f8fd2d4a1ed3b845b315a668e408e303",
+    "README.md": "2f40f3e09613c58b96055442ad1e534f84a991770da515719bbea805c5d29082",
+    "doi_chieu_tung_dong_csv.csv": "5b4af5040790e80535eb5ac54104bcb9a7337c3c35a43d6adf5f15dcc9dfac33"
+  }
+}

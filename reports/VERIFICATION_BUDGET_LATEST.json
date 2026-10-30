@@ -1,0 +1,8 @@
+{
+  "status": "VERIFIED_COMPLETE",
+  "report": "reports\\zc702_verification_budget_20261027T014110Z\\REPORT.md",
+  "raw_run": "build/zc702/verification_budget_runs/20261027T014110Z",
+  "proof_sha256": "24110ab706f5a4b600bec67ddf72cd188bd8956cbbe0d586455c3430d23c61b9",
+  "regression": "reports/zc702_key_stream_20261027T014221Z/REPORT.md",
+  "scope": "Boot-lifetime verification gate only; whole-session security remains partial"
+}

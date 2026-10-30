@@ -1,0 +1,143 @@
+{
+  "verified_utc": "20261027T072418Z",
+  "item_id": "PUB02_P06",
+  "title": "Paced arrival traffic benchmark and empirical crossover verification",
+  "crossover_prediction": {
+    "single_context_k1_crossover_blocks_s": 1941.4,
+    "multi_context_k4_crossover_blocks_s": 6794.8,
+    "k1_crossover_verified": true,
+    "k4_crossover_verified": true
+  },
+  "k1_measurements": [
+    {
+      "arrival_rate": 500,
+      "eff_secret_mbps": 0.661,
+      "thr_secret_mbps": 0.503,
+      "adaptive_secret_mbps": 0.659,
+      "eff_queue": 0.09,
+      "thr_queue": 0.0,
+      "winner": "EFFICIENCY"
+    },
+    {
+      "arrival_rate": 1000,
+      "eff_secret_mbps": 1.471,
+      "thr_secret_mbps": 1.119,
+      "adaptive_secret_mbps": 1.429,
+      "eff_queue": 1.49,
+      "thr_queue": 0.0,
+      "winner": "EFFICIENCY"
+    },
+    {
+      "arrival_rate": 1500,
+      "eff_secret_mbps": 1.868,
+      "thr_secret_mbps": 1.494,
+      "adaptive_secret_mbps": 1.863,
+      "eff_queue": 34.58,
+      "thr_queue": 0.01,
+      "winner": "EFFICIENCY"
+    },
+    {
+      "arrival_rate": 1941,
+      "eff_secret_mbps": 1.868,
+      "thr_secret_mbps": 2.02,
+      "adaptive_secret_mbps": 2.407,
+      "eff_queue": 58.82,
+      "thr_queue": 0.02,
+      "winner": "THROUGHPUT"
+    },
+    {
+      "arrival_rate": 2500,
+      "eff_secret_mbps": 1.869,
+      "thr_secret_mbps": 2.624,
+      "adaptive_secret_mbps": 3.005,
+      "eff_queue": 61.05,
+      "thr_queue": 0.03,
+      "winner": "THROUGHPUT"
+    },
+    {
+      "arrival_rate": 3500,
+      "eff_secret_mbps": 1.869,
+      "thr_secret_mbps": 3.652,
+      "adaptive_secret_mbps": 3.997,
+      "eff_queue": 62.34,
+      "thr_queue": 0.06,
+      "winner": "THROUGHPUT"
+    },
+    {
+      "arrival_rate": 5000,
+      "eff_secret_mbps": 1.869,
+      "thr_secret_mbps": 5.369,
+      "adaptive_secret_mbps": 5.637,
+      "eff_queue": 63.06,
+      "thr_queue": 0.17,
+      "winner": "THROUGHPUT"
+    }
+  ],
+  "k4_measurements": [
+    {
+      "arrival_rate": 2000,
+      "eff_secret_mbps": 2.783,
+      "thr_secret_mbps": 2.115,
+      "adaptive_secret_mbps": 2.766,
+      "eff_queue": 0.25,
+      "thr_queue": 0.01,
+      "winner": "EFFICIENCY"
+    },
+    {
+      "arrival_rate": 4000,
+      "eff_secret_mbps": 5.454,
+      "thr_secret_mbps": 4.148,
+      "adaptive_secret_mbps": 5.157,
+      "eff_queue": 25.46,
+      "thr_queue": 0.05,
+      "winner": "EFFICIENCY"
+    },
+    {
+      "arrival_rate": 6000,
+      "eff_secret_mbps": 5.53,
+      "thr_secret_mbps": 6.311,
+      "adaptive_secret_mbps": 7.287,
+      "eff_queue": 61.64,
+      "thr_queue": 0.13,
+      "winner": "THROUGHPUT"
+    },
+    {
+      "arrival_rate": 6795,
+      "eff_secret_mbps": 5.53,
+      "thr_secret_mbps": 7.003,
+      "adaptive_secret_mbps": 7.925,
+      "eff_queue": 62.65,
+      "thr_queue": 0.15,
+      "winner": "THROUGHPUT"
+    },
+    {
+      "arrival_rate": 8000,
+      "eff_secret_mbps": 5.53,
+      "thr_secret_mbps": 8.456,
+      "adaptive_secret_mbps": 9.223,
+      "eff_queue": 62.73,
+      "thr_queue": 0.29,
+      "winner": "THROUGHPUT"
+    },
+    {
+      "arrival_rate": 10000,
+      "eff_secret_mbps": 5.53,
+      "thr_secret_mbps": 10.349,
+      "adaptive_secret_mbps": 10.909,
+      "eff_queue": 63.28,
+      "thr_queue": 0.67,
+      "winner": "THROUGHPUT"
+    },
+    {
+      "arrival_rate": 15000,
+      "eff_secret_mbps": 5.53,
+      "thr_secret_mbps": 15.0,
+      "adaptive_secret_mbps": 14.997,
+      "eff_queue": 63.68,
+      "thr_queue": 54.62,
+      "winner": "THROUGHPUT"
+    }
+  ],
+  "status": "PARTIAL_QUEUE_SIMULATION_EVALUATED",
+  "scope": "Discrete-event host simulation based on hardware-calibrated parameters; not live board arrival measurement"
+}

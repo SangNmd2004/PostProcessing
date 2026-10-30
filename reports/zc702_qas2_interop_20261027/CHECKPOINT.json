@@ -1,0 +1,13 @@
+{
+  "stage": "PC Python / host C QAS2 interoperability",
+  "hardware_capture": false,
+  "baseline_manifest_files_verified": 27,
+  "previous_checkpoint_files_verified": 27,
+  "project_status": "PARTIAL",
+  "remaining_gates": [
+    "trusted bootstrap and fresh session handshake",
+    "durable monotonic state and budget",
+    "separate board QAS2 dispatcher",
+    "real COM3 tamper/replay/reset regression"
+  ]
+}

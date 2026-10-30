@@ -1,0 +1,41 @@
+{
+  "verified_utc": "20261027T072417Z",
+  "item_id": "R05",
+  "title": "FPGA-based Alice syndrome encoder reusing LDPC shifter and ROM",
+  "overall": "PASS",
+  "files": {
+    "ldpc_syndrome_encoder.v": "73cbf82cc57965fea1d297afddf9212950de65ad8bd929ec69140a9d5435b9b3"
+  },
+  "test_results": [
+    {
+      "code": "r12",
+      "syndrome_bits": 1536,
+      "bit_exact_match": true,
+      "status": "PASS"
+    },
+    {
+      "code": "r23",
+      "syndrome_bits": 1024,
+      "bit_exact_match": true,
+      "status": "PASS"
+    },
+    {
+      "code": "r34",
+      "syndrome_bits": 768,
+      "bit_exact_match": true,
+      "status": "PASS"
+    },
+    {
+      "code": "r56",
+      "syndrome_bits": 512,
+      "bit_exact_match": true,
+      "status": "PASS"
+    }
+  ],
+  "hardware_architecture_benefit": {
+    "resource_reuse": "Shares existing 128-lane barrel shifter with Bob decoder",
+    "bram_overhead": "0 BRAMs (distributed LUT RAM for temporary 24-column buffer)",
+    "throughput_mbit_s": "Emits 128-bit layer syndrome in 24 clock cycles (~266 Mbit/s at 50 MHz)",
+    "latency_us": "1.92 us per block (r34) at 50 MHz"
+  }
+}

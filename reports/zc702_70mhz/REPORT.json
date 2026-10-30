@@ -1,0 +1,19 @@
+{
+  "verified_utc": "20261027T060100Z",
+  "item_id": "P05",
+  "title": "70 MHz Zynq PL system implementation and timing closure",
+  "overall": "PARTIAL",
+  "files": {
+    "timing_routed.rpt": "build/zc702_70mhz/timing_routed.rpt"
+  },
+  "sta_breakdown": {
+    "target_period_ns": 14.286,
+    "target_freq_mhz": 70.0,
+    "existing_route_wns_ns": -3.069,
+    "existing_route_whs_ns": 0.045,
+    "critical_path_delay_ns": 16.555,
+    "logic_levels": 11,
+    "projected_wns_after_retiming_ns": 2.466
+  },
+  "baseline_policy": "Physical ZC702 board remains strictly at 50 MHz (FCLK0 = 50.0 MHz, WNS = +2.645 ns); 70 MHz STA analysis is preserved as isolated optimization plan without claiming false 70 MHz board operation."
+}

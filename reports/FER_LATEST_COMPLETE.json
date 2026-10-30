@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "trials": 10000,
+  "qber": 0.02,
+  "code": "r34",
+  "scope": "one selected synthetic BSC stratum; other strata not completed",
+  "report": "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_fer_20261027T032458Z\\REPORT.md",
+  "raw_result": "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\build\\zc702\\fer_runs\\20261027T032458Z\\result.json",
+  "verified_evidence": "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_fer_20261027T032458Z\\verified_evidence.json"
+}

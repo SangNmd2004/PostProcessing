@@ -1,0 +1,87 @@
+{
+  "verified_utc": "20261027T050408Z",
+  "item_id": "PUB04",
+  "title": "Cumulative correctness security bound and verification budget analysis",
+  "overall": "PASS",
+  "tag_length_bits": 64,
+  "default_epsilon_cor": 1e-15,
+  "default_budget_cap": 18446,
+  "files": {
+    "session_persistence.h": true,
+    "session_persistence.c": true
+  },
+  "epsilon_tradeoffs": [
+    {
+      "eps_cor_target": 1e-16,
+      "max_verification_blocks": 1844,
+      "max_key_volume_mbit": 5.1
+    },
+    {
+      "eps_cor_target": 1e-15,
+      "max_verification_blocks": 18446,
+      "max_key_volume_mbit": 51.0
+    },
+    {
+      "eps_cor_target": 1e-14,
+      "max_verification_blocks": 184467,
+      "max_key_volume_mbit": 510.05
+    },
+    {
+      "eps_cor_target": 1e-12,
+      "max_verification_blocks": 18446744,
+      "max_key_volume_mbit": 51005.25
+    }
+  ],
+  "accumulation_16mbit_scenarios": [
+    {
+      "target_bits": 16000000,
+      "blocks_needed": 5787,
+      "rejection_rate": 0.0,
+      "total_verification_attempts": 5787,
+      "max_blocks_allowed": 18446,
+      "eps_cor_consumed": 3.137138986086807e-16,
+      "eps_cor_budget": 1e-15,
+      "budget_utilization_pct": 31.372655318226172,
+      "within_budget": true
+    },
+    {
+      "target_bits": 16000000,
+      "blocks_needed": 5787,
+      "rejection_rate": 0.1,
+      "total_verification_attempts": 6430,
+      "max_blocks_allowed": 18446,
+      "eps_cor_consumed": 3.485709984540897e-16,
+      "eps_cor_budget": 1e-15,
+      "budget_utilization_pct": 34.85850590914019,
+      "within_budget": true
+    },
+    {
+      "target_bits": 16000000,
+      "blocks_needed": 5787,
+      "rejection_rate": 0.3,
+      "total_verification_attempts": 8268,
+      "max_blocks_allowed": 18446,
+      "eps_cor_consumed": 4.482091781055075e-16,
+      "eps_cor_budget": 1e-15,
+      "budget_utilization_pct": 44.82272579421013,
+      "within_budget": true
+    },
+    {
+      "target_bits": 16000000,
+      "blocks_needed": 5787,
+      "rejection_rate": 0.5,
+      "total_verification_attempts": 11574,
+      "max_blocks_allowed": 18446,
+      "eps_cor_consumed": 6.274277972173614e-16,
+      "eps_cor_budget": 1e-15,
+      "budget_utilization_pct": 62.745310636452345,
+      "within_budget": true
+    }
+  ],
+  "persistence_architecture": {
+    "memory_target": "Zynq OCM (0xFFFC0000) / BBRAM",
+    "anti_rollback_monotonic_counter": true,
+    "descriptor_integrity_crc32": true,
+    "fail_closed_lockout_on_corruption": true
+  }
+}

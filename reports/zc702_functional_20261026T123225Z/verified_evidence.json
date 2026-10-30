@@ -1,0 +1,15 @@
+{
+  "raw_receipts_verified": true,
+  "ir_cases": 63,
+  "ir_attempts": 71,
+  "keys": 39,
+  "qkd_irq_receipts": 71,
+  "pa_outputs": 38,
+  "accumulator_checks": 8,
+  "multicontext_checks": 4,
+  "source_files": {
+    "result.json": "18b33bea3c39a215a929fb56242a08099a523795c5374410727f6ea2d0a561f0",
+    "uart.log": "3022674f57ba57461d953e5ff690f2fd7a656ad37ee4db342e84d9c78172095d",
+    "xsct.log": "85c7a49200242badacaeff6c7aefeba889530a0ac7bfe4d52c62159e7c44102a"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "verified_utc": "20261027T053017Z",
+  "item_id": "P03",
+  "title": "Physical on-chip TRNG seed source with online health tests",
+  "overall": "PASS",
+  "files": {
+    "trng_zc702.v": "7a88f455ef66fe61856ea12797f33d8f37d4163e8b4f65058ebf3703fc69be61",
+    "trng_driver.c": "c80567f5499756d2d763400311b225b8f4ee0ccb516f4cf8157b1046c0529fe8",
+    "trng_driver.h": "a7cce22a27bcbb700131b4595b92ed71178a66fc28f158b933c08f7a7a9e6294"
+  },
+  "nist_sp800_90b_metrics": {
+    "min_entropy_h_inf": 0.9905,
+    "target_min_entropy": ">= 0.95 bits/bit",
+    "rct_cutoff": 40,
+    "apt_cutoff": 325,
+    "apt_window": 512,
+    "false_alarm_probability_alpha": "2^-20 (< 10^-6)"
+  },
+  "test_results": [
+    {
+      "test_case": "physical_entropy_harvesting_and_min_entropy",
+      "n_samples": 6654,
+      "p1": 0.50331,
+      "min_entropy_h_inf": 0.9905,
+      "pass_threshold": "H_inf >= 0.95",
+      "status": "PASS"
+    },
+    {
+      "test_case": "clean_continuous_health_tests_zero_false_alarms",
+      "bits_evaluated": 6654,
+      "rct_alarms": 0,
+      "apt_alarms": 0,
+      "status": "PASS"
+    },
+    {
+      "test_case": "rct_stuck_at_fault_detection_and_isolation",
+      "rct_alarm_tripped": true,
+      "fail_closed_isolation": true,
+      "status": "PASS"
+    },
+    {
+      "test_case": "apt_bias_collapse_detection",
+      "apt_alarm_tripped": true,
+      "status": "PASS"
+    },
+    {
+      "test_case": "pa_seed_harvesting_33_words",
+      "words_harvested": 33,
+      "unique_words": 33,
+      "status": "PASS"
+    }
+  ]
+}

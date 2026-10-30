@@ -1,0 +1,42 @@
+{
+  "hardware_capture": false,
+  "paired_input_hashes_verified": true,
+  "independent_inputs": 1000,
+  "configuration_evaluations": 3000,
+  "common_success_trials": 997,
+  "paired_contrasts": [
+    {
+      "from": "OMS_random",
+      "to": "OMS_GS",
+      "paired_trials": 1000,
+      "delta_mean_attempts": -0.587,
+      "approx_95_lower": -0.6256475785335581,
+      "approx_95_upper": -0.5483524214664418,
+      "common_success_trials": 997,
+      "delta_mean_f_ir_common_success": -0.08184973787752055,
+      "failures_fixed": 1,
+      "failures_introduced": 2,
+      "mcnemar_exact_two_sided_p": 1.0,
+      "scope": "MODEL_ONLY_NOT_BOARD"
+    },
+    {
+      "from": "OMS_GS",
+      "to": "NMS_GS",
+      "paired_trials": 1000,
+      "delta_mean_attempts": -0.066,
+      "approx_95_lower": -0.08596353427408922,
+      "approx_95_upper": -0.04603646572591079,
+      "common_success_trials": 997,
+      "delta_mean_f_ir_common_success": -0.007918060224773149,
+      "failures_fixed": 2,
+      "failures_introduced": 0,
+      "mcnemar_exact_two_sided_p": 0.5,
+      "scope": "MODEL_ONLY_NOT_BOARD"
+    }
+  ],
+  "files": {
+    "trials.csv": "cad07f63cb6c842a1e9a497bc0162a6787f1922afca47ecf9d0e8943e8517aaf",
+    "summary.csv": "f2d6f02e03513a4f8d115873f8a69eddfbc5bc919e28397b6c091068f7d2ce78",
+    "frozen_config.json": "82953de1391783e91761681d6c54560fbf166a7524a2e369cbe1f2e5d97ae2ed"
+  }
+}

@@ -1,0 +1,460 @@
+{
+  "status": "PASS",
+  "scope": "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing",
+  "previous_cleanup_phases": [
+    {
+      "status": "PASS",
+      "verified_at": "2026-10-30T10:19:44.895944+07:00",
+      "scope": "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing",
+      "before_files": 84434,
+      "before_bytes": 1155462269,
+      "recycled_generated_files": 166,
+      "archived_files": 2252,
+      "removed_from_live_tree_bytes": 430304039,
+      "archive": {
+        "path": "artifacts/archive/legacy_20261030.zip",
+        "sha256": "a8da999d5e7ee3e0b9f7a60dc40068e8b103093e27099dd6b9bdbc917abcd4a4",
+        "bytes": 44736774,
+        "files": 2252,
+        "all_entries_sha256_verified": true
+      },
+      "workspace_reduction_bytes_before_audit_files": 385567265,
+      "protected_files_sha256_unchanged": 1561,
+      "baseline_manifest_files_verified": 27,
+      "current_handoff_verification": "CONTINUATION_HANDOFF_HASHES_PASS 265",
+      "python_sources_parse_pass": 116,
+      "local_markdown_links_checked": 279,
+      "preexisting_broken_links": [
+        {
+          "page": "TONG_HOP_KET_QUA_VA_KE_HOACH_ZC702.md",
+          "target": "workspace_snapshot/build/zc702/timing_routed.rpt",
+          "resolved": "workspace_snapshot/build/zc702/timing_routed.rpt"
+        },
+        {
+          "page": "TONG_HOP_KET_QUA_VA_KE_HOACH_ZC702.md",
+          "target": "workspace_snapshot/build/zc702/utilization_routed.rpt",
+          "resolved": "workspace_snapshot/build/zc702/utilization_routed.rpt"
+        },
+        {
+          "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+          "target": "zc702_board_ablation_20261027T024201Z/REPORT.md",
+          "resolved": "reports/zc702_independent_review_20261027/reviewed_inputs/zc702_board_ablation_20261027T024201Z/REPORT.md"
+        },
+        {
+          "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+          "target": "zc702_wrong_codeword_20261027T044256Z/REPORT.md",
+          "resolved": "reports/zc702_independent_review_20261027/reviewed_inputs/zc702_wrong_codeword_20261027T044256Z/REPORT.md"
+        },
+        {
+          "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+          "target": "zc702_schedule_validation_20261027T044317Z/REPORT.md",
+          "resolved": "reports/zc702_independent_review_20261027/reviewed_inputs/zc702_schedule_validation_20261027T044317Z/REPORT.md"
+        },
+        {
+          "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+          "target": "FER_CATALOG.md",
+          "resolved": "reports/zc702_independent_review_20261027/reviewed_inputs/FER_CATALOG.md"
+        },
+        {
+          "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+          "target": "zc702_profiling_20261027/REPORT.md",
+          "resolved": "reports/zc702_independent_review_20261027/reviewed_inputs/zc702_profiling_20261027/REPORT.md"
+        },
+        {
+          "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+          "target": "ONGOING_RESEARCH_STAGES.md",
+          "resolved": "reports/zc702_independent_review_20261027/reviewed_inputs/ONGOING_RESEARCH_STAGES.md"
+        }
+      ],
+      "new_broken_links": [],
+      "hardware_run": false,
+      "progress_claims_modified": false,
+      "archive_roots": [
+        "artifacts/ZC702_AI_CONTINUATION_20261027T035627Z",
+        "artifacts/ZC702_AI_CONTINUATION_20261027T044734Z",
+        "artifacts/ZC702_AI_CONTINUATION_20261027T050130Z",
+        "artifacts/ZC702_AI_CONTINUATION_20261027T050450Z",
+        "artifacts/ZC702_AI_CONTINUATION_20261027T050822Z",
+        "artifacts/ZC702_AI_CONTINUATION_20261027T051914Z",
+        "artifacts/ZC702_AI_CONTINUATION_20261027T053845Z",
+        "artifacts/ZC702_AI_CONTINUATION_20261027T060316Z",
+        "artifacts/ZC702_AI_CONTINUATION_20261027T062306Z",
+        "reports/handoff_audit_next",
+        "reports/handoff_audit_test",
+        "reports/zc702_handoff_audit_20261027_attempt01",
+        "syn/zc702/finalize_execution_handoff.py",
+        "syn/zc702/fix_aux_reset.tcl",
+        "syn/zc702/package_budget_update.py",
+        "syn/zc702/package_handoff.py",
+        "syn/zc702/package_profiling_update.py"
+      ],
+      "deleted_generated_roots": [
+        ".Xil",
+        "build/zc702/.Xil",
+        "build/zc702/auth_channel.o",
+        "build/zc702/event_scheduler.o",
+        "build/zc702/pe_accounting.o",
+        "build/zc702/project/qkd_zc702.cache",
+        "build/zc702/session_persistence.o",
+        "build/zc702/system_placed.dcp",
+        "gowin/impl/gwsynthesis/qkd_ir.vg",
+        "gowin/impl/pnr/qkd_ir.bin",
+        "gowin/impl/pnr/qkd_ir.binx",
+        "gowin/impl/pnr/qkd_ir.db",
+        "gowin/impl/pnr/qkd_ir.p",
+        "gowin/impl/pnr/qkd_ir.pr",
+        "gowin/impl/temp",
+        "model/__pycache__",
+        "syn/zc702/__pycache__",
+        "webtalk.jou",
+        "webtalk.log",
+        "webtalk_20744.backup.jou",
+        "webtalk_20744.backup.log",
+        "xelab.log",
+        "xelab.pb",
+        "xsim.dir",
+        "xsim.jou",
+        "xsim.log",
+        "xsim_13656.backup.jou",
+        "xsim_13656.backup.log",
+        "xsim_14720.backup.jou",
+        "xsim_14720.backup.log",
+        "xvlog.log",
+        "xvlog.pb"
+      ],
+      "removal_method": "Windows Recycle Bin; permanent deletion was rejected by automatic policy review",
+      "recycle_bin_emptied": false,
+      "after_files": 82021,
+      "missing_unplanned_files": [],
+      "unexpected_new_files": [],
+      "final_tree_inventory_verified": true
+    },
+    {
+      "status": "PASS",
+      "verified_at": "2026-10-30T10:28:28.377166+07:00",
+      "scope": "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing",
+      "removed_roots": [
+        "DEVLOG.md",
+        "GUIDE_BAN_GIAO_AI_TIEP_THEO.md",
+        "Lõi IR Blind Reconciliation (Copy).md",
+        "PROMPT_BAN_GIAO_AI_ZC702.md",
+        "TONG_HOP_KET_QUA_VA_KE_HOACH_ZC702.md",
+        "artifacts/AI_HANDOFF_ZC702_20261026",
+        "artifacts/AI_HANDOFF_ZC702_EXECUTION_20261026T170148Z",
+        "artifacts/ZC702_AI_CONTINUATION_20261027T035757Z",
+        "artifacts/ZC702_AI_CONTINUATION_20261027T063356Z",
+        "artifacts/ZC702_PROFILING_UPDATE_20261027T022508Z",
+        "artifacts/ZC702_VERIFICATION_BUDGET_UPDATE_20261027T014524Z",
+        "artifacts/archive",
+        "gowin",
+        "reports/AI_CONTINUATION_HANDOFF_LATEST.json",
+        "reports/EXECUTION_HANDOFF_LATEST.json",
+        "reports/PROFILING_UPDATE_LATEST.json",
+        "reports/VERIFICATION_BUDGET_UPDATE_LATEST.json",
+        "reports/handoff_bundle_audit_20261026.json",
+        "reports/zc702_ae350_porting",
+        "reports/zc702_followthrough_20261027/after/GUIDE_BAN_GIAO_AI_TIEP_THEO.md",
+        "results/compare_papers.md",
+        "results/pnr_2026-10-24",
+        "results/pnr_2026-10-24_70mhz",
+        "results/pnr_2026-10-24_bsramreg",
+        "syn/ae350",
+        "syn/gowin_pnr.tcl",
+        "syn/gowin_syn.tcl",
+        "syn/qkd_ir.sdc",
+        "syn/qkd_pp_pnr_top.v",
+        "syn/zc702/build_continuation_handoff.py",
+        "syn/zc702/generate_claim_matrix.py",
+        "syn/zc702/generate_work_items.py",
+        "syn/zc702/package_execution_handoff.py"
+      ],
+      "recycled_files": 27514,
+      "removed_markdown_files": 232,
+      "workspace_reduction_bytes": 316228347,
+      "baseline_files_verified": 27,
+      "unchanged_files_sha256_verified": 1529,
+      "python_sources_parse_pass": 112,
+      "vivado_rtl_inputs_verified": [
+        "rtl/ldpc/ldpc_sdp_ram.v",
+        "rtl/ldpc/qc_cyclic_shifter.v",
+        "rtl/ldpc/ldpc_code_rom.v",
+        "rtl/ldpc/ldpc_ir_decoder.v",
+        "rtl/top/qkd_ir_core.v",
+        "rtl/pa/pa_hankel_hash.v",
+        "rtl/top/qkd_pp_axi.v",
+        "rtl/top/qkd_pp_zc702.v"
+      ],
+      "work_item_ids_and_statuses_unchanged": true,
+      "modified_files": [
+        "README.md",
+        "HUONG_DAN_TONG_HOP_ZC702.md",
+        "KE_HOACH_HOAN_THANH_MUC_TIEU_ZC702.md",
+        "syn/zc702/prepare_research_tasks.py",
+        "reports/zc702_independent_review_20261027/run_review_probes.py",
+        "reports/DOI_CHIEU_HUONG_DI_VOI_TONG_HOP_KET_QUA.md",
+        "reports/zc702_work_items.csv",
+        "reports/zc702_remaining_work.csv",
+        "reports/cleanup_20261030/REPORT.md",
+        "reports/EXECUTION_TRACKER.md",
+        "reports/zc702_uart_20261026T115803Z/DOI_CHIEU_MUC_TIEU_IR_BLIND_RECONCILIATION.md"
+      ],
+      "migrated_inputs": [
+        {
+          "source": "artifacts/AI_HANDOFF_ZC702_20261026/plans/WORK_ITEMS.csv",
+          "destination": "data/research/work_items_seed.csv",
+          "source_sha256": "51c8699461618b78994c61021099c73ae5c73403f41f4e544e2927554687c6b7",
+          "destination_sha256": "51bad8adaac161a0c18a72c766dabba20dcda0782857297e731dcb3624124b52"
+        },
+        {
+          "source": "artifacts/ZC702_AI_CONTINUATION_20261027T035757Z/workspace_snapshot/reports/zc702_work_items.csv",
+          "destination": "data/research/review_work_items_20261027T035757Z.csv",
+          "source_sha256": "69f3135dc7ad7ced37d9fee0d8105af9551dfe632792e49ccb89c5c2128a6f3d",
+          "destination_sha256": "69f3135dc7ad7ced37d9fee0d8105af9551dfe632792e49ccb89c5c2128a6f3d"
+        }
+      ],
+      "removal_method": "Windows Recycle Bin; no new backup archives",
+      "hardware_run": false,
+      "after_files": 54510,
+      "all_retained_original_files_present": true,
+      "remaining_platform_file_paths": [],
+      "markdown_links_checked": 271,
+      "new_broken_links": [],
+      "preexisting_broken_links": [
+        {
+          "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+          "target": "zc702_board_ablation_20261027T024201Z/REPORT.md",
+          "resolved": "reports/zc702_independent_review_20261027/reviewed_inputs/zc702_board_ablation_20261027T024201Z/REPORT.md"
+        },
+        {
+          "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+          "target": "zc702_wrong_codeword_20261027T044256Z/REPORT.md",
+          "resolved": "reports/zc702_independent_review_20261027/reviewed_inputs/zc702_wrong_codeword_20261027T044256Z/REPORT.md"
+        },
+        {
+          "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+          "target": "zc702_schedule_validation_20261027T044317Z/REPORT.md",
+          "resolved": "reports/zc702_independent_review_20261027/reviewed_inputs/zc702_schedule_validation_20261027T044317Z/REPORT.md"
+        },
+        {
+          "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+          "target": "FER_CATALOG.md",
+          "resolved": "reports/zc702_independent_review_20261027/reviewed_inputs/FER_CATALOG.md"
+        },
+        {
+          "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+          "target": "zc702_profiling_20261027/REPORT.md",
+          "resolved": "reports/zc702_independent_review_20261027/reviewed_inputs/zc702_profiling_20261027/REPORT.md"
+        },
+        {
+          "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+          "target": "ONGOING_RESEARCH_STAGES.md",
+          "resolved": "reports/zc702_independent_review_20261027/reviewed_inputs/ONGOING_RESEARCH_STAGES.md"
+        }
+      ]
+    }
+  ],
+  "script_report_cleanup": {
+    "removal_method": "Windows Recycle Bin",
+    "removed_targets": [
+      "syn/zc702/monitor_research_reports.py",
+      "syn/zc702/recover_closed_fer_manifest.py",
+      "reports/handoff_audit_latest",
+      "reports/zc702_handoff_audit_20261027",
+      "reports/DOI_CHIEU_HUONG_DI_VOI_TONG_HOP_KET_QUA.md",
+      "reports/FER_INCOMPLETE_RUNS.csv",
+      "reports/cleanup_20261030/before_cleanup.json",
+      "reports/cleanup_20261030/PHASE2_AUDIT.json"
+    ],
+    "removed_files": [
+      {
+        "path": "reports/DOI_CHIEU_HUONG_DI_VOI_TONG_HOP_KET_QUA.md",
+        "size": 6283,
+        "sha256": "274d6db9c451fc97bfd5672f1f85f89982b428cdf508957cce9ea754ee455fae"
+      },
+      {
+        "path": "reports/FER_INCOMPLETE_RUNS.csv",
+        "size": 90,
+        "sha256": "169770b4d27eddaa87be8ae44797ba5ca85eb53349bc763ec644ff3f38d5e26d"
+      },
+      {
+        "path": "reports/cleanup_20261030/before_cleanup.json",
+        "size": 2278,
+        "sha256": "1ebb304775aa310ba4dcdff188837ee1312a116b3912c78a389b26ba5db82777"
+      },
+      {
+        "path": "reports/cleanup_20261030/PHASE2_AUDIT.json",
+        "size": 5496,
+        "sha256": "41df9c91f042cefe403cef1dacbff6f1af7418c75cba6b482045bfd7d00cb64c"
+      },
+      {
+        "path": "reports/handoff_audit_latest/AUDIT.json",
+        "size": 5715,
+        "sha256": "3f8a3758677fe651d82936e297cb94999f87600a72d4513c5ed982c71d0f9b60"
+      },
+      {
+        "path": "reports/handoff_audit_latest/REPORT.md",
+        "size": 803,
+        "sha256": "34c1218dec655e2c6145553c6e6e35c44dd13c5d4706691019f9b41fb6370482"
+      },
+      {
+        "path": "reports/handoff_audit_latest/checkpoint/closed_session_0_MANIFEST_RECOVERY.json",
+        "size": 889,
+        "sha256": "c315c47d3d6a0bde382b900d73fbd8426bfac2283310fc5c38130fa1e7c2b19b"
+      },
+      {
+        "path": "reports/handoff_audit_latest/checkpoint/closed_session_0_tx_manifest.json",
+        "size": 271375,
+        "sha256": "4e735347a3b6e4b54a60d2db24ec92e2f9a5fa8e3c62a78b752a2605151bb7c9"
+      },
+      {
+        "path": "reports/handoff_audit_latest/checkpoint/fer_journal_verified_prefix.jsonl",
+        "size": 2998934,
+        "sha256": "1f16a7e1f8b8c43585e615a53c34ddc3a48e11e8633d65874beca0aeceecd8f5"
+      },
+      {
+        "path": "reports/handoff_audit_latest/checkpoint/fer_result_partial_or_complete.json",
+        "size": 3885665,
+        "sha256": "a20c8fa54ed0cc3b4f257e39dee8dd51cabb0c6d3b85b9760dd3eeb7a90634d0"
+      },
+      {
+        "path": "reports/handoff_audit_latest/checkpoint/firmware_manifest.json",
+        "size": 3213,
+        "sha256": "869becfc01a7af5362d32a794ec1e7795fbb1a8c3417956996344ed718318896"
+      },
+      {
+        "path": "reports/handoff_audit_latest/checkpoint/follow.json",
+        "size": 2193,
+        "sha256": "9310eaed13bc8b539d8797f2340b136f04680b6e8974e657af8953bd26ac65e8"
+      },
+      {
+        "path": "reports/handoff_audit_latest/checkpoint/follow_jobs.json",
+        "size": 141,
+        "sha256": "9779bcfb0e8e5152ba635b280363e872d5fc3620204c3f502e31867635bbe00d"
+      },
+      {
+        "path": "reports/handoff_audit_latest/checkpoint/jobs.json",
+        "size": 234,
+        "sha256": "8f1353fcf46bcf2e8c24675763d04e7fdbe97558d389b6ce00bb730126d51ecd"
+      },
+      {
+        "path": "reports/handoff_audit_latest/checkpoint/main.json",
+        "size": 5256,
+        "sha256": "db1c4cb7d3740823217f6480b02271b2a432cfcd68a8d55fc7b0620b758ca79e"
+      },
+      {
+        "path": "reports/handoff_audit_latest/checkpoint/main_frozen_plan.json",
+        "size": 1641,
+        "sha256": "614db3ea917fe886da5d6cc5f84afe95ca27550ebd3ef67e38e16b0bdee80e15"
+      },
+      {
+        "path": "reports/zc702_handoff_audit_20261027/AUDIT.json",
+        "size": 8762,
+        "sha256": "8781de4031385f133c20c093bd590678e723f733add5d02e29efa08d1b7757d2"
+      },
+      {
+        "path": "reports/zc702_handoff_audit_20261027/REPORT.md",
+        "size": 803,
+        "sha256": "0f32d35d54aa888fdbe298b402f3380814a71bbd59ca23dba7e7bd2a1eaa21bc"
+      },
+      {
+        "path": "reports/zc702_handoff_audit_20261027/checkpoint/closed_session_0_MANIFEST_RECOVERY.json",
+        "size": 889,
+        "sha256": "c315c47d3d6a0bde382b900d73fbd8426bfac2283310fc5c38130fa1e7c2b19b"
+      },
+      {
+        "path": "reports/zc702_handoff_audit_20261027/checkpoint/closed_session_0_tx_manifest.json",
+        "size": 271375,
+        "sha256": "4e735347a3b6e4b54a60d2db24ec92e2f9a5fa8e3c62a78b752a2605151bb7c9"
+      },
+      {
+        "path": "reports/zc702_handoff_audit_20261027/checkpoint/fer_journal_verified_prefix.jsonl",
+        "size": 932515,
+        "sha256": "24e444979f9d1b3c3f5e5625d03a07b8c10f08a1d983af5eadea1b551e2d588d"
+      },
+      {
+        "path": "reports/zc702_handoff_audit_20261027/checkpoint/fer_result_partial_or_complete.json",
+        "size": 1209183,
+        "sha256": "433b005b3ca4704ff626c52e2e0ef84c5f4a353699ab12d284f0cbcce4be680f"
+      },
+      {
+        "path": "reports/zc702_handoff_audit_20261027/checkpoint/firmware_manifest.json",
+        "size": 3213,
+        "sha256": "869becfc01a7af5362d32a794ec1e7795fbb1a8c3417956996344ed718318896"
+      },
+      {
+        "path": "reports/zc702_handoff_audit_20261027/checkpoint/follow.json",
+        "size": 1091,
+        "sha256": "41ec9f71c510e14bc53021fe1bc0bd17a9a9f9f32c367bb61e23f15212484e3b"
+      },
+      {
+        "path": "reports/zc702_handoff_audit_20261027/checkpoint/follow_jobs.json",
+        "size": 226,
+        "sha256": "e4aae91df76cf70101d24dcdc1987bdac402b5372dd636895812c2468538fe99"
+      },
+      {
+        "path": "reports/zc702_handoff_audit_20261027/checkpoint/jobs.json",
+        "size": 822,
+        "sha256": "5dcc10b7803115958ec632ced7f992e34bfbd2188beeec0f29ca6325bd580190"
+      },
+      {
+        "path": "reports/zc702_handoff_audit_20261027/checkpoint/main.json",
+        "size": 5076,
+        "sha256": "d51673116b9794582f97b612d2cd159d1386beaf215bbbbbdd392c127f888b3d"
+      },
+      {
+        "path": "reports/zc702_handoff_audit_20261027/checkpoint/main_frozen_plan.json",
+        "size": 1641,
+        "sha256": "614db3ea917fe886da5d6cc5f84afe95ca27550ebd3ef67e38e16b0bdee80e15"
+      },
+      {
+        "path": "syn/zc702/monitor_research_reports.py",
+        "size": 1524,
+        "sha256": "311c32e46a15adf906b92053dcaffb22c33843a0c5f2bbd9342581504c578587"
+      },
+      {
+        "path": "syn/zc702/recover_closed_fer_manifest.py",
+        "size": 4343,
+        "sha256": "006b23eddd521c999044a2772232bd5e4f8973302cd649053bc89780909ca717"
+      }
+    ],
+    "recycled_python_scripts": 2,
+    "recycled_report_files": 28,
+    "reason": "Closed-job utilities, unreferenced handoff audits, superseded narrative, stale incomplete-cohort table, and redundant cleanup metadata. Reconciliation audit, raw board evidence, distinct campaigns and essential report tools remain.",
+    "remaining_files": 54480,
+    "protected_files_sha256_unchanged": 1089,
+    "baseline_manifest_files_verified": 27,
+    "work_item_ids_and_statuses_unchanged": true,
+    "python_sources_parse_pass": 110,
+    "new_broken_links": [],
+    "preexisting_broken_links": [
+      {
+        "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+        "target": "zc702_board_ablation_20261027T024201Z/REPORT.md"
+      },
+      {
+        "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+        "target": "zc702_wrong_codeword_20261027T044256Z/REPORT.md"
+      },
+      {
+        "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+        "target": "zc702_schedule_validation_20261027T044317Z/REPORT.md"
+      },
+      {
+        "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+        "target": "FER_CATALOG.md"
+      },
+      {
+        "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+        "target": "zc702_profiling_20261027/REPORT.md"
+      },
+      {
+        "page": "reports/zc702_independent_review_20261027/reviewed_inputs/TIEN_DO_TOAN_BO_DU_AN.md",
+        "target": "ONGOING_RESEARCH_STAGES.md"
+      }
+    ],
+    "local_markdown_links_checked": 261,
+    "hardware_run": false,
+    "all_retained_original_files_present": true
+  },
+  "verified_at": "2026-10-30T10:32:30.969433+07:00"
+}

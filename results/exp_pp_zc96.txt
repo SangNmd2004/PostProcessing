@@ -1,0 +1,6 @@
+zc=96 r34 Q=1.0% | pp=0: FER=0.000 f=2.08 att=1.03 dec=1.03 it=23 und=0 pp_ok=0 fails=5 usc<=16:1 med_usc=42 | pp=2: FER=0.000 f=2.08 att=1.03 dec=1.05 it=24 und=0 pp_ok=0
+zc=96 r34 Q=2.0% | pp=0: FER=0.000 f=1.55 att=2.85 dec=2.85 it=118 und=0 pp_ok=0 fails=278 usc<=16:8 med_usc=76 | pp=2: FER=0.000 f=1.54 att=2.84 dec=2.93 it=122 und=0 pp_ok=2
+zc=96 r23 Q=3.0% | pp=0: FER=0.000 f=1.44 att=1.75 dec=1.75 it=65 und=0 pp_ok=0 fails=112 usc<=16:3 med_usc=91 | pp=2: FER=0.000 f=1.44 att=1.75 dec=1.79 it=67 und=0 pp_ok=0
+zc=96 r23 Q=4.0% | pp=0: FER=0.033 f=1.34 att=3.37 dec=3.37 it=144 und=0 pp_ok=0 fails=368 usc<=16:5 med_usc=117 | pp=2: FER=0.033 f=1.34 att=3.36 dec=3.41 it=146 und=0 pp_ok=1
+zc=96 r12 Q=6.0% | pp=0: FER=0.007 f=1.37 att=1.14 dec=1.14 it=27 und=0 pp_ok=0 fails=26 usc<=16:0 med_usc=144 | pp=2: FER=0.007 f=1.37 att=1.14 dec=1.14 it=27 und=0 pp_ok=0
+zc=96 r12 Q=7.0% | pp=0: FER=0.000 f=1.28 att=1.79 dec=1.79 it=67 und=0 pp_ok=0 fails=119 usc<=16:2 med_usc=148 | pp=2: FER=0.000 f=1.27 att=1.79 dec=1.81 it=67 und=0 pp_ok=1

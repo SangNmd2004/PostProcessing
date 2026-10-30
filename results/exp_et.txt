@@ -1,0 +1,5 @@
+zc=128 frames=150 iter_max=50 pp_rounds=1; 'it/blk' = iterations per successful block (all attempts, failures included)
+r34 Q=2.0% | et= 0: FER=0.000 f=1.55 att=2.87 it/blk=121 | et= 4: FER=0.000 f=1.65 att=3.37 it/blk=49 | et= 6: FER=0.000 f=1.62 att=3.24 it/blk=63 | et= 8: FER=0.000 f=1.60 att=3.13 it/blk=76 | et=12: FER=0.000 f=1.57 att=2.98 it/blk=92
+r23 Q=3.5% | et= 0: FER=0.013 f=1.39 att=2.64 it/blk=108 | et= 4: FER=0.020 f=1.44 att=2.99 it/blk=49 | et= 6: FER=0.013 f=1.42 att=2.83 it/blk=60 | et= 8: FER=0.013 f=1.41 att=2.76 it/blk=69 | et=12: FER=0.013 f=1.40 att=2.70 it/blk=81
+r12 Q=6.0% | et= 0: FER=0.007 f=1.37 att=1.14 it/blk=27 | et= 4: FER=0.007 f=1.38 att=1.26 it/blk=24 | et= 6: FER=0.007 f=1.37 att=1.19 it/blk=24 | et= 8: FER=0.007 f=1.37 att=1.18 it/blk=24 | et=12: FER=0.007 f=1.37 att=1.17 it/blk=25
+r12 Q=8.0% | et= 0: FER=0.067 f=1.25 att=3.06 it/blk=129 | et= 4: FER=0.073 f=1.26 att=3.29 it/blk=57 | et= 6: FER=0.067 f=1.26 att=3.17 it/blk=70 | et= 8: FER=0.067 f=1.25 att=3.16 it/blk=78 | et=12: FER=0.067 f=1.25 att=3.10 it/blk=91

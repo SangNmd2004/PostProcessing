@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 26 17:56:24 2026
+# Process ID: 27488
+# Current directory: C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026
+# Command line: wbtcv.exe -mode batch -source C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026/xsim.dir/review_ctx/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026/webtalk.log
+# Journal file: C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026/xsim.dir/review_ctx/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Oct 26 17:56:24 2026...

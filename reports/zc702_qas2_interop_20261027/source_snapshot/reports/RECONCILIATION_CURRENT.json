@@ -1,0 +1,9 @@
+{
+  "updated_at": "2026-10-27T16:57:16.602166+07:00",
+  "status": "PARTIAL_IMPLEMENTATION_WITH_SCOPED_TESTS",
+  "current_report": "reports/zc702_qas2_interop_20261027/REPORT.md",
+  "canonical_mapping": "reports/zc702_qas2_interop_20261027/MAPPING_CANONICAL.md",
+  "supersedes_mapping_in": "reports/zc702_reconciliation_20261027/REPORT.md",
+  "old_report_is_preserved": true,
+  "physical_board_rerun": false
+}

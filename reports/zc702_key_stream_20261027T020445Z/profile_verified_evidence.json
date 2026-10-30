@@ -1,0 +1,25 @@
+{
+  "raw_profile_replay_verified": true,
+  "functional_source_proof_verified": true,
+  "snapshots": 30,
+  "phase_rows": 138,
+  "emissions": [
+    {
+      "input_bits": 1213835,
+      "output_bits": 104768,
+      "passes": 103,
+      "tail_bits": 0,
+      "PA_calls_us": 342276.4400739832,
+      "PA_call_mean_us": 3323.0722337279926,
+      "PA_setup_us": 613.5119822081525,
+      "PA_mm2s_start_us": 28721.720167070114,
+      "PA_DMA_output_drain_us": 312878.50192652346,
+      "prefix_prepare_us": 162.49499528764514,
+      "tail_finalize_wipe_us": 42179.08077680666,
+      "emit_command_snapshot_us": 396962.1514880976,
+      "scope": "PS-observed PA multi-pass calls include DMA/cache; excludes seed UART, IR and source accumulation"
+    }
+  ],
+  "invalid_PMU_spans": 0,
+  "source_result_sha256": "415efcbca4793aa27aec8c4191d09fbe3dda9f1e971854cfe4552c8fa41b97ce"
+}

@@ -1,0 +1,15 @@
+﻿original_finding_id,original_subject,independent_recheck_status,current_finding
+REV01,Status promotion by file existence,TRACKER_CORRECTED_REPORT_MAPPING_OPEN,RC03;RC04
+REV02,Unmeasured ablation layers 5 and 6,RELABELLED_PROJECTIONS_NOT_NEW_BOARD_RESULTS,RC04
+REV03,Paced crossover simulator claimed as board experiment,SIMULATOR_YIELD_AND_SCOPE_CORRECTED_BOARD_GATE_OPEN,RC04
+REV04,Authentication PSK exposure and seq0 replay,SEQ0_FIXED_NEW_SIPHASH_KAT_FAILS,RC01
+REV05,Persistence CRC and rollback,CRC_FIXED_COLD_ROLLBACK_UNRESOLVED,RC02
+REV06,Event queue holes and IRQ integration,QUEUE_REGRESSION_FIXED_IRQ_INTEGRATION_OPEN,RC04
+REV07,TRNG synthetic data claimed physical entropy,DEMOTED_STALE_REPORT_AND_ENTROPY_GATE_OPEN,RC04;RC06
+REV08,NTT RTL stub and unsupported transform scaling,LIMIT_DOCUMENTED_IMPLEMENTATION_OPEN,RC04
+REV09,Long LDPC decoder structural stub,ACKNOWLEDGED_STILL_OPEN,RC04
+REV10,Alice encoder wrong matrix,HOST_MODEL_FIXED_RTL_TEST_PENDING,RC06
+REV11,Timing report lacks provenance,UNRESOLVED,RC04
+REV12,Profiler C includes wrong API header,HOST_AND_ARM_COMPILE_FIXED_MEASUREMENT_GATE_OPEN,RC04
+REV13,PE C simulation and retrospective finite-key claims,UNRESOLVED,RC04
+REV14,Optical/rate/resource models called implemented results,RATE4CYCLE_FIXED_OTHER_EVIDENCE_GATES_OPEN,RC04

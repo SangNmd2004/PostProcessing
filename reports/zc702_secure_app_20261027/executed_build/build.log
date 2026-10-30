@@ -1,0 +1,4 @@
+In file included from C:\Users\Admin\Downloads\PostProcessing\PostProcessing\build\zc702\secure_app_test\20261027_integration\secure_main.c:10:
+C:\Users\Admin\Downloads\PostProcessing\PostProcessing\build\zc702\vitis\qkd_zc702_platform\export\qkd_zc702_platform\sw\qkd_zc702_platform\standalone_domain\bspinclude\include/xtime_l.h:65:9: note: #pragma message: For the sleep routines, Global timer is being used
+   65 | #pragma message ("For the sleep routines, Global timer is being used")
+      |         ^~~~~~~

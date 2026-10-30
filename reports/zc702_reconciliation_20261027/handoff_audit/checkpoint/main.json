@@ -1,0 +1,148 @@
+{
+  "complete": true,
+  "started_utc": "2026-10-27T02:42:00.841917+00:00",
+  "plan": [
+    {
+      "id": "paired_ablation_1000",
+      "kind": "board_ablation",
+      "script": "run_board_ablation.py",
+      "trials": 1000,
+      "qber": 0.03,
+      "code": "r23",
+      "seed": 1800000
+    },
+    {
+      "id": "fer_pilot_q01",
+      "kind": "fer",
+      "script": "run_fer_campaign.py",
+      "trials": 1000,
+      "qber": 0.01,
+      "code": "r34",
+      "seed": 2100000
+    },
+    {
+      "id": "fer_pilot_q02",
+      "kind": "fer",
+      "script": "run_fer_campaign.py",
+      "trials": 1000,
+      "qber": 0.02,
+      "code": "r34",
+      "seed": 2200000
+    },
+    {
+      "id": "fer_pilot_q05",
+      "kind": "fer",
+      "script": "run_fer_campaign.py",
+      "trials": 1000,
+      "qber": 0.05,
+      "code": "r12",
+      "seed": 2500000
+    },
+    {
+      "id": "fer_pilot_q07",
+      "kind": "fer",
+      "script": "run_fer_campaign.py",
+      "trials": 1000,
+      "qber": 0.07,
+      "code": "r12",
+      "seed": 2700000
+    },
+    {
+      "id": "fer_qualification_q02",
+      "kind": "fer",
+      "script": "run_fer_campaign.py",
+      "trials": 10000,
+      "qber": 0.02,
+      "code": "r34",
+      "seed": 3200000
+    }
+  ],
+  "stages": [
+    {
+      "id": "paired_ablation_1000",
+      "status": "VERIFIED_COMPLETE",
+      "started_utc": "2026-10-27T02:42:00.851935+00:00",
+      "pid": 26136,
+      "stdout": "build\\zc702\\research_stages\\20261027T024200Z\\paired_ablation_1000.stdout.log",
+      "stderr": "build\\zc702\\research_stages\\20261027T024200Z\\paired_ablation_1000.stderr.log",
+      "run": "build\\zc702\\board_ablation_runs\\20261027T024201Z",
+      "verified_evaluations": 4000,
+      "planned_evaluations": 4000,
+      "report": "reports\\zc702_board_ablation_20261027T024201Z",
+      "finished_utc": "2026-10-27T03:43:53.547263+00:00"
+    },
+    {
+      "id": "fer_pilot_q01",
+      "status": "VERIFIED_COMPLETE",
+      "started_utc": "2026-10-27T03:05:45.874812+00:00",
+      "pid": 5588,
+      "stdout": "build\\zc702\\research_stages\\20261027T024200Z\\fer_pilot_q01.stdout.log",
+      "stderr": "build\\zc702\\research_stages\\20261027T024200Z\\fer_pilot_q01.stderr.log",
+      "run": "build\\zc702\\fer_runs\\20261027T030546Z",
+      "verified_evaluations": 1000,
+      "planned_evaluations": 1000,
+      "report": "reports\\zc702_fer_20261027T030546Z",
+      "finished_utc": "2026-10-27T03:43:53.668562+00:00"
+    },
+    {
+      "id": "fer_pilot_q02",
+      "status": "VERIFIED_COMPLETE",
+      "started_utc": "2026-10-27T03:09:19.391742+00:00",
+      "pid": 18756,
+      "stdout": "build\\zc702\\research_stages\\20261027T024200Z\\fer_pilot_q02.stdout.log",
+      "stderr": "build\\zc702\\research_stages\\20261027T024200Z\\fer_pilot_q02.stderr.log",
+      "run": "build\\zc702\\fer_runs\\20261027T030919Z",
+      "verified_evaluations": 1000,
+      "planned_evaluations": 1000,
+      "report": "reports\\zc702_fer_20261027T030919Z",
+      "finished_utc": "2026-10-27T03:43:53.750092+00:00"
+    },
+    {
+      "id": "fer_pilot_q05",
+      "status": "VERIFIED_COMPLETE",
+      "started_utc": "2026-10-27T03:15:49.207199+00:00",
+      "pid": 14740,
+      "stdout": "build\\zc702\\research_stages\\20261027T024200Z\\fer_pilot_q05.stdout.log",
+      "stderr": "build\\zc702\\research_stages\\20261027T024200Z\\fer_pilot_q05.stderr.log",
+      "run": "build\\zc702\\fer_runs\\20261027T031549Z",
+      "verified_evaluations": 1000,
+      "planned_evaluations": 1000,
+      "report": "reports\\zc702_fer_20261027T031549Z",
+      "finished_utc": "2026-10-27T03:43:53.825615+00:00"
+    },
+    {
+      "id": "fer_pilot_q07",
+      "status": "VERIFIED_COMPLETE",
+      "started_utc": "2026-10-27T03:19:34.064497+00:00",
+      "pid": 12540,
+      "stdout": "build\\zc702\\research_stages\\20261027T024200Z\\fer_pilot_q07.stdout.log",
+      "stderr": "build\\zc702\\research_stages\\20261027T024200Z\\fer_pilot_q07.stderr.log",
+      "run": "build\\zc702\\fer_runs\\20261027T031934Z",
+      "verified_evaluations": 1000,
+      "planned_evaluations": 1000,
+      "report": "reports\\zc702_fer_20261027T031934Z",
+      "finished_utc": "2026-10-27T03:43:53.895649+00:00"
+    },
+    {
+      "id": "fer_qualification_q02",
+      "status": "VERIFIED_COMPLETE",
+      "started_utc": "2026-10-27T03:43:53.981640+00:00",
+      "pid": 4820,
+      "stdout": "build\\zc702\\research_stages\\20261027T024200Z\\fer_qualification_q02.stdout.log",
+      "stderr": "build\\zc702\\research_stages\\20261027T024200Z\\fer_qualification_q02.stderr.log",
+      "run": "build\\zc702\\fer_runs\\20261027T032458Z",
+      "verified_evaluations": 10000,
+      "planned_evaluations": 10000,
+      "report": "reports\\zc702_fer_20261027T032458Z",
+      "finished_utc": "2026-10-27T04:42:53.442365+00:00"
+    }
+  ],
+  "scope": "synthetic BSC decoder experiments; tag and PA excluded",
+  "previous_controller_errors": [
+    {
+      "error": "PermissionError(13, 'Access is denied')",
+      "stopped_utc": "2026-10-27T03:32:03.374733+00:00"
+    }
+  ],
+  "finished_utc": "2026-10-27T04:42:53.458915+00:00"
+}

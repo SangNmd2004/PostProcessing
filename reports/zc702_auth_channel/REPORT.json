@@ -1,0 +1,40 @@
+{
+  "verified_utc": "20261027T072419Z",
+  "item_id": "P04",
+  "title": "Authenticated classical Alice-Bob channel using Wegman-Carter MAC",
+  "overall": "PASS",
+  "files": {
+    "auth_channel.c": "d963b417d6152f156dd4839891349fe05a04f47e7d20eede10b14a09fc61e1e9",
+    "auth_channel.h": "790efaf34c067ce615aeda32d45485b96ed31a47fedbbd8a8df8584e3301a59f"
+  },
+  "test_results": [
+    {
+      "test_case": "normal_round_trip",
+      "packets_tested": 4,
+      "status": "PASS"
+    },
+    {
+      "test_case": "tamper_bit_flip_detection",
+      "trials": 50,
+      "detected": 50,
+      "detection_rate_pct": 100.0,
+      "status": "PASS"
+    },
+    {
+      "test_case": "anti_replay_protection",
+      "replay_status": "AUTH_ERR_REPLAY_SEQ",
+      "status": "PASS"
+    },
+    {
+      "test_case": "corrupt_magic_word_detection",
+      "status": "PASS"
+    }
+  ],
+  "security_parameters": {
+    "mac_tag_length_bits": 64,
+    "universal_hash_field": "GF(2^64)",
+    "forgery_probability_per_message": 5.421010862427522e-20,
+    "anti_replay_mechanism": "Strictly increasing sequence counter",
+    "lockout_policy": "Fail-closed on persistent tampering"
+  }
+}

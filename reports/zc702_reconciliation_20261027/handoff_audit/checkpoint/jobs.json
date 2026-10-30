@@ -1,0 +1,8 @@
+{
+  "status": "VERIFIED_COMPLETE",
+  "pid": 4112,
+  "port": "COM3",
+  "port_released": true,
+  "followup_directory": "build\\zc702\\research_followups\\20261027T032212Z",
+  "report": "reports/RESEARCH_FOLLOWUPS_LATEST.json"
+}

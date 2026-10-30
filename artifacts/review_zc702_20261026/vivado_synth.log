@@ -1,0 +1,161 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 26 17:08:27 2026
+# Process ID: 22552
+# Current directory: C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026
+# Command line: vivado.exe -mode batch -source .\synth_zc702.tcl -log vivado_synth.log -journal vivado_synth.jou
+# Log file: C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026/vivado_synth.log
+# Journal file: C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026\vivado_synth.jou
+#-----------------------------------------------------------
+source {.\synth_zc702.tcl}
+# set root [file normalize [file join [file dirname [info script]] ../..]]
+# set out [file normalize [file dirname [info script]]]
+# set_param general.maxThreads 4
+# foreach f {
+#     rtl/ldpc/ldpc_sdp_ram.v
+#     rtl/ldpc/qc_cyclic_shifter.v
+#     rtl/ldpc/ldpc_code_rom.v
+#     rtl/ldpc/ldpc_ir_decoder.v
+#     rtl/top/qkd_ir_core.v
+#     rtl/pa/pa_hankel_hash.v
+#     rtl/top/qkd_pp_axi.v
+# } { read_verilog [file join $root $f] }
+# synth_design -top qkd_pp_axi -part xc7z020clg484-1 -mode out_of_context
+Command: synth_design -top qkd_pp_axi -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 26228
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1108.598 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'qkd_pp_axi' [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/top/qkd_pp_axi.v:58]
+	Parameter ZC bound to: 128 - type: integer 
+	Parameter SH_W bound to: 7 - type: integer 
+	Parameter CTX_W bound to: 2 - type: integer 
+	Parameter ZC16 bound to: 128 - type: integer 
+	Parameter NCTX bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'qkd_ir_core' [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/top/qkd_ir_core.v:35]
+	Parameter ZC bound to: 128 - type: integer 
+	Parameter SH_W bound to: 7 - type: integer 
+	Parameter CTX_W bound to: 2 - type: integer 
+	Parameter NCTX bound to: 4 - type: integer 
+	Parameter ROW_BEATS bound to: 8 - type: integer 
+	Parameter SYN_BEATS bound to: 4 - type: integer 
+	Parameter KEY_WORDS bound to: 2 - type: integer 
+	Parameter C_FREE bound to: 3'b000 
+	Parameter C_HOLD bound to: 3'b001 
+	Parameter C_QUEUE bound to: 3'b010 
+	Parameter C_DEC bound to: 3'b011 
+	Parameter C_WAIT bound to: 3'b100 
+	Parameter C_OUT bound to: 3'b101 
+	Parameter R_IDLE bound to: 2'b00 
+	Parameter R_RD bound to: 2'b01 
+	Parameter R_CAP bound to: 2'b10 
+	Parameter R_WR bound to: 2'b11 
+	Parameter G_IDLE bound to: 3'b000 
+	Parameter G_REQ bound to: 3'b001 
+	Parameter G_CAP bound to: 3'b010 
+	Parameter G_SEND bound to: 3'b011 
+	Parameter G_REQ2 bound to: 3'b100 
+INFO: [Synth 8-6157] synthesizing module 'ldpc_ir_decoder' [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/ldpc_ir_decoder.v:74]
+	Parameter ZC bound to: 128 - type: integer 
+	Parameter SH_W bound to: 7 - type: integer 
+	Parameter APP_W bound to: 7 - type: integer 
+	Parameter C2V_W bound to: 6 - type: integer 
+	Parameter V2C_W bound to: 8 - type: integer 
+	Parameter NGRP bound to: 16 - type: integer 
+	Parameter CTX_W bound to: 2 - type: integer 
+	Parameter S_IDLE bound to: 4'b0000 
+	Parameter S_LOAD bound to: 4'b0001 
+	Parameter S_RD bound to: 4'b0010 
+	Parameter S_WR bound to: 4'b0100 
+	Parameter S_CHK bound to: 4'b0101 
+	Parameter S_LEND bound to: 4'b0110 
+	Parameter S_USC bound to: 4'b0111 
+	Parameter S_UEND bound to: 4'b1000 
+	Parameter S_UP1 bound to: 4'b1001 
+	Parameter S_UP2 bound to: 4'b1010 
+	Parameter S_UFIN bound to: 4'b1011 
+	Parameter S_CNT bound to: 4'b1100 
+	Parameter S_CFLIP bound to: 4'b1101 
+	Parameter M_RD bound to: 2'b00 
+	Parameter M_WR bound to: 2'b01 
+	Parameter M_USC bound to: 2'b10 
+	Parameter M_CNT bound to: 2'b11 
+	Parameter MAG_MAX bound to: 7'b1111111 
+	Parameter NPOP bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ldpc_code_rom' [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/ldpc_code_rom.v:6]
+INFO: [Synth 8-226] default block is never used [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/ldpc_code_rom.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'ldpc_code_rom' (1#1) [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/ldpc_code_rom.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ldpc_sdp_ram' [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/ldpc_sdp_ram.v:6]
+	Parameter DATA_W bound to: 384 - type: integer 
+	Parameter DEPTH bound to: 128 - type: integer 
+	Parameter ADDR_W bound to: 7 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ldpc_sdp_ram' (2#1) [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/ldpc_sdp_ram.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ldpc_sdp_ram__parameterized0' [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/ldpc_sdp_ram.v:6]
+	Parameter DATA_W bound to: 896 - type: integer 
+	Parameter DEPTH bound to: 24 - type: integer 
+	Parameter ADDR_W bound to: 5 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ldpc_sdp_ram__parameterized0' (2#1) [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/ldpc_sdp_ram.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ldpc_sdp_ram__parameterized1' [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/ldpc_sdp_ram.v:6]
+	Parameter DATA_W bound to: 768 - type: integer 
+	Parameter DEPTH bound to: 128 - type: integer 
+	Parameter ADDR_W bound to: 7 - type: integer 
+	Parameter OUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ldpc_sdp_ram__parameterized1' (2#1) [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/ldpc_sdp_ram.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ldpc_sdp_ram__parameterized2' [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/ldpc_sdp_ram.v:6]
+	Parameter DATA_W bound to: 128 - type: integer 
+	Parameter DEPTH bound to: 32 - type: integer 
+	Parameter ADDR_W bound to: 5 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ldpc_sdp_ram__parameterized2' (2#1) [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/ldpc_sdp_ram.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ldpc_sdp_ram__parameterized3' [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/ldpc_sdp_ram.v:6]
+	Parameter DATA_W bound to: 128 - type: integer 
+	Parameter DEPTH bound to: 128 - type: integer 
+	Parameter ADDR_W bound to: 7 - type: integer 
+	Parameter OUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ldpc_sdp_ram__parameterized3' (2#1) [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/ldpc_sdp_ram.v:6]
+INFO: [Synth 8-6157] synthesizing module 'qc_cyclic_shifter' [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/qc_cyclic_shifter.v:10]
+	Parameter ZC bound to: 128 - type: integer 
+	Parameter WORD_W bound to: 8 - type: integer 
+	Parameter SHIFT_W bound to: 7 - type: integer 
+	Parameter NGRP bound to: 16 - type: integer 
+	Parameter PIPE_AT bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'qc_cyclic_shifter' (3#1) [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/qc_cyclic_shifter.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ldpc_ir_decoder' (4#1) [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/ldpc/ldpc_ir_decoder.v:74]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/top/qkd_ir_core.v:452]
+INFO: [Synth 8-6155] done synthesizing module 'qkd_ir_core' (5#1) [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/top/qkd_ir_core.v:35]
+INFO: [Synth 8-6157] synthesizing module 'pa_hankel_hash' [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/pa/pa_hankel_hash.v:18]
+	Parameter L_OUT bound to: 1024 - type: integer 
+	Parameter NW_W bound to: 20 - type: integer 
+	Parameter W_LEN bound to: 1056 - type: integer 
+	Parameter PRELOAD bound to: 33 - type: integer 
+	Parameter NOUT bound to: 16 - type: integer 
+	Parameter P_IDLE bound to: 2'b00 
+	Parameter P_PRE bound to: 2'b01 
+	Parameter P_RUN bound to: 2'b10 
+	Parameter P_OUT bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'pa_hankel_hash' (6#1) [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/pa/pa_hankel_hash.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'qkd_pp_axi' (7#1) [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/rtl/top/qkd_pp_axi.v:58]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1476.348 ; gain = 367.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1476.348 ; gain = 367.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1476.348 ; gain = 367.750
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ldpc_ir_decoder'

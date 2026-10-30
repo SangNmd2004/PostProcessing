@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-27T06:30:31.277317+00:00",
+  "hardware_capture": false,
+  "model_co_simulation_verified": true,
+  "prime_q": 4293918721,
+  "invertibility_pass": true,
+  "bit_exactness_pass": true,
+  "files": {
+    "pa_ntt_top.v": "9483861a5a25061d2f967d7e3450afe87c5669bddc8eeb2e8d0c004705ef07fe",
+    "pa_ntt_model.py": "a6dd1edd2450ad74257bd262ed1e369fd83fac7b5dcbf32f99b5bd2ada973814",
+    "REPORT.json": "0c4998666791f89bef1c3d50b56dd68ade37a9ea35abb1d9fffe3610ad22e353",
+    "benchmark_summary.csv": "89cf31fc5efe53b383e748e206985ec1625f34267c901015a898aad844ec3e91"
+  }
+}

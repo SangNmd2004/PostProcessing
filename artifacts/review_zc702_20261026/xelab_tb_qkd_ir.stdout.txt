@@ -1,0 +1,36 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_qkd_ir -s review_basic --debug off --mt 2 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 's_axi_awaddr' [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026/tb_qkd_ir_review.v:43]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 's_axi_araddr' [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026/tb_qkd_ir_review.v:46]
+WARNING: [VRFC 10-5021] port 's_axi_awprot' is not connected on this instance [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026/tb_qkd_ir_review.v:41]
+WARNING: [VRFC 10-3645] port 'm_axis_key_tkeep' remains unconnected for this instance [C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026/tb_qkd_ir_review.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.ldpc_code_rom
+Compiling module work.ldpc_sdp_ram(DATA_W=384,DEPTH=12...
+Compiling module work.ldpc_sdp_ram(DATA_W=896,OUT_REG=...
+Compiling module work.ldpc_sdp_ram(DATA_W=768,DEPTH=12...
+Compiling module work.ldpc_sdp_ram(DATA_W=128,DEPTH=32...
+Compiling module work.ldpc_sdp_ram(DATA_W=128,DEPTH=12...
+Compiling module work.qc_cyclic_shifter(ZC=128,NGRP=16...
+Compiling module work.ldpc_ir_decoder_default
+Compiling module work.qkd_ir_core_default
+Compiling module work.pa_hankel_hash_default
+Compiling module work.qkd_pp_axi_default
+Compiling module work.qkd_pp_zc702
+Compiling module work.tb_qkd_ir
+Built simulation snapshot review_basic
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Admin/Downloads/PostProcessing/PostProcessing/artifacts/review_zc702_20261026/xsim.dir/review_basic/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Oct 26 17:53:51 2026...

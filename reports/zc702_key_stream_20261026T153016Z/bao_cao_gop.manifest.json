@@ -1,0 +1,23 @@
+{
+  "rows": 614,
+  "sha256": "ad1d1f8617d1224bb5f1e1d252e30a049e3c1745f019bba35dada8d982d339f8",
+  "sources": {
+    "reports\\zc702_key_stream_20261026T153016Z\\blocks.csv": {
+      "rows": 512,
+      "sha256": "e3c3a06d92f89c49c20510fcd784dca645c551fd07ed061d4c52d3c7953ac3f9"
+    },
+    "reports\\zc702_key_stream_20261026T153016Z\\decisions.csv": {
+      "rows": 92,
+      "sha256": "f0b9ca40f207b8175654f07abb0b04b949e2eb788d8562a65d523b3a069215dd"
+    },
+    "reports\\zc702_key_stream_20261026T153016Z\\emissions.csv": {
+      "rows": 1,
+      "sha256": "59c346876007899dfc940808d1a0a8faf24f9bb7be836b754b7059decf31e7d7"
+    },
+    "reports\\zc702_key_stream_20261026T153016Z\\checks.csv": {
+      "rows": 9,
+      "sha256": "552480340dd4fd57fa640756c864bbbac982f70a9aca79aa3c4328ccee22649e"
+    }
+  },
+  "note": "Different views of the same trials; do not sum counts across record_type"
+}

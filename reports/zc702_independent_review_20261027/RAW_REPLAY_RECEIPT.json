@@ -1,0 +1,23 @@
+[
+  {
+    "verifier": "verify_experiment_run.py",
+    "verifier_sha256": "dcbc1a727d034fbb9dc8999d5d98eaedd085ca6ee3c89e595d7221840e444055",
+    "run": "build/zc702/fer_runs/20261027T032458Z",
+    "returncode": 0,
+    "scope": "Original checks; output redirected; tracker completion hook disabled"
+  },
+  {
+    "verifier": "report_wrong_codeword_test.py",
+    "verifier_sha256": "4c2b7adaaf39f14ac60aa053bbafe93999c910e10d414f3367b4e3aaf600283a",
+    "run": "build/zc702/wrong_codeword_runs/20261027T044256Z",
+    "returncode": 0,
+    "scope": "Original checks; output redirected; tracker completion hook disabled"
+  },
+  {
+    "verifier": "report_schedule_validation.py",
+    "verifier_sha256": "b7f01a8740ed11ce0bb9b2b18b5b9281346517b0e7eb8c1cf17523bf696536c1",
+    "run": "build/zc702/schedule_validation_runs/20261027T044317Z",
+    "returncode": 0,
+    "scope": "Original checks; output redirected; tracker completion hook disabled"
+  }
+]

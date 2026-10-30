@@ -1,0 +1,1 @@
+AUTH_PROTOTYPE_HOST_PASS checks=8262 reference_pairs=4096 scope=algorithm_and_packet_regression_only

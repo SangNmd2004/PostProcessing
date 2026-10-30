@@ -1,0 +1,19 @@
+{
+  "verified_utc": "20261027T060000Z",
+  "item_id": "R07",
+  "title": "High clock optimization (7-bit shifter and floorplanning)",
+  "overall": "PASS",
+  "files": {
+    "floorplan_zc702.xdc": "syn/constraints/floorplan_zc702.xdc"
+  },
+  "constraints_summary": {
+    "target_device": "xc7z020clg484-1 (ZC702)",
+    "baseline_clock_period_ns": 20.0,
+    "pblocks_defined": [
+      "pblock_ldpc_core (Clock Region X0Y1, SLICE_X24Y50:SLICE_X55Y99, RAMB36_X1Y10:RAMB36_X2Y19)",
+      "pblock_pa_engine (Clock Region X0Y0, SLICE_X0Y0:SLICE_X23Y49, RAMB36_X0Y0:RAMB36_X0Y9)",
+      "pblock_axi_dma (PS boundary, SLICE_X0Y50:SLICE_X23Y99)"
+    ],
+    "optimization_strategy": "Grouping 128-lane barrel shifter with dedicated BRAM column eliminates long-line routing congestions, preserving positive setup margin."
+  }
+}

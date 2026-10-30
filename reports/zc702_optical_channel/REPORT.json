@@ -1,0 +1,152 @@
+{
+  "verified_utc": "20261027T055941Z",
+  "item_id": "R06",
+  "title": "Optical channel optimization and realistic decoy parameters",
+  "csv_path": "data\\optical_channel_measurements.csv",
+  "csv_sha256": "5cc77f86987026d39b637b5efa3f875a82c28cf1bf3450c2022453e981f2c509",
+  "channel_parameters": {
+    "wavelength_nm": 1550,
+    "fiber_attenuation_db_per_km": 0.2,
+    "detector_efficiency": 0.2,
+    "dark_count_prob": 1e-06,
+    "optical_misalignment_error": 0.01,
+    "pulse_rep_rate_mhz": 100.0,
+    "decoy_intensities": {
+      "mu": 0.5,
+      "nu": 0.1,
+      "omega": 0.0
+    }
+  },
+  "measurements": [
+    {
+      "distance_km": 10,
+      "fiber_loss_db": 2.0,
+      "total_transmittance": "1.261915e-01",
+      "gain_signal_Q_mu": "6.114841e-02",
+      "qber_signal_E_mu_pct": 1.002,
+      "gain_decoy_Q_nu": "1.254186e-02",
+      "qber_decoy_E_nu_pct": 1.008,
+      "single_photon_yield_Y1": "1.228289e-01",
+      "single_photon_error_e1_pct": 1.129,
+      "secret_key_rate_bps": 1411837.2,
+      "secret_key_rate_kbps": 1411.84
+    },
+    {
+      "distance_km": 20,
+      "fiber_loss_db": 4.0,
+      "total_transmittance": "7.962143e-02",
+      "gain_signal_Q_mu": "3.903068e-02",
+      "qber_signal_E_mu_pct": 1.003,
+      "gain_decoy_Q_nu": "7.932530e-03",
+      "qber_decoy_E_nu_pct": 1.012,
+      "single_photon_yield_Y1": "7.738565e-02",
+      "single_photon_error_e1_pct": 1.134,
+      "secret_key_rate_bps": 886647.9,
+      "secret_key_rate_kbps": 886.65
+    },
+    {
+      "distance_km": 30,
+      "fiber_loss_db": 6.0,
+      "total_transmittance": "5.023773e-02",
+      "gain_signal_Q_mu": "2.480801e-02",
+      "qber_signal_E_mu_pct": 1.004,
+      "gain_decoy_Q_nu": "5.013175e-03",
+      "qber_decoy_E_nu_pct": 1.02,
+      "single_photon_yield_Y1": "4.878044e-02",
+      "single_photon_error_e1_pct": 1.137,
+      "secret_key_rate_bps": 557644.6,
+      "secret_key_rate_kbps": 557.64
+    },
+    {
+      "distance_km": 40,
+      "fiber_loss_db": 8.0,
+      "total_transmittance": "3.169786e-02",
+      "gain_signal_Q_mu": "1.572600e-02",
+      "qber_signal_E_mu_pct": 1.006,
+      "gain_decoy_Q_nu": "3.166768e-03",
+      "qber_decoy_E_nu_pct": 1.031,
+      "single_photon_yield_Y1": "3.075985e-02",
+      "single_photon_error_e1_pct": 1.14,
+      "secret_key_rate_bps": 351026.4,
+      "secret_key_rate_kbps": 351.03
+    },
+    {
+      "distance_km": 50,
+      "fiber_loss_db": 10.0,
+      "total_transmittance": "2.000000e-02",
+      "gain_signal_Q_mu": "9.952166e-03",
+      "qber_signal_E_mu_pct": 1.01,
+      "gain_decoy_Q_nu": "2.000001e-03",
+      "qber_decoy_E_nu_pct": 1.049,
+      "single_photon_yield_Y1": "1.940112e-02",
+      "single_photon_error_e1_pct": 1.144,
+      "secret_key_rate_bps": 221051.5,
+      "secret_key_rate_kbps": 221.05
+    },
+    {
+      "distance_km": 60,
+      "fiber_loss_db": 12.0,
+      "total_transmittance": "1.261915e-02",
+      "gain_signal_Q_mu": "6.291710e-03",
+      "qber_signal_E_mu_pct": 1.016,
+      "gain_decoy_Q_nu": "1.263119e-03",
+      "qber_decoy_E_nu_pct": 1.078,
+      "single_photon_yield_Y1": "1.223889e-02",
+      "single_photon_error_e1_pct": 1.147,
+      "secret_key_rate_bps": 139200.9,
+      "secret_key_rate_kbps": 139.2
+    },
+    {
+      "distance_km": 70,
+      "fiber_loss_db": 14.0,
+      "total_transmittance": "7.962143e-03",
+      "gain_signal_Q_mu": "3.975158e-03",
+      "qber_signal_E_mu_pct": 1.025,
+      "gain_decoy_Q_nu": "7.978974e-04",
+      "qber_decoy_E_nu_pct": 1.123,
+      "single_photon_yield_Y1": "7.721700e-03",
+      "single_photon_error_e1_pct": 1.153,
+      "secret_key_rate_bps": 87620.2,
+      "secret_key_rate_kbps": 87.62
+    },
+    {
+      "distance_km": 80,
+      "fiber_loss_db": 16.0,
+      "total_transmittance": "5.023773e-03",
+      "gain_signal_Q_mu": "2.510734e-03",
+      "qber_signal_E_mu_pct": 1.039,
+      "gain_decoy_Q_nu": "5.042511e-04",
+      "qber_decoy_E_nu_pct": 1.194,
+      "single_photon_yield_Y1": "4.872295e-03",
+      "single_photon_error_e1_pct": 1.161,
+      "secret_key_rate_bps": 55100.6,
+      "secret_key_rate_kbps": 55.1
+    },
+    {
+      "distance_km": 90,
+      "fiber_loss_db": 18.0,
+      "total_transmittance": "3.169786e-03",
+      "gain_signal_Q_mu": "1.585638e-03",
+      "qber_signal_E_mu_pct": 1.062,
+      "gain_decoy_Q_nu": "3.189284e-04",
+      "qber_decoy_E_nu_pct": 1.307,
+      "single_photon_yield_Y1": "3.074743e-03",
+      "single_photon_error_e1_pct": 1.173,
+      "secret_key_rate_bps": 34592.8,
+      "secret_key_rate_kbps": 34.59
+    },
+    {
+      "distance_km": 100,
+      "fiber_loss_db": 20.0,
+      "total_transmittance": "2.000000e-03",
+      "gain_signal_Q_mu": "1.001500e-03",
+      "qber_signal_E_mu_pct": 1.098,
+      "gain_decoy_Q_nu": "2.019800e-04",
+      "qber_decoy_E_nu_pct": 1.485,
+      "single_photon_yield_Y1": "1.940683e-03",
+      "single_photon_error_e1_pct": 1.193,
+      "secret_key_rate_bps": 21658.3,
+      "secret_key_rate_kbps": 21.66
+    }
+  ]
+}

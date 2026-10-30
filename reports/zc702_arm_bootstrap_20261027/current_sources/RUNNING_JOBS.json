@@ -1,0 +1,9 @@
+{
+  "status": "VERIFIED_COMPLETE",
+  "script": "syn/zc702/run_bootstrap_board.py",
+  "run_directory": "build/zc702/bootstrap_board_runs/20261027T101719Z",
+  "port": "COM3",
+  "port_released": true,
+  "baseline_restored": true,
+  "report": "reports/zc702_bootstrap_board_20261027T101719Z/verified_evidence.json"
+}
