@@ -11,6 +11,16 @@
 - [Tổng hợp IP riêng](HUONG_DAN_TONG_HOP_ZC702.md), [firmware và UART](firmware/zc702_uart/README.md), [giao thức QAS2](firmware/zc702_uart/AUTH_SESSION_PROTOCOL.md).
 - [Kế hoạch nghiệm thu](KE_HOACH_HOAN_THANH_MUC_TIEU_ZC702.md).
 
+## Kiến trúc, hướng phát triển và mô hình toán học
+
+- [Kiến trúc chi tiết lõi IR và PA](<Lõi IR Blind Reconciliation (Copy).md>): luồng dữ liệu, decoder/layer, bốn context, rate, finite-key, thanh ghi và hướng phát triển.
+- [Tổng hợp kiến trúc và định hướng nghiên cứu ZC702](TONG_HOP_KET_QUA_VA_KE_HOACH_ZC702.md).
+- [Kế hoạch tổng thể và hướng phát triển](KE_HOACH_TONG_THE_VA_HUONG_PHAT_TRIEN.md): các giai đoạn, đầu việc và tiêu chí nghiệm thu.
+- [Bốn mô hình toán học và thiết kế thí nghiệm](MO_HINH_TOAN_HOC_VA_KE_HOACH_THUC_NGHIEM.md): hàng đợi/lập lịch đa context, leakage và crossover, finite-key/first-EMIT, ngân sách xác minh.
+- Đặc tả triển khai: [resource/scheduling](reports/publication_plan_20261026/RESOURCE_MODEL_DERIVATION.md), [crossover](reports/publication_plan_20261026/CROSSOVER_MODEL_SPEC.md), [gate thực nghiệm](reports/publication_plan_20261026/EXPERIMENT_PLAN.md).
+
+Các tài liệu gốc được khôi phục để giữ kiến trúc và lý do nghiên cứu. Số liệu lịch sử hoặc đề xuất trong đó cần đọc cùng trạng thái và raw proof hiện hành; không thay thế bảng nghiệm thu. [Biên bản khôi phục và SHA-256](reports/documents_restoration_20261031.json).
+
 ## Cấu trúc
 
 | Thư mục | Nội dung |

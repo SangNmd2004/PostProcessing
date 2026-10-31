@@ -1,0 +1,43 @@
+{
+  "restored_at": "2026-10-31T09:33:42.843641+07:00",
+  "reason": "Restore architecture, roadmap and mathematical-model documents mistakenly classified as obsolete during cleanup.",
+  "documents": [
+    {
+      "source_original_name": "Lõi IR Blind Reconciliation (Copy).md",
+      "restored_path": "Lõi IR Blind Reconciliation (Copy).md",
+      "recovered_source_sha256": "22b6a86f99bf064e724cf87ec9c5e5caf047a90396a28cad18863dfe8e8c2723",
+      "source_bytes": 26924,
+      "exact_copy_verified_before_link_updates": true,
+      "restored_sha256": "22b6a86f99bf064e724cf87ec9c5e5caf047a90396a28cad18863dfe8e8c2723",
+      "byte_exact_to_recovered_source": true
+    },
+    {
+      "source_original_name": "TONG_HOP_KET_QUA_VA_KE_HOACH_ZC702.md",
+      "restored_path": "TONG_HOP_KET_QUA_VA_KE_HOACH_ZC702.md",
+      "recovered_source_sha256": "9e131883b26362687635a2b2280ab5da221576815f8813708e4def19c8eb14c2",
+      "source_bytes": 29083,
+      "exact_copy_verified_before_link_updates": true,
+      "restored_sha256": "0a625e27a09d793f89c6beed6a7e7b35ecb1fa7b2440a38fd11b7988870f0302",
+      "byte_exact_to_recovered_source": false
+    },
+    {
+      "source_original_name": "MASTER_PLAN.md",
+      "restored_path": "KE_HOACH_TONG_THE_VA_HUONG_PHAT_TRIEN.md",
+      "recovered_source_sha256": "87406871187e40e38d6ff3e9d05ea79b6fe471748127a7ec6ca50996a705897a",
+      "source_bytes": 9373,
+      "exact_copy_verified_before_link_updates": true,
+      "restored_sha256": "9a14490b4c8d1014c1c42837da7f5d65ac41c0dd7839313a7774a0ff39fde90b",
+      "byte_exact_to_recovered_source": false
+    },
+    {
+      "source_original_name": "PUBLICATION_EXPERIMENT_PLAN.md",
+      "restored_path": "MO_HINH_TOAN_HOC_VA_KE_HOACH_THUC_NGHIEM.md",
+      "recovered_source_sha256": "2e866fc3991f629500e7dc77376fa3de44b17e1566fb652cc9f360612fa57035",
+      "source_bytes": 14027,
+      "exact_copy_verified_before_link_updates": true,
+      "restored_sha256": "bed3bc8c88c081d9c66a8b171d52f7a4bf9667e24b8350aabb4474baba0d27ad",
+      "byte_exact_to_recovered_source": false
+    }
+  ],
+  "modifications": "Core IR document restored byte for byte. Other documents retain source content, with a scope note and obsolete-link repairs. No hardware/code changes or new experimental claims."
+}
