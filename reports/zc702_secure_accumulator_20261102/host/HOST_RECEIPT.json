@@ -1,0 +1,59 @@
+{
+  "status": "HOST_C_INSTRUMENTED_DMA_PASS",
+  "commands": [
+    {
+      "argv": [
+        "C:/msys64/mingw64/bin/gcc.exe",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "syn/zc702/tests",
+        "-I",
+        "firmware/zc702_uart",
+        "-I",
+        "firmware",
+        "-I",
+        "build/zc702/uart_firmware",
+        "syn/zc702/tests/secure_accumulator_host.c",
+        "firmware/zc702_uart/auth_session.c",
+        "firmware/crypto/siphash.c",
+        "firmware/crypto/qcrypto.c",
+        "firmware/crypto/rfc6234/sha224-256.c",
+        "-lm",
+        "-o",
+        "build/zc702/secure_accumulator_host/20261102/test.exe"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "build/zc702/secure_accumulator_host/20261102/test.exe"
+      ],
+      "returncode": 0,
+      "stdout": "SECURE_ACCUMULATOR_HOST_PASS checks=1500317 DMA_INSTRUMENTED_NOT_PL\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:/msys64/mingw64/bin/gcc.exe",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "gcc.exe (Rev6, Built by MSYS2 project) 16.2.0\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "stderr": ""
+    }
+  ],
+  "source_sha256": {
+    "syn/zc702/tests/secure_accumulator_host.c": "a3872719c0cf85d8f5b9c2f190e2d0df8b1377ba581f5ee426ff0515a130a780",
+    "syn/zc702/tests/secure_service_overlay.h": "feea2f24bfd9ac9f89f1bcf0b91a1146e44615bdd3a56c7820aee8bc813012ff",
+    "firmware/zc702_uart/secure_accumulator_service.h": "a060305f6a4f37c3eabae6b5a631b286e292967247606e95ad136983d2bf27e8",
+    "firmware/zc702_uart/secure_key_stream.h": "8299d666dd15a5396cae5cdf27bfdd3b99c905922e0b6920f07299cf0a824e63"
+  },
+  "hardware_capture": false,
+  "scope": "real dispatcher/auth/stream C, mocked IR/PA/DMA; scalar wipe assertions are not independent trials"
+}

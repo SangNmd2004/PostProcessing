@@ -1,6 +1,6 @@
 """Independent request/log checks for DDR latency or independent-BSC FER runs."""
 from pathlib import Path
-import argparse,collections,csv,hashlib,json,re,struct,sys,zlib
+import argparse,collections,csv,hashlib,json,os,re,struct,sys,zlib
 import numpy as np
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'model'))
 import ir_model as m
@@ -85,8 +85,9 @@ else:
            'scope':'IR component; no tag or PA in this measurement'}
     out=ROOT/'reports'/('zc702_fer_'+result['started_utc'])
 proof['source_result_sha256']=hashlib.sha256((folder/'result.json').read_bytes()).hexdigest()
+proof['raw_replay_verified']=True
 out.mkdir(exist_ok=True,parents=True);(out/'verified_evidence.json').write_text(json.dumps(proof,indent=2)+'\n')
-if args.kind=='fer' and len(result['records'])>=10000:
+if args.kind=='fer' and len(result['records'])>=10000 and os.environ.get('QKD_DISABLE_COMPLETION_HOOK')!='1':
     # Completion hook for the long-running campaign. It marks one stratum done,
     # never claims that every QBER/policy or the whole project is complete.
     report=(out/'REPORT.md').relative_to(ROOT).as_posix()

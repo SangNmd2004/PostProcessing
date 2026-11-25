@@ -10,7 +10,7 @@ from pa_accum import PAAccumulator
 from hankel_exact import hankel_hash
 from run_key_stream import Source,bits_words
 
-ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('run',type=Path);args=ap.parse_args()
+ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('run',type=Path);ap.add_argument('--output',type=Path);args=ap.parse_args()
 folder=args.run.resolve();result=json.loads((folder/'result.json').read_text())
 assert result['complete'] and result['hardware_capture'] and not result['security_certified']
 uart=(folder/'uart.log').read_text();xsct=(folder/'xsct.log').read_text(errors='replace')
@@ -21,7 +21,7 @@ for f in frames:
     data=(folder/f['file']).read_bytes()
     assert hashlib.sha256(data).hexdigest()==f['sha256'] and f'{zlib.crc32(data):08x}'==f['crc32']
     payloads[f['seq']]=struct.unpack('<'+'I'*(len(data)//4),data)
-sources={name:Source(name) for name in result['sources']}
+sources={name:Source(name,Path(info['path']).parent) for name,info in result['sources'].items()}
 for name,source in sources.items():assert hashlib.sha256(source.path.read_bytes()).hexdigest()==result['sources'][name]['sha256']
 codes=m.load_codes(128);key_groups=collections.OrderedDict()
 for seq,index,value in re.findall(r'QKD_FUNC_KEY seq=(\d+) word=(\d+) value=([0-9a-fA-F]{16})',uart):
@@ -120,7 +120,9 @@ for f in frames:
 assert emission==len(result['emissions'])
 negative={(r['source'],r['source_block']) for r in result['records'] if r['outcome']=='INJECTED_TAG_REJECT'}
 reused=[r for r in block_rows if (r['source'],r['source_block']) in negative]
-out=ROOT/'reports'/('zc702_key_stream_'+result['started_utc']);out.mkdir(parents=True,exist_ok=True)
+out=args.output or ROOT/'reports'/('zc702_key_stream_'+result['started_utc'])
+if (out/'verified_evidence.json').exists() or (out/'MANIFEST_SHA256.csv').exists():raise FileExistsError('Use a fresh --output directory; preserve verified history')
+out.mkdir(parents=True,exist_ok=True)
 def write(name,rows):
     if not rows:return
     fields=list(dict.fromkeys(k for r in rows for k in r))

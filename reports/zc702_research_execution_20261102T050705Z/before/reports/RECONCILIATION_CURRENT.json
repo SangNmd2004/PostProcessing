@@ -1,0 +1,11 @@
+{
+  "updated_at": "2026-11-02T11:58:50.401141+07:00",
+  "status": "PARTIAL_IMPLEMENTATION_WITH_SCOPED_TESTS",
+  "current_report": "reports/zc702_secure_accumulator_20261102/REPORT.md",
+  "canonical_mapping": "reports/zc702_secure_accumulator_20261102/MAPPING_CANONICAL.md",
+  "supersedes_mapping_in": "reports/zc702_reconciliation_20261027/REPORT.md",
+  "old_report_is_preserved": true,
+  "physical_board_rerun": true,
+  "verified_evidence": "reports/zc702_secure_accumulator_20261102/board_verification_attempt2/verified_evidence.json",
+  "verified_evidence_sha256": "323c57dd41b7723779082827bcbdd9cdce1dd228d9a85bc4f730e246bfa86b51"
+}

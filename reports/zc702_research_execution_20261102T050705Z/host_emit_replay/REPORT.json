@@ -1,0 +1,19 @@
+{
+  "scope": "RETROSPECTIVE_RAW_EVENT_MODEL_REGRESSION_NOT_PROSPECTIVE_OR_SECURITY_PROOF",
+  "model_agreement": true,
+  "decisions": 18,
+  "emissions": [
+    {
+      "session_id": 0,
+      "event_id": 2526,
+      "kind": "EMIT",
+      "bits_before": 1213835,
+      "input_bits": 1213835,
+      "output_bits": 104768,
+      "split": false,
+      "all_fields_match": true,
+      "bits_after": 0
+    }
+  ],
+  "source_sha256": "04c7db633a7d93bab5396d393dd5ceda3265daf6e8660f7d570c4cbff2e37d56"
+}

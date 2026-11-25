@@ -24,8 +24,8 @@ def bits_words(bits,width=32):
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 class Source:
-    def __init__(self,level):
-        self.path=ROOT/f'data/sessions/session_{level}.npz';self.meta=json.loads(self.path.with_suffix('.json').read_text())
+    def __init__(self,level,directory=None):
+        self.path=(Path(directory) if directory else ROOT/'data/sessions')/f'session_{level}.npz';self.meta=json.loads(self.path.with_suffix('.json').read_text())
         data=np.load(self.path);z=data['basis']==0;x=~z
         self.t=data['t'][z];self.a=data['a'][z];self.b=data['b'][z];self.k=data['k'][z]
         self.tx=data['t'][x];self.kx=data['k'][x];self.ex=(data['a'][x]!=data['b'][x]).astype(np.uint8)
@@ -44,15 +44,16 @@ def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--port',default='COM3');ap.add_argument('--scenario',choices=['smoke','emit','split'],default='emit')
     ap.add_argument('--limit',type=int);ap.add_argument('--bad-blocks',type=int,default=90)
+    ap.add_argument('--source-dir',type=Path,help='Separate public source cohort; never overwrite data/sessions')
     ap.add_argument('--profile-emit',action='store_true',help='Measure board phases around final EMIT after ingest; no change to data or decisions')
     args=ap.parse_args();stamp=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
     if args.profile_emit and args.scenario!='emit':ap.error('--profile-emit requires --scenario emit')
     folder=ROOT/'build/zc702/key_stream_runs'/stamp;folder.mkdir(parents=True)
-    source=Source('weak');bad=Source('severe')
+    source=Source('weak',args.source_dir);bad=Source('severe',args.source_dir) if args.scenario=='split' else None
     result={'complete':False,'hardware_capture':True,'scenario':args.scenario,'started_utc':stamp,'port':args.port,
             'seed_source':'public_test_numpy_PCG64','seed_replay_value':2026102601,
             'source_kind':'simulated_decoy_BB84','physical_optical_data':False,'security_certified':False,
-            'sources':{s.level:{'path':str(s.path),'sha256':sha(s.path),'metadata_sha256':sha(s.path.with_suffix('.json'))} for s in [source,bad]},
+            'sources':{s.level:{'path':str(s.path),'sha256':sha(s.path),'metadata_sha256':sha(s.path.with_suffix('.json'))} for s in [source,bad] if s is not None},
             'harness_files':{str(p.relative_to(ROOT)):sha(p) for p in [Path(__file__),ROOT/'syn/zc702/uart_session.py',ROOT/'model/hankel_exact.py']},
             'records':[],'decisions':[],'emissions':[],'negative_checks':[]}
     def persist():(folder/'result.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')

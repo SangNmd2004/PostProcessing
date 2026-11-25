@@ -1,0 +1,72 @@
+{
+  "status": "CONDITIONAL_MATH_ANALYSIS_ONLY",
+  "persistence_implemented": false,
+  "anti_rollback_verified": false,
+  "default_cap": 18446,
+  "assumptions": [
+    "per-check conditional hash collision bound established separately",
+    "valid hash-family seed policy",
+    "count includes all reserved checks"
+  ],
+  "scenarios": [
+    {
+      "buffer_capacity_bits": 16000000,
+      "whole_blocks_that_fit": 5786,
+      "retained_input_bits": 15998290,
+      "unused_capacity_bits": 1710,
+      "rejection_rate": 0,
+      "estimated_verification_attempts": 5786,
+      "max_verification_attempts": 18446,
+      "conditional_union_bound_at_estimate": 3.1365968850005643e-16,
+      "estimate_within_cap": true,
+      "hard_cap_failure_bound": 9.999596636833807e-16,
+      "scope": "INPUT_BUFFER_AND_CONDITIONAL_COLLISION_ACCOUNTING; rejection estimate is not a probability guarantee; PA output unspecified"
+    },
+    {
+      "buffer_capacity_bits": 16000000,
+      "whole_blocks_that_fit": 5786,
+      "retained_input_bits": 15998290,
+      "unused_capacity_bits": 1710,
+      "rejection_rate": 0.1,
+      "estimated_verification_attempts": 6429,
+      "max_verification_attempts": 18446,
+      "conditional_union_bound_at_estimate": 3.485167883454654e-16,
+      "estimate_within_cap": true,
+      "hard_cap_failure_bound": 9.999596636833807e-16,
+      "scope": "INPUT_BUFFER_AND_CONDITIONAL_COLLISION_ACCOUNTING; rejection estimate is not a probability guarantee; PA output unspecified"
+    },
+    {
+      "buffer_capacity_bits": 16000000,
+      "whole_blocks_that_fit": 5786,
+      "retained_input_bits": 15998290,
+      "unused_capacity_bits": 1710,
+      "rejection_rate": 0.3,
+      "estimated_verification_attempts": 8266,
+      "max_verification_attempts": 18446,
+      "conditional_union_bound_at_estimate": 4.48100757888259e-16,
+      "estimate_within_cap": true,
+      "hard_cap_failure_bound": 9.999596636833807e-16,
+      "scope": "INPUT_BUFFER_AND_CONDITIONAL_COLLISION_ACCOUNTING; rejection estimate is not a probability guarantee; PA output unspecified"
+    },
+    {
+      "buffer_capacity_bits": 16000000,
+      "whole_blocks_that_fit": 5786,
+      "retained_input_bits": 15998290,
+      "unused_capacity_bits": 1710,
+      "rejection_rate": 0.5,
+      "estimated_verification_attempts": 11572,
+      "max_verification_attempts": 18446,
+      "conditional_union_bound_at_estimate": 6.273193770001129e-16,
+      "estimate_within_cap": true,
+      "hard_cap_failure_bound": 9.999596636833807e-16,
+      "scope": "INPUT_BUFFER_AND_CONDITIONAL_COLLISION_ACCOUNTING; rejection estimate is not a probability guarantee; PA output unspecified"
+    }
+  ],
+  "excluded_claims": [
+    "secret output volume",
+    "absolute security",
+    "MAC bound",
+    "storage persistence",
+    "rollback protection"
+  ]
+}

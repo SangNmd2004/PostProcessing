@@ -1,0 +1,7 @@
+{
+  "status": "HOST_MODEL_AND_PLAN_REPAIRS_VERIFIED",
+  "baseline_files_verified": 27,
+  "previous_checkpoint_unchanged": true,
+  "hardware_capture": false,
+  "active_board_job_is_separate": true
+}

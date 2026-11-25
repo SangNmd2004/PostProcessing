@@ -1,0 +1,42 @@
+[
+  {
+    "run": "build/zc702/paced_runs/20261102T051641Z",
+    "result_sha256": "f2b728f13aeed333516bd6278a69d13addac97fc9e224b60c34f1d713ec09a60",
+    "uart_sha256": "4ae925418e52d4ee51241e17e407c7bf36cf4d6a27f0a587fdf6285965160874",
+    "completed_measurements": 4,
+    "error": null,
+    "restore_error": "TimeoutError('QKD_UART_READY version=1 max_words=4096')",
+    "baseline_restored": false,
+    "build": "build/zc702/paced_test/20261102_pilot_v3/paced_test.elf"
+  },
+  {
+    "run": "build/zc702/paced_runs/20261102T052134Z",
+    "result_sha256": "44780c377340a3fc89467689759fec5542cc7bf616105036aaf4f225cf3b9e6c",
+    "uart_sha256": "ca2adffb40333c36c2655b328ba5cb866743449e7fa3be1e6032d70157e233db",
+    "completed_measurements": 30,
+    "error": "TimeoutError('QKD_PACED_PASS seq=65 contexts=(\\\\d+) jobs=(\\\\d+) corrected=(\\\\d+) discarded=(\\\\d+) dropped=(\\\\d+) interval_us=(\\\\d+) policy=(\\\\d+) elapsed_us=(\\\\d+)')",
+    "restore_error": null,
+    "baseline_restored": true,
+    "build": "build/zc702/paced_test/20261102_pilot_v4/paced_test.elf"
+  },
+  {
+    "run": "build/zc702/paced_runs/20261102T052610Z",
+    "result_sha256": "e87ec9b25758196cb921fa09a47042a518f2b3a1b22176ca6c1d643edb5c740d",
+    "uart_sha256": "b6a862623e96f15b7b589454532f8342596703c3321e7fc5292650dd6f07efd8",
+    "completed_measurements": 38,
+    "error": "TimeoutError('QKD_PACED_PASS seq=81 contexts=(\\\\d+) jobs=(\\\\d+) corrected=(\\\\d+) discarded=(\\\\d+) dropped=(\\\\d+) interval_us=(\\\\d+) policy=(\\\\d+) elapsed_us=(\\\\d+)')",
+    "restore_error": null,
+    "baseline_restored": true,
+    "build": "build/zc702/paced_test/20261102_pilot_v5/paced_test.elf"
+  },
+  {
+    "run": "build/zc702/paced_runs/20261102T052933Z",
+    "result_sha256": "c01a583befbfee3442a0f5eea9bec93bbca0c0702201700ae28748117a2026b3",
+    "uart_sha256": "f951e4d81c686cc510e6da6915d94a5acf76f208cd39131017bf32c527ab46a7",
+    "completed_measurements": 0,
+    "error": "TimeoutError('QKD_PACED_PASS seq=5 contexts=(\\\\d+) jobs=(\\\\d+) corrected=(\\\\d+) discarded=(\\\\d+) dropped=(\\\\d+) interval_us=(\\\\d+) policy=(\\\\d+) elapsed_us=(\\\\d+)')",
+    "restore_error": null,
+    "baseline_restored": true,
+    "build": "build/zc702/paced_test/20261102_diagnostic_v6/paced_test.elf"
+  }
+]

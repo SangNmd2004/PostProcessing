@@ -1,147 +1,73 @@
-> Khôi phục ngày 31/10/2026 từ kế hoạch thí nghiệm gốc. Bốn mô hình bên dưới là đề xuất cần kiểm chứng theo giả định riêng. Xem [suy diễn resource/scheduling](reports/publication_plan_20261026/RESOURCE_MODEL_DERIVATION.md), [đặc tả crossover](reports/publication_plan_20261026/CROSSOVER_MODEL_SPEC.md) và [kế hoạch nghiệm thu](reports/publication_plan_20261026/EXPERIMENT_PLAN.md) để đối chiếu phần đã triển khai.
+# Mô hình toán và kế hoạch thực nghiệm ZC702
 
-# Kế Hoạch Thiết Kế Thí Nghiệm & Mô Hình Toán Cho Bài Báo Khoa Học
+Cập nhật 02/11/2026 theo [bản duyệt](reports/zc702_math_experiment_review_20261102/REPORT.md). Bản trước được giữ trong reports/zc702_research_execution_20261102T050705Z/before/. Giữ nguyên [35 ID chuẩn](reports/zc702_work_items.csv), tên và trạng thái.
 
-Tài liệu này chi tiết hóa toàn bộ chiến lược công bố khoa học, bao gồm: tiêu đề bài báo, 3 trụ cột đóng góp, 4 mô hình toán học bắt buộc có, thiết kế thí nghiệm đối chiếu trên kit ZC702, kế hoạch thống kê FER và danh mục hình ảnh/bảng biểu dự kiến cho bản thảo.
+## Mục tiêu và phạm vi
 
----
+Kiểm chứng ba đóng góp: che RTT bằng đa context, điều khiển EFFICIENCY/THROUGHPUT theo backlog, tích lũy verified key cho finite-key PA. Baseline PL 50 MHz, LDPC 3072, Hankel streaming giữ nguyên. Nguồn synthetic/công khai không chứng minh khóa bí mật.
 
-## 1. Tiêu Đề Bài Báo & Tạp Chí Mục Tiêu
+Các số lịch sử ×3,48, 5,81/8,67 Mbit/s và 470 kbit thuộc bối cảnh model/RTL cũ, không là target board bắt buộc. Tái dùng bằng chứng verified; lặp fixture để đo timing không tăng cỡ mẫu FER. Chấp nhận không có crossover hoặc model không đạt tolerance.
 
-### Tiêu Đề Dự Kiến (Working Title)
-> **"A Low-Cost, Latency-Hiding, and Finite-Key Aware Post-Processing SoC Architecture for Discrete-Variable Quantum Key Distribution"**  
-> *(Kiến trúc SoC chi phí thấp, che độ trễ và nhận biết độ dài khóa hữu hạn cho khâu hậu xử lý DV-QKD)*
+## 1. Lập lịch — PUB01/P06/PUB05
 
-### Lựa Chọn Tạp Chí / Hội Nghị Mục Tiêu
-1. **Nhóm Mục Tiêu Thực Tế (Hoàn thành Giai đoạn 1 & 2):**
-   - **IEEE Access** (Impact Factor ~3.4, Open Access, chu kỳ bình duyệt nhanh 4–6 tuần, phù hợp bài kiến trúc hệ thống thực nghiệm).
-   - **Entropy (MDPI)** (Special Issue on Quantum Information & Cryptography).
-   - **Hội nghị Quốc Tế:** QCrypt (Annual Conference on Quantum Cryptography), IEEE FPT (Field Programmable Technology), hoặc IEEE ISCAS.
-2. **Nhóm Mục Tiêu Nâng Cao (Khi hoàn thành thêm Giai đoạn 3 với mã rate 0.95 và TRNG vật lý):**
-   - **IEEE Transactions on Very Large Scale Integration (VLSI) Systems (TVLSI)**.
-   - **IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I)**.
+S(K) ≈ min(K,1+RTT/Tservice) chỉ giải thích trực giác. Predictor model/zc702_resource_model.py dùng decoder chung và PS/DMA load/reveal tuần tự, có thể overlap với context khác. K không nhân tốc độ vật lý decoder.
 
----
+Input: trace attempt/iteration/reveal, K, injected delay, chi phí load/control. Output: elapsed time, busy cycles, speedup so K=1 trên cùng workload. Trace-known không dự đoán FER từ QBER. Không cộng profiler parent/child hoặc span overlap.
 
-## 2. Ba Trụ Cột Đóng Góp Khoa Học (Core Contributions)
+Bằng chứng cũ: 12 calibration, 54 held-out timing, K=1/2/4, RTT 0/100/500/1000/5000/10000 µs; mean absolute relative-to-prediction error 0,293559%, max 1,116519%; phạm vi ET=PP=0, DDR IR, fixture lặp. Tolerance 10%/20% là ngưỡng kỹ thuật, không là CI.
 
-Tránh tuyệt đối việc lấy hiệu suất rò rỉ $f$ hoặc xung nhịp $F_{max}$ làm luận điểm cạnh tranh vì $f=1{,}2-1{,}9$ và $50-70\text{ MHz}$ không phải là thế mạnh so với các thiết kế trên FPGA UltraScale+ đắt tiền. Thay vào đó, bài báo tập trung vào 3 đóng góp kiến trúc hệ thống thực tế:
+Scheduler thử mới với một RX buffer drain wave trước load/REVEAL blocking, rồi queue các context đã chuẩn bị. Predictor cũ không tự áp dụng cho scheduler mới. Claim không tăng BRAM cần so hai build/kiến trúc K=1/K=4 thực.
 
-```
-                  +-------------------------------------------------------------+
-                  | Luận điểm: Hậu xử lý DV-QKD che RTT & nhận thức Finite-Key |
-                  +------------------------------+------------------------------+
-                                                 |
-         +---------------------------------------+---------------------------------------+
-         |                                       |                                       |
-+--------v----------------------+  +-------------v-----------------+  +------------------v--------------------+
-| Trụ Cột 1: Đa Ngữ Cảnh        |  | Trụ Cột 2: Điều Khiển 2 Chế Độ|  | Trụ Cột 3: Tích Lũy Finite-Key        |
-| - 4 Contexts xen kẽ           |  | - EFFICIENCY vs THROUGHPUT    |  | - Thuật toán Lim (2014)               |
-| - Dùng chung APP/C2V/SGN      |  | - Hysteresis tự chuyển        |  | - WAIT / EMIT / ABORT / split         |
-| - Không tăng BSRAM            |  | - Khóa bão hòa 8.67 Mbit/s    |  | - Đưa khóa 0 -> 470 kbit ở MODERATE   |
-| - Tăng tốc x3.48 che trễ RTT  |  | - Điểm giao thoa dự đoán được |  | - Nhận thức biến động kênh thực tế    |
-+-------------------------------+  +-------------------------------+  +---------------------------------------+
-```
+## 2. Leakage và crossover — PUB02/PUB06
 
-1. **Trụ Cột 1 - Bộ giải mã đa ngữ cảnh chia sẻ bộ nhớ (Memory-Shared Multi-Context):**
-   - Trong DV-QKD, việc hỏi–đáp thông tin công bố qua kênh cổ điển Alice–Bob tạo ra độ trễ Round-Trip Time (RTT từ $100\text{ }\mu\text{s}$ đến vài phần nghìn giây), khiến phần cứng giải mã thường xuyên bị nhàn rỗi (idle).
-   - Kiến trúc đề xuất giữ 4 khối ngữ cảnh thường trú (`CTX_W = 2`), dùng chung toàn bộ các mảng nhớ tính toán lớn APP, C2V, SGN; chỉ nhân bản độ sâu bộ đệm CH và SYN RAM.
-   - Kết quả: Che hoàn toàn thời gian trễ RTT, tăng tốc thông lượng $\times 3{,}48$ mà **không tiêu tốn thêm bất kỳ khối Block RAM (BSRAM) nào**.
-2. **Trụ Cột 2 - Bộ điều khiển thích ứng Backlog hai chế độ (Backlog-Adaptive Dual-Mode Controller):**
-   - Đa số các công trình trước đây chỉ cố định một chiến lược giải mã.
-   - Hệ thống tích hợp hai chế độ hoạt động: `EFFICIENCY` (ưu tiên rò rỉ thấp, $f=1{,}50$) khi tải thấp và `THROUGHPUT` (công bố trước $r_0$ bit để hội tụ ngay sau 1 lần thử, đạt thông lượng bão hòa $8{,}67\text{ Mbit/s}$ so với $5{,}81\text{ Mbit/s}$ của EFFICIENCY) khi tải cao.
-   - Cơ chế trễ (hysteresis) tự động chuyển đổi dựa trên độ dài hàng đợi khối khóa thô, với điểm giao thoa thông lượng được dự đoán chính xác bằng mô hình toán.
-3. **Trụ Cột 3 - Bộ gom khối Decoy nhận thức độ dài hữu hạn (Finite-Key Block Accumulator):**
-   - Áp dụng cận hữu hạn Lim et al. (2014) kết hợp máy trạng thái tự động thích ứng với sự thay đổi của kênh truyền quang (`WAIT`, `EMIT`, `ABORT`, `split`).
-   - Đột phá thực nghiệm: Trong kịch bản suy hao và nhiễu trung bình (`MODERATE`), đánh giá từng khối đơn lẻ đều cho độ dài khóa hữu hạn $\ell \le 0$ (buộc phải hủy bỏ toàn bộ), nhưng bộ gom tích lũy tự động đã trích xuất thành công **$470\text{ kbit}$** khóa bí mật an toàn.
+    leak_IR = m - D + r0 + sum(reveal_i)
+    f_IR = leak_IR / (n_key * h2(QBER))
+    E[A] = sum_a P(A >= a)
 
----
+Ghi tag/PE/control disclosure riêng theo transcript; chốt QBER ground truth hay estimate và mẫu số/cohort. So paired common-success, đồng thời báo success/wrong/discard; không chỉ chọn success riêng từng policy.
 
-## 3. Bốn Mô Hình Toán Học Bắt Buộc Có & Phương Pháp Kiểm Chứng
+Mô hình fluid có điều kiện: Rp(lambda)=Yp*min(lambda,mup). Yp là retained modeled output/input block dưới policy/window cố định; mup là capacity đo ở training. Nếu YE>YT>0, muT>muE và YT*muT>YE*muE thì lambda*=YE*muE/YT nằm giữa hai capacity; không thỏa thì báo không có crossover.
 
-Mô hình chỉ có giá trị khoa học khi **dự đoán được trước** các chỉ số hệ thống, sau đó đối chiếu độ lệch với số đo thực tế trên kit ZC702 (không phải là làm khớp đường cong sau khi đo).
+Yield phụ thuộc age/window/channel/arrival cần event model. Hysteresis/burst/queue hữu hạn cần đo riêng. Pilot chưa chạy tag/PE/PA chỉ dùng n_key−leak_IR làm IR proxy, không là secret-key throughput hoặc Yp toàn pipeline.
 
-### Mô Hình 1: Mô Hình Hàng Đợi & Lập Lịch Đa Ngữ Cảnh (Queueing & Multi-Context Scheduling)
-- **Đại lượng dự đoán:** Hệ số tăng tốc thông lượng $S(K)$ theo số lượng ngữ cảnh $K$, thời gian giải mã một lần thử $T_{\text{dec}}$, thời gian trễ vòng lặp kênh cổ điển $\text{RTT}$, và thời gian truyền DMA/UART $T_{\text{trans}}$.
-- **Công thức giải tích ban đầu:**
-  $$S(K) \approx \min\left(K, 1 + \frac{\text{RTT}}{T_{\text{dec}} + T_{\text{trans}}}\right)$$
-- **Vùng bão hòa:** Dự đoán ngưỡng RTT tối thiểu để 4 ngữ cảnh đạt tới mức tăng tốc bão hòa lý thuyết ($\approx \times 3{,}5 - \times 4{,}0$).
-- **Phương pháp kiểm chứng:** Đo đạc bằng bộ đếm chu kỳ ARM PMU trên kit ZC702 ở các mức RTT giả lập: $100\text{ }\mu\text{s}$, $500\text{ }\mu\text{s}$, $1\text{ ms}$, $5\text{ ms}$, $10\text{ ms}$ cho cả $K=1$ và $K=4$.
+## 3. Thực nghiệm pacing
 
-### Mô Hình 2: Mô Hình Hiệu Suất Rò Rỉ $f$ & Điểm Giao Thoa Profile
-- **Đại lượng dự đoán:** Hiệu suất rò rỉ kỳ vọng $f(q)$ và số lần thử trung bình $E[A]$ theo mã được chọn, mức QBER $q$, số bit công bố trước $r_0$ và bước công bố $\Delta$.
-  $$f = \frac{m - d + r_0 + \sum_{i=1}^{A-1} \Delta_i}{(n - d) \cdot h(q)}$$
-- **Dự đoán điểm giao thoa:** Dự đoán chính xác tốc độ khóa thô đầu vào $R_{\text{raw}}^*$ mà tại đó chế độ `THROUGHPUT` bắt đầu cho lượng khóa bí mật thực tế cao hơn chế độ `EFFICIENCY` (theo số liệu sơ bộ là quanh mức $14 - 18\text{ Mbit/s}$).
-- **Phương pháp kiểm chứng:** Chạy sweep tự động trên kit ZC702 với tối thiểu $10^3$ khối độc lập cho mỗi điểm QBER.
+UART 115200 baud không cấp trực tiếp tải Mbit/s. DDR preload và ARM hardware timer-paced jobs; UART ngoài timed loop. Ghi scheduled/actual arrival, admission, dispatch, completion, backlog, drop, outcome, attempts/leak và timer. Tách PMU/global timer/PL cycles, virtual time và wall time.
 
-### Mô Hình 3: Mô Hình Tích Lũy Finite-Key & Thời Gian Đến EMIT Đầu Tiên
-- **Đại lượng dự đoán:** Độ dài khóa bí mật hữu hạn $\ell(N)$ theo số khối tích lũy $N$, thời gian trung bình $T_{\text{emit}}$ để đạt quyết định `EMIT` đầu tiên, và điều kiện kích hoạt `ABORT` hoặc `split` theo tham số kênh Gamma-Gamma.
-- **Phương pháp kiểm chứng:** Chạy các phiên dữ liệu mô phỏng vật lý đa dạng (`WEAK`, `MILD`, `MODERATE`), ghi nhận số lần split/abort và so sánh sai lệch giữa dự đoán giải tích với bộ đệm thực tế trên kit ZC702.
+Đo EFF/THR trên cùng Alice/Bob/PE/channel/arrival. Freeze tham số, prediction, tiêu chí và hash trước capture mới; không fit lại validation. Validation đầy đủ cần input/seed độc lập. Pilot lặp hai input chỉ kiểm tra lịch arrival mới; repeat range không là CI.
 
-### Mô Hình 4: Phân Bổ Ngân Sách An Toàn & Cận $\varepsilon_{cor}$ Tích Lũy
-- **Đại lượng dự đoán:** Xác suất lỗi xác minh tích lũy toàn phiên $\varepsilon_{cor}^{\text{accum}}$ cho thẻ tag băm Hankel 64-bit qua $N$ khối:
-  $$\varepsilon_{cor}^{\text{accum}} \le N \cdot 2^{-64}$$
-- **Phân tích ranh giới giới hạn:**
-  - Nếu dành trọn ngân sách $\varepsilon_{cor} = 10^{-15}$ cho khâu tag xác minh:
-    $$N_{\max} = 10^{-15} \cdot 2^{64} \approx 1{,}84 \times 10^4 \text{ khối}$$
-  - Với kích thước khối $n = 3072$ bit (lấy 2765 bit khóa), $N_{\max}$ tương đương khoảng **$\approx 50{,}9\text{ Mbit}$ khóa thô**.
-  - Đối với phiên gom khối lớn 16 Mbit ($\approx 5\,786$ khối), số lượng khối này nằm sát ngưỡng an toàn ($\approx 31{,}4\%$ ngân sách tối đa).
-- **Ý nghĩa bài báo:** Đây là phân tích lý thuyết quan trọng mà rất ít bài báo FPGA thực hiện, chứng minh rằng việc chọn độ dài tag 64-bit là tối ưu cho các phiên thu thập dưới 50 Mbit.
+Runner board: syn/zc702/run_paced_board.py. run_paced_arrival_benchmark.py cũ là simulator. Không gán sẵn speedup/yield làm kết quả.
 
----
+## 4. Finite-key — PUB03/P01/P02
 
-## 4. Thiết Kế Các Chiến Dịch Thí Nghiệm Đo Đạc
+Dùng pa_model.py với giả định công bố và pa_accum.py. Phân biệt candidate ell với ell_out=0 khi WAIT; EMIT làm tròn xuống bội 64. Không ép tái hiện 470 kbit.
 
-### Thí Nghiệm 1: Phân Rã Độ Trễ Timeline Phần Cứng Bằng ARM PMU
-- Gắn thanh ghi bộ đếm chu kỳ phần cứng Cortex-A9 (`ARM_PMU_CCNT`) vào driver bare-metal.
-- Xuất bảng dữ liệu microsecond chi tiết cho từng khối:
-  - $T_{\text{DMA\_in}}$ (Nạp LLR + Syndrome vào PL).
-  - $T_{\text{IR\_compute}}$ (Thời gian giải mã QC-LDPC trong PL).
-  - $T_{\text{Alice\_RTT}}$ (Thời gian chờ Alice qua mạng).
-  - $T_{\text{Verify}}$ (Băm Hankel tag 64-bit).
-  - $T_{\text{PA}}$ (Băm Hankel PA 1024-bit).
-  - $T_{\text{DMA\_out}}$ (Truyền khóa ra DDR).
-  - $T_{\text{UART}}$ (Overhead truyền nhận gói tin thử nghiệm).
+Event ID tăng theo session: RESET/APPEND/DECIDE/EMIT/ABORT. Hai DECIDE cùng bit count vẫn là hai event. Chỉ commit emitted() sau PA_EMIT thành công, giữ split tail. Freeze source/prediction trước board capture; replay dữ liệu cũ là retrospective regression.
 
-### Thí Nghiệm 2: Nghiên Cứu Ablation Có Kiểm Soát (Bảng Bắt Buộc)
-Giữ nguyên cùng một tập vector thử nghiệm và cùng seed ngẫu nhiên, đo đạc lần lượt 7 cấu hình:
+Ghép đúng key/counts/leak/time theo block. PE dùng test basis riêng hoặc bỏ/tính đủ bit công bố. Lập ledger IR/tag/PE/correction. Giữ công thức baseline tới khi có phân tích chứng minh thay đổi; phần tag cộng và correction bổ sung là conservative accounting cần rà soát, không âm thầm giảm leakage.
 
-| Cấu Hình | Mô Tả Kỹ Thuật | $f$ Trung Bình | Số Vòng Lặp TB | Số Lần Thử TB | Thông Lượng Khóa Sửa |
-|---|---|---|---|---|---|
-| **Ablation 0** | Baseline: Đục lỗ ngẫu nhiên, giải OMS, bước cố định $\Delta=16$, không ET | — | — | — | — |
-| **Ablation 1** | + Grouping & Sorting (GS) cho 307 vị trí $D$ | — | — | — | — |
-| **Ablation 2** | + Layered Normalized Min-Sum (NMS $\alpha = 0{,}75$) | — | — | — | — |
-| **Ablation 3** | + Dừng sớm (Early Termination) & Post-Processing (PP) | — | — | — | — |
-| **Ablation 4** | + Chế độ Dynamic: công bố trước $r_0$ bit và $\Delta$ thích ứng | — | — | — | — |
-| **Ablation 5** | + Bộ điều khiển Hysteresis tự chuyển `EFFICIENCY` / `THROUGHPUT` | — | — | — | — |
-| **Ablation 6** | + Kiến trúc 4 Ngữ Cảnh (Multi-Context RTT hiding) | — | — | — | — |
+Selection/discard thích ứng, split và epsilon qua nhiều emission còn cần review. Bit-exact không là security proof. Nguồn đã generate, biết trước và virtual age chỉ chứng minh prospective functional replay; không chứng minh phân bố first-EMIT nguồn quang hay wall time.
 
-### Thí Nghiệm 3: Chiến Dịch Thống Kê FER $\ge 10^4$ Khối Độc Lập
-- Tự động hóa bộ sinh $10^4$ khối ngẫu nhiên độc lập cho từng điểm QBER: $1\%$, $2\%$, $3\%$, $5\%$, $7\%$.
-- Tính khoảng tin cậy 95% Wilson Score Interval cho tỷ lệ lỗi khung:
-  $$p \in \frac{\hat{p} + \frac{z^2}{2n} \pm z\sqrt{\frac{\hat{p}(1-\hat{p})}{n} + \frac{z^2}{4n^2}}}{1 + \frac{z^2}{n}} \quad (z = 1{,}96)$$
-- Tách biệt rõ ràng các sự kiện:
-  - Khối bị decoder hủy (Discard).
-  - Khối hội tụ sai codeword nhưng bị tag 64-bit chặn lại (Caught by tag).
-  - Khối sai codeword lọt qua tag (Undetected error - kỳ vọng bằng 0).
+## 5. Verification budget — PUB04/F07
 
----
+Nếu mỗi verify có conditional collision bound eps_hash được chứng minh cho hash family/seed policy, union bound là min(1,N*eps_hash). Với eps_hash=2^-64, ngân sách 1e-15, cap lý thuyết 18446 lượt. Tính tag sai/hash đã thử khi DMA lỗi theo hợp đồng; reset session/buffer không hoàn budget trong boot.
 
-## 5. Danh Mục Hình Ảnh & Bảng Biểu Dự Kiến Cho Bản Thảo
+Buffer 16.000.000 bit chứa 5786 block trọn ×2765 = 15.998.290 bit; block tiếp vượt buffer. Đây là input reconciled, khác output PA. Ước tính attempts từ rejection rate không bảo đảm hard cap cho mọi realization. Tách MAC/correctness/secrecy/durable accounting. Không gọi tag 64 tối ưu nếu chưa có tradeoff. CRC/RAM/file thường không là anti-rollback; reboot persistence vẫn PARTIAL.
 
-### Danh Mục Hình Vẽ (Figures)
-1. **Fig. 1:** Sơ đồ kiến trúc tổng quan hệ thống hậu xử lý DV-QKD trên SoC ZC702 (phân chia PS/PL, 4 Simple DMAs, DDR3).
-2. **Fig. 2:** Cấu trúc chi tiết lõi giải mã QC-LDPC 4 ngữ cảnh với mảng nhớ APP/C2V/SGN dùng chung và cơ chế gối layer.
-3. **Fig. 3:** Sơ đồ máy trạng thái bộ điều khiển Backlog Hysteresis và bộ gom Decoy Finite-Key (`WAIT`, `EMIT`, `ABORT`, `split`).
-4. **Fig. 4:** Đồ thị tốc độ tăng tốc $S(K)$ lý thuyết so với số đo thực nghiệm trên board theo độ trễ RTT ($0{,}1 - 10\text{ ms}$).
-5. **Fig. 5:** Đồ thị thông lượng khóa bí mật thực tế theo tốc độ khóa thô đầu vào, thể hiện rõ điểm giao thoa giữa EFFICIENCY và THROUGHPUT.
-6. **Fig. 6:** Đường cong hội tụ tích lũy khóa bí mật hữu hạn $\ell(N)$ theo thời gian trong môi trường nhiễu loạn Gamma-Gamma.
-7. **Fig. 7:** Biểu đồ thác lỗi (Waterfall curves) và phân bố số lần thử của 4 mother codes sau khi tối ưu GS và NMS.
+## 6. Dependency và nghiệm thu
 
-### Danh Mục Bảng Biểu (Tables)
-1. **Table I:** Tham số và đặc tính kiến trúc của 4 Mother Code QC-LDPC ($Z_c=128, n=3072$).
-2. **Table II:** Phân rã thời gian thực thi (Latency Breakdown) đo bằng ARM PMU cycle counter cho từng giai đoạn.
-3. **Table III:** Bảng kết quả nghiên cứu Ablation Study qua 7 tầng tối ưu hóa.
-4. **Table IV:** Kết quả chiến dịch đo FER trên $\ge 10^4$ khối kèm khoảng tin cậy 95%.
-5. **Table V:** Sử dụng tài nguyên trên chip Xilinx XC7Z020 (LUT, FF, BRAM, DSP) và so sánh với cấu hình 1 context.
-6. **Table VI:** Bảng so sánh toàn diện với các công trình công bố quốc tế (Paper A, B, C, D).
+| Chặng | ID | Việc làm | Bằng chứng |
+|---|---|---|---|
+| A | PUB02/PUB03/PUB04 | Sửa split/event/budget/stale claims | Host regression, giới hạn rõ |
+| B | PUB01/P06/PUB05 | Reuse K/RTT, thêm workload thiếu | Frozen prediction, raw timing |
+| C | PUB02/PUB06 | Paired pacing/profile/adaptive/K | Arrival/backlog/outcome/leak, raw verifier |
+| D | PUB03 | Source mới, WAIT/EMIT/split/ABORT | Hash trước capture, PA/tail khớp |
+| E | P08/PUB07 | Qualification strata thiếu | Ít nhất 10000 input độc lập/stratum chọn, CI |
+
+FER fixed n, seed disjoint, không dừng sớm theo CI đẹp. Tách discard/wrong-key/tag reject thực chạy/hardware/transport. Wilson hai phía 95% khác exact một phía 95%; CI pointwise không là CI đồng thời. Ablation decoder đã có 1000 paired input ×4 cấu hình; ưu tiên dynamic/hysteresis/K dưới cùng arrival/channel schedule.
+
+## 7. Bằng chứng và phần mở rộng
+
+Lưu lệnh/tool versions/seeds/config/source/ELF/raw UART/manifest và verifier độc lập. RUNNING_JOBS tách running/pending verify/verified. Kiểm tra 27 baseline hash, restore sau test ELF, đóng COM3; một board owner, không overwrite checkpoint lịch sử. Model chạy tuần tự, không thêm worker theo số CPU.
+
+NTT/code dài/TRNG vật lý/timing 70 MHz/production trust-storage là hướng riêng, không chặn mọi gate nghiên cứu. PUB08 vẫn deferred; venue/review time chỉ tra khi chuẩn bị nộp bài.

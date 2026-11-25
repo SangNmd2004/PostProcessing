@@ -5,6 +5,7 @@ ROOT=Path(__file__).resolve().parents[2]
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--output',required=True,type=Path)
+    ap.add_argument('--accumulator',action='store_true')
     args=ap.parse_args();out=args.output.resolve()
     assert out.is_relative_to(ROOT/'build/zc702/secure_app_test') and not (out/'manifest.json').exists()
     out.mkdir(parents=True,exist_ok=True)
@@ -14,6 +15,11 @@ def main():
     prefix=(baseline/'uart_main.c').read_text().split('#include "service.h"')[0]
     main=(ROOT/'firmware/zc702_uart/bootstrap_test_main.c').read_text()
     main=main.replace('QB_READY','SA_READY')
+    if args.accumulator:
+        main=main.replace('qboot_init(&boot,psk,aid,bid,16)', 'qboot_init(&boot,psk,aid,bid,10000)')
+        # Private include overlay: all immutable baseline sources stay untouched.
+        (out/'secure_service_overlay.h').write_text((ROOT/'firmware/zc702_uart/service.h').read_text().replace('"functional.h"','"secure_functional_overlay.h"'))
+        (out/'secure_functional_overlay.h').write_text((ROOT/'firmware/zc702_uart/functional.h').read_text().replace('"key_stream.h"','"secure_key_stream.h"'))
     main=main.replace('qas_reset(&data_session);','{qas_reset(&data_session);secure_lifecycle_clear();}')
     a=main.index("        }else if(line[0]=='D'){");b=main.index('\n        answer(rc,reply,count);',a)
     main=main[:a]+'''        }else if(line[0]=='G'){
@@ -23,7 +29,8 @@ def main():
             uint32_t written=0;rc=secure_dispatch(&data_session,input,(uint32_t)n,reply,sizeof(reply),&written);count=written;
         }
 '''+main[b:]
-    generated=prefix+'\n#include "secure_app_service.h"\n'+main
+    header='secure_accumulator_service.h' if args.accumulator else 'secure_app_service.h'
+    generated=prefix+'\n#include "'+header+'"\n'+main
     (out/'secure_main.c').write_text(generated)
     platform=ROOT/'build/zc702/vitis/qkd_zc702_platform/export/qkd_zc702_platform/sw/qkd_zc702_platform/standalone_domain'
     link=ROOT/'build/zc702/vitis/qkd_smoke/src/lscript.ld'
@@ -40,13 +47,17 @@ def main():
          'firmware/zc702_uart/qas2_bootstrap.h','firmware/zc702_uart/auth_session.h','firmware/crypto/qcrypto.h',
          'firmware/crypto/rfc6234/sha.h','firmware/crypto/rfc6234/sha-private.h','firmware/crypto/siphash.h',
          'syn/zc702/build_secure_app_test.py','syn/zc702/program_bootstrap.tcl'}
+    if args.accumulator:
+        files.update({'firmware/zc702_uart/secure_accumulator_service.h','firmware/zc702_uart/secure_key_stream.h'})
     for name in files:
         if (ROOT/name).suffix in ['.h','.c','.py','.tcl','.ld']:
             dest=out/'source_snapshot'/name;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes((ROOT/name).read_bytes())
     receipt=dict(scope='LAB public root/host nonce/reset controls and debug KEY readback; authenticated fixture commands only, no production security claim',
         elf=(out/'secure_app_test.elf').relative_to(ROOT).as_posix(),elf_sha256=hashlib.sha256((out/'secure_app_test.elf').read_bytes()).hexdigest(),
         source_sha256={name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in sorted(files)},
-        generated_sha256=hashlib.sha256((out/'secure_main.c').read_bytes()).hexdigest(),command=command)
+        generated_sha256=hashlib.sha256((out/'secure_main.c').read_bytes()).hexdigest(),command=command,
+        generated_files_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in out.glob('*.h')},
+        accumulator=args.accumulator)
     (out/'manifest.json').write_text(json.dumps(receipt,indent=2)+'\n');print('SECURE_APP_TEST_BUILD_PASS',out)
 
 if __name__=='__main__':main()

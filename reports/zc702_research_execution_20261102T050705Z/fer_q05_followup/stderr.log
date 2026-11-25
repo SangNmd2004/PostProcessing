@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\PostProcessing\PostProcessing\syn\zc702\run_managed_fer.py", line 63, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\Admin\Downloads\PostProcessing\PostProcessing\syn\zc702\run_managed_fer.py", line 43, in main
+    assert child.returncode==0,'FER child failed; see logs'
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError: FER child failed; see logs

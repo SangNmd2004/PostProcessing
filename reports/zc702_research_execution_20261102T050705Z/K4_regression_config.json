@@ -1,0 +1,106 @@
+{
+  "fixture_sha256": "4d6c7e5dee33d1069f6a453d9842d1ff43bc6a36b706db46167a37277f77fd80",
+  "scope": "ISOLATED_REGRESSION_OF_K4_ADAPTIVE_TIMEOUT; failed prior run retained",
+  "cases": [
+    {
+      "k": 4,
+      "jobs": 32,
+      "rtt": 1000,
+      "interval": 100,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 0,
+      "phase": "K4_adaptive_regression"
+    },
+    {
+      "k": 4,
+      "jobs": 32,
+      "rtt": 1000,
+      "interval": 100,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 1,
+      "phase": "K4_adaptive_regression"
+    },
+    {
+      "k": 4,
+      "jobs": 32,
+      "rtt": 1000,
+      "interval": 100,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 2,
+      "phase": "K4_adaptive_regression"
+    },
+    {
+      "k": 4,
+      "jobs": 32,
+      "rtt": 1000,
+      "interval": 100,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 3,
+      "phase": "K4_adaptive_regression"
+    },
+    {
+      "k": 4,
+      "jobs": 32,
+      "rtt": 1000,
+      "interval": 100,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 4,
+      "phase": "K4_adaptive_regression"
+    },
+    {
+      "k": 4,
+      "jobs": 32,
+      "rtt": 1000,
+      "interval": 100,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 5,
+      "phase": "K4_adaptive_regression"
+    },
+    {
+      "k": 4,
+      "jobs": 32,
+      "rtt": 1000,
+      "interval": 100,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 6,
+      "phase": "K4_adaptive_regression"
+    },
+    {
+      "k": 4,
+      "jobs": 32,
+      "rtt": 1000,
+      "interval": 100,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 7,
+      "phase": "K4_adaptive_regression"
+    },
+    {
+      "k": 4,
+      "jobs": 32,
+      "rtt": 1000,
+      "interval": 100,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 8,
+      "phase": "K4_adaptive_regression"
+    },
+    {
+      "k": 4,
+      "jobs": 32,
+      "rtt": 1000,
+      "interval": 100,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 9,
+      "phase": "K4_adaptive_regression"
+    }
+  ]
+}

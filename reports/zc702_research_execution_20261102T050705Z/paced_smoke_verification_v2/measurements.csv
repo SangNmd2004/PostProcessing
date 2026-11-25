@@ -1,0 +1,5 @@
+﻿run_seq,k,jobs,rtt,interval,capacity,policy,elapsed_us,corrected,discarded,dropped,IR_correct_bits,wrong_converged,IR_retained_proxy_bits,IR_correct_Mbit_s,IR_proxy_Mbit_s,max_observed_arrival_lateness_us,scope
+5,1,4,1000,1000,4,0,4252,4,0,0,11060,0,9062,2.601128880526811,2.1312323612417687,4,"DDR-paced IR only; proxy subtracts IR leak, excludes tag/PE/PA; no secret yield"
+7,1,4,1000,1000,4,1,3096,4,0,0,11060,0,8838,3.5723514211886305,2.854651162790698,3,"DDR-paced IR only; proxy subtracts IR leak, excludes tag/PE/PA; no secret yield"
+9,1,4,1000,1000,4,2,4251,4,0,0,11060,0,9062,2.6017407668783816,2.1317337097153612,2,"DDR-paced IR only; proxy subtracts IR leak, excludes tag/PE/PA; no secret yield"
+11,4,8,1000,0,1,2,125,1,0,7,2765,0,2304,22.12,18.432,3,"DDR-paced IR only; proxy subtracts IR leak, excludes tag/PE/PA; no secret yield"

@@ -1,0 +1,2 @@
+﻿run,verified_records,planned,error
+build/zc702/fer_runs/20261102T062045Z,7204,10000,TimeoutError('QKD_UART_ACK seq=9006 bytes=896')

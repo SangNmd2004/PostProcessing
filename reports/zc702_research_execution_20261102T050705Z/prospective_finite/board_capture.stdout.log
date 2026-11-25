@@ -1,0 +1,51 @@
+ZC702_BUNDLE_VERIFY_PASS bit_sha256=0e98876a2f884e19a69b3ced2d58109845520961a2112f2b698306f07db49f19
+manifest: C:\Users\Admin\Downloads\PostProcessing\PostProcessing\build\zc702\bundle_manifest.json
+STREAM_PROGRESS 10 verified bits 27650 weak 10
+STREAM_PROGRESS 20 verified bits 55300 weak 20
+STREAM_PROGRESS 30 verified bits 82950 weak 30
+STREAM_PROGRESS 40 verified bits 110600 weak 40
+STREAM_PROGRESS 50 verified bits 138250 weak 50
+STREAM_PROGRESS 60 verified bits 165900 weak 60
+STREAM_PROGRESS 70 verified bits 193550 weak 70
+STREAM_PROGRESS 80 verified bits 221200 weak 80
+STREAM_PROGRESS 90 verified bits 248850 weak 90
+STREAM_PROGRESS 100 verified bits 276500 weak 100
+STREAM_PROGRESS 110 verified bits 304150 weak 110
+STREAM_PROGRESS 120 verified bits 331800 weak 120
+STREAM_PROGRESS 130 verified bits 359450 weak 130
+STREAM_PROGRESS 140 verified bits 387100 weak 140
+STREAM_PROGRESS 150 verified bits 414750 weak 150
+STREAM_PROGRESS 160 verified bits 442400 weak 160
+STREAM_PROGRESS 170 verified bits 470050 weak 170
+STREAM_PROGRESS 180 verified bits 497700 weak 180
+STREAM_PROGRESS 190 verified bits 525350 weak 190
+STREAM_PROGRESS 200 verified bits 553000 weak 200
+STREAM_PROGRESS 210 verified bits 580650 weak 210
+STREAM_PROGRESS 220 verified bits 608300 weak 220
+STREAM_PROGRESS 230 verified bits 635950 weak 230
+STREAM_PROGRESS 240 verified bits 663600 weak 240
+STREAM_PROGRESS 250 verified bits 691250 weak 250
+STREAM_PROGRESS 260 verified bits 718900 weak 260
+STREAM_PROGRESS 270 verified bits 746550 weak 270
+STREAM_PROGRESS 280 verified bits 774200 weak 280
+STREAM_PROGRESS 290 verified bits 801850 weak 290
+STREAM_PROGRESS 300 verified bits 829500 weak 300
+STREAM_PROGRESS 310 verified bits 857150 weak 310
+STREAM_PROGRESS 320 verified bits 884800 weak 320
+STREAM_PROGRESS 330 verified bits 912450 weak 330
+STREAM_PROGRESS 340 verified bits 940100 weak 340
+STREAM_PROGRESS 350 verified bits 967750 weak 350
+STREAM_PROGRESS 360 verified bits 995400 weak 360
+STREAM_PROGRESS 370 verified bits 1023050 weak 370
+STREAM_PROGRESS 380 verified bits 1050700 weak 380
+STREAM_PROGRESS 390 verified bits 1078350 weak 391
+STREAM_PROGRESS 400 verified bits 1106000 weak 401
+STREAM_PROGRESS 410 verified bits 1133650 weak 411
+STREAM_PROGRESS 420 verified bits 1161300 weak 421
+STREAM_PROGRESS 430 verified bits 1188950 weak 431
+STREAM_PROGRESS 440 verified bits 1216600 weak 441
+STREAM_PROGRESS 450 verified bits 1244250 weak 451
+NTT_REFERENCE_START input 1244250 output 153536
+PL_PA_FINITE_EMIT_PASS 1244250 -> 153536 tail 0
+KEY_STREAM_EVIDENCE C:\Users\Admin\Downloads\PostProcessing\PostProcessing\build\zc702\key_stream_runs\20261102T061515Z
+KEY_STREAM_PASS emit 450

@@ -1,0 +1,8 @@
+{
+  "host_complete": true,
+  "tests": 12,
+  "raw_split_decisions": 92,
+  "raw_emit_decisions": 18,
+  "prior_ID_title_statuses_preserved": true,
+  "board_state": "See live RUNNING_JOBS.json; previous failed pilot retained"
+}

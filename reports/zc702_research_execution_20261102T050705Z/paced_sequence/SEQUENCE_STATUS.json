@@ -1,0 +1,125 @@
+{
+  "started_utc": "2026-11-02T05:35:46.764212+00:00",
+  "complete": true,
+  "steps": [
+    {
+      "label": "paced_pilot",
+      "command": [
+        "C:\\Program Files\\Python311\\python.exe",
+        "syn/zc702/run_paced_board.py",
+        "--build",
+        "build/zc702/paced_test/20261102_safe_wave_v7",
+        "--fixtures",
+        "build/zc702/paced_fixtures/20261102_training"
+      ],
+      "status": "COMMAND_COMPLETED",
+      "started_utc": "2026-11-02T05:35:46.764212+00:00",
+      "pid": 13284,
+      "returncode": 0,
+      "finished_utc": "2026-11-02T05:36:32.781633+00:00"
+    },
+    {
+      "label": "paced_pilot_verify",
+      "command": [
+        "C:\\Program Files\\Python311\\python.exe",
+        "syn/zc702/verify_paced_board.py",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\build\\zc702\\paced_runs\\20261102T053546Z",
+        "--output",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_research_execution_20261102T050705Z\\paced_sequence\\pilot_verified"
+      ],
+      "status": "COMMAND_COMPLETED",
+      "started_utc": "2026-11-02T05:36:32.791815+00:00",
+      "pid": 23840,
+      "returncode": 0,
+      "finished_utc": "2026-11-02T05:36:34.801077+00:00"
+    },
+    {
+      "label": "freeze_model",
+      "command": [
+        "C:\\Program Files\\Python311\\python.exe",
+        "syn/zc702/freeze_paced_model.py",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\build\\zc702\\paced_runs\\20261102T053546Z",
+        "--output",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_research_execution_20261102T050705Z\\paced_sequence\\frozen_model"
+      ],
+      "status": "COMMAND_COMPLETED",
+      "started_utc": "2026-11-02T05:36:34.802084+00:00",
+      "pid": 13616,
+      "returncode": 0,
+      "finished_utc": "2026-11-02T05:36:36.812384+00:00"
+    },
+    {
+      "label": "arrival_validation",
+      "command": [
+        "C:\\Program Files\\Python311\\python.exe",
+        "syn/zc702/run_paced_board.py",
+        "--build",
+        "build/zc702/paced_test/20261102_safe_wave_v7",
+        "--fixtures",
+        "build/zc702/paced_fixtures/20261102_training",
+        "--config",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_research_execution_20261102T050705Z\\paced_sequence\\frozen_model\\frozen_validation.json"
+      ],
+      "status": "COMMAND_COMPLETED",
+      "started_utc": "2026-11-02T05:36:36.814396+00:00",
+      "pid": 24536,
+      "returncode": 0,
+      "finished_utc": "2026-11-02T05:37:56.841123+00:00"
+    },
+    {
+      "label": "arrival_raw_verify",
+      "command": [
+        "C:\\Program Files\\Python311\\python.exe",
+        "syn/zc702/verify_paced_board.py",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\build\\zc702\\paced_runs\\20261102T053636Z",
+        "--output",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_research_execution_20261102T050705Z\\paced_sequence\\arrival_verified"
+      ],
+      "status": "COMMAND_COMPLETED",
+      "started_utc": "2026-11-02T05:37:56.850838+00:00",
+      "pid": 13772,
+      "returncode": 0,
+      "finished_utc": "2026-11-02T05:37:58.859919+00:00"
+    },
+    {
+      "label": "arrival_model_compare",
+      "command": [
+        "C:\\Program Files\\Python311\\python.exe",
+        "syn/zc702/verify_paced_model.py",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\build\\zc702\\paced_runs\\20261102T053636Z",
+        "--frozen",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_research_execution_20261102T050705Z\\paced_sequence\\frozen_model\\frozen_validation.json",
+        "--output",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_research_execution_20261102T050705Z\\paced_sequence\\model_comparison"
+      ],
+      "status": "COMMAND_COMPLETED",
+      "started_utc": "2026-11-02T05:37:58.862116+00:00",
+      "pid": 11644,
+      "returncode": 0,
+      "finished_utc": "2026-11-02T05:38:00.872286+00:00"
+    },
+    {
+      "label": "fer_q01_qualification",
+      "command": [
+        "C:\\Program Files\\Python311\\python.exe",
+        "syn/zc702/run_managed_fer.py",
+        "--trials",
+        "10000",
+        "--qber",
+        ".01",
+        "--code",
+        "r34",
+        "--seed-base",
+        "4100000"
+      ],
+      "status": "COMMAND_COMPLETED",
+      "started_utc": "2026-11-02T05:38:00.874804+00:00",
+      "pid": 20988,
+      "returncode": 0,
+      "finished_utc": "2026-11-02T06:14:31.301625+00:00"
+    }
+  ],
+  "training_run": "build/zc702/paced_runs/20261102T053546Z",
+  "validation_run": "build/zc702/paced_runs/20261102T053636Z",
+  "fer_run": "build/zc702/fer_runs/20261102T053801Z"
+}

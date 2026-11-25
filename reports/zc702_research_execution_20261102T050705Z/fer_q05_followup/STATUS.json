@@ -1,0 +1,33 @@
+{
+  "status": "STOPPED_ERROR",
+  "complete": false,
+  "planned_trials": 10000,
+  "qber": 0.05,
+  "code": "r12",
+  "seed_base": 4200000,
+  "command": [
+    "C:\\Program Files\\Python311\\python.exe",
+    "syn/zc702/run_managed_fer.py",
+    "--trials",
+    "10000",
+    "--qber",
+    ".05",
+    "--code",
+    "r12",
+    "--seed-base",
+    "4200000"
+  ],
+  "returncode": 1,
+  "last_job": {
+    "status": "STOPPED_ERROR",
+    "pid": 7608,
+    "child_pid": 11852,
+    "script": "syn/zc702/run_managed_fer.py",
+    "controller": "build/zc702/managed_fer/20261102T062045Z",
+    "port": "COM3",
+    "run_directory": "build/zc702/fer_runs/20261102T062045Z",
+    "port_released": true,
+    "baseline_restored": true,
+    "error": "AssertionError('FER child failed; see logs')"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "raw_replay_verified": true,
+  "frozen_before_capture": true,
+  "model_accepted": true,
+  "measurements": 30,
+  "mean_absolute_error_pct": 0.20389796298645774,
+  "max_absolute_error_pct": 2.947016174010039,
+  "max_IR_proxy_bits_error_pct": 0.06546427121112403,
+  "source_result_sha256": "012a4aea9feafb6280737ddf29b23b6074819da4654b65aa92f3c81f789c1c30",
+  "frozen_config_sha256": "62511206f620429a8354a4d887836b5f67ed4670b83a4687eef03dd99436def9",
+  "verifier_sha256": "3f6dea2f6e4ca7fb703dc71da15a7469c37edab135e5ab2dcd22ff162e7ab4a7",
+  "scope": "K1 DDR IR; held-out arrival schedules on repeated training inputs; fixed f_adj; no PA/secret-yield crossover claim",
+  "criteria": {
+    "mean_absolute_error_pct_max": 10,
+    "max_absolute_error_pct_max": 20,
+    "IR_proxy_bits_error_pct_max": 5,
+    "denominator": "prediction",
+    "scope": "engineering tolerance; not confidence bounds"
+  }
+}

@@ -1,7 +1,7 @@
 {
-  "complete_postverified_cohorts": 8,
-  "qualification_size_cohorts": 2,
-  "incomplete_or_not_postverified": 0,
+  "complete_postverified_cohorts": 9,
+  "qualification_size_cohorts": 3,
+  "incomplete_or_not_postverified": 1,
   "overlapping_seed_ranges_same_stratum": [],
   "no_automatic_pooling": true,
   "runs": [
@@ -188,6 +188,29 @@
       "raw_result": "build/zc702/fer_runs/20261027T032458Z/result.json",
       "report": "reports/zc702_fer_20261027T032458Z/REPORT.md",
       "source_result_sha256": "a20c8fa54ed0cc3b4f257e39dee8dd51cabb0c6d3b85b9760dd3eeb7a90634d0"
+    },
+    {
+      "run_id": "20261102T053801Z",
+      "qber": 0.01,
+      "code": "r34",
+      "cn": "nms75",
+      "puncturing": "gs",
+      "n": 10000,
+      "success": 10000,
+      "discard": 0,
+      "wrong_codeword": 0,
+      "FER": 0.0,
+      "Wilson95_low": 0,
+      "Wilson95_high": 0.00038399837067659573,
+      "seed_start": 4100000,
+      "seed_stop_exclusive": 4110000,
+      "role": "qualification_sample_size",
+      "tag_PA_applied": false,
+      "previous_session_errors": 0,
+      "firmware_elf_SHA256": "bd3bfcf950b0735dfbce9d16d3051042b3b47145eb0dd1801754cba8b12135e2",
+      "raw_result": "build/zc702/fer_runs/20261102T053801Z/result.json",
+      "report": "reports/zc702_fer_20261102T053801Z/REPORT.md",
+      "source_result_sha256": "f8aad5fe8a86faf74329fedff777ea3cd8426c4d14feb5687ebfc5d8641e1c8c"
     }
   ]
 }

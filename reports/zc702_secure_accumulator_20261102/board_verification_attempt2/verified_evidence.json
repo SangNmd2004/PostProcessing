@@ -1,0 +1,138 @@
+{
+  "raw_replay_verified": true,
+  "source_result_sha256": "b8155f7612c04f85f5997a300a5ffc5846876703657d00782c12962f62e4dc48",
+  "uart_sha256": "50c42c13bc915031fc37e5b1e41e1aa9f27b84d3fe93fdba0eeb4867802b8a29",
+  "tx_sha256": "bcc7bc5eed710924d3c4c6b9f33a3648aedd2e4bff8363d5f02c354c41380f74",
+  "commands_verified": 888,
+  "authenticated_dispatches": 767,
+  "policy_rejections": 17,
+  "transport_rejections": {
+    "-7": 3,
+    "-3": 2,
+    "-6": 1,
+    "-4": 1,
+    "-8": 1
+  },
+  "verified_appends": 172,
+  "verification_used": 175,
+  "verification_limit": 175,
+  "tag_failures": 3,
+  "emissions": [
+    {
+      "index": 259,
+      "input_bits": 110600,
+      "output_bits": 37568,
+      "tail_bits": 0,
+      "split": false,
+      "input_sha256": "28bbe37da4dc135c3edb93e9fa3a415916eaca7a5fe25c11a5b9ca4c840be21e",
+      "PA_sha256": "1a94c701d4bdf86d1511ee7a86cc9509b7fed0c9b837c811d95bbb53935c7813",
+      "words_verified": 587
+    },
+    {
+      "index": 653,
+      "input_bits": 248850,
+      "output_bits": 115968,
+      "tail_bits": 2765,
+      "split": true,
+      "input_sha256": "ef7b49c66c7052473830a77e0dc5d8200e9ea2d6663a6becfe4f480520e144b9",
+      "PA_sha256": "325c2f8c077636c5b04cab0c7785d51dc63c6c13d2615d976c0d49b73f86dc7f",
+      "words_verified": 1812
+    }
+  ],
+  "reset_budget_checks": [
+    {
+      "index": 0,
+      "used": 0,
+      "kind": "I"
+    },
+    {
+      "index": 6,
+      "used": 0,
+      "kind": "R"
+    },
+    {
+      "index": 8,
+      "used": 0,
+      "kind": "I"
+    },
+    {
+      "index": 16,
+      "used": 0,
+      "kind": "R"
+    },
+    {
+      "index": 18,
+      "used": 0,
+      "kind": "I"
+    },
+    {
+      "index": 68,
+      "used": 1,
+      "kind": "R"
+    },
+    {
+      "index": 70,
+      "used": 1,
+      "kind": "I"
+    },
+    {
+      "index": 83,
+      "used": 2,
+      "kind": "R"
+    },
+    {
+      "index": 85,
+      "used": 2,
+      "kind": "I"
+    },
+    {
+      "index": 271,
+      "used": 42,
+      "kind": "R"
+    },
+    {
+      "index": 273,
+      "used": 42,
+      "kind": "I"
+    },
+    {
+      "index": 678,
+      "used": 133,
+      "kind": "R"
+    },
+    {
+      "index": 680,
+      "used": 133,
+      "kind": "I"
+    },
+    {
+      "index": 848,
+      "used": 173,
+      "kind": "R"
+    },
+    {
+      "index": 850,
+      "used": 173,
+      "kind": "I"
+    },
+    {
+      "index": 871,
+      "used": 175,
+      "kind": "R"
+    },
+    {
+      "index": 873,
+      "used": 175,
+      "kind": "I"
+    },
+    {
+      "index": 879,
+      "used": 175,
+      "kind": "I"
+    }
+  ],
+  "wipe_checks": 11,
+  "buffer_digest_checks": 3,
+  "baseline_restored": true,
+  "scope": "Physical PL IR/verify/accumulator PA; repeated PUBLIC r56 and synthetic bound counts. No independent FER trials, optical yield, production authentication or durable security claim."
+}

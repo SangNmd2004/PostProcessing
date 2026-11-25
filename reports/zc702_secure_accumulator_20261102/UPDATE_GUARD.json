@@ -1,0 +1,181 @@
+{
+  "raw_replay_verified": true,
+  "source_result_sha256": "b8155f7612c04f85f5997a300a5ffc5846876703657d00782c12962f62e4dc48",
+  "canonical_identifiers_titles_statuses_preserved": [
+    [
+      "F01",
+      "QC-LDPC 3072 and four codes with NMS75 + GS",
+      "PASS_FUNCTIONAL_BOARD"
+    ],
+    [
+      "F02",
+      "HOLD reveal retry discard and ERRCNT tracking",
+      "PASS_FUNCTIONAL_BOARD"
+    ],
+    [
+      "F03",
+      "EFFICIENCY and THROUGHPUT controller policies on ARM",
+      "PASS_FUNCTIONAL_BOARD"
+    ],
+    [
+      "F04",
+      "Backlog hysteresis profile switching",
+      "PASS_FUNCTIONAL_BOARD"
+    ],
+    [
+      "F05",
+      "Dynamic code selection r0 delta and early abort",
+      "PASS_FUNCTIONAL_BOARD"
+    ],
+    [
+      "F06",
+      "Early termination (ET) and post-processing (PP)",
+      "PASS_FUNCTIONAL_BOARD"
+    ],
+    [
+      "F07",
+      "Verification tag and fail-closed rejection",
+      "PASS_FUNCTIONAL_BOARD"
+    ],
+    [
+      "F08",
+      "IR strip D-positions followed by per-block PA1024",
+      "PASS_FUNCTIONAL_BOARD"
+    ],
+    [
+      "F09",
+      "Four contexts resident and queued in PL",
+      "PASS_FUNCTIONAL_BOARD"
+    ],
+    [
+      "F10",
+      "QKD PL interrupt delivery to ARM GIC",
+      "PASS_FUNCTIONAL_BOARD"
+    ],
+    [
+      "F11",
+      "Decoy finite-key WAIT EMIT ABORT split state machine",
+      "PASS_FUNCTIONAL_BOARD"
+    ],
+    [
+      "F12",
+      "DMA UART infrastructure and verified artifacts",
+      "PASS_FUNCTIONAL_BOARD"
+    ],
+    [
+      "P01",
+      "Accumulated verified IR buffer coupled with finite-key PA emission",
+      "PASS_FUNCTIONAL_BOARD"
+    ],
+    [
+      "P02",
+      "PE sample leakage removal and exact error counting",
+      "PARTIAL"
+    ],
+    [
+      "P03",
+      "Physical on-chip TRNG seed source with online health tests",
+      "PARTIAL"
+    ],
+    [
+      "P04",
+      "Authenticated classical Alice-Bob channel",
+      "PARTIAL"
+    ],
+    [
+      "P05",
+      "70 MHz Zynq PL system implementation and timing closure",
+      "PARTIAL"
+    ],
+    [
+      "P06",
+      "Throughput and 4-context RTT hiding benchmark with HW timers",
+      "PARTIAL"
+    ],
+    [
+      "P07",
+      "Purely interrupt-driven DMA and context scheduling",
+      "PARTIAL"
+    ],
+    [
+      "P08",
+      "FER measurement over at least 10000 independent blocks",
+      "PARTIAL"
+    ],
+    [
+      "R01",
+      "Longer LDPC code length (6144 to 12288 bits, 128 lanes)",
+      "PARTIAL"
+    ],
+    [
+      "R02",
+      "High rate (~0.95) and low rate (~0.40) LDPC mother codes",
+      "PARTIAL"
+    ],
+    [
+      "R03",
+      "Port to Andes AE350 RISC-V SoC platform",
+      "TODO_RESEARCH"
+    ],
+    [
+      "R04",
+      "Large-block PA via NTT-based MMH-MH / Toeplitz hashing",
+      "PARTIAL"
+    ],
+    [
+      "R05",
+      "FPGA-based Alice syndrome encoder reusing LDPC shifter and ROM",
+      "PARTIAL"
+    ],
+    [
+      "R06",
+      "Optical channel optimization and realistic decoy parameters",
+      "PARTIAL"
+    ],
+    [
+      "R07",
+      "High clock optimization (7-bit shifter and floorplanning)",
+      "PARTIAL"
+    ],
+    [
+      "PUB01",
+      "Multi-context queueing and scheduling model S(K) & board RTT validation",
+      "PARTIAL"
+    ],
+    [
+      "PUB02",
+      "Analytical f and attempts model vs (code, QBER, r0, delta) & crossover proof",
+      "PARTIAL"
+    ],
+    [
+      "PUB03",
+      "Finite-key accumulation model ell(N) and ABORT/split empirical validation",
+      "PARTIAL"
+    ],
+    [
+      "PUB04",
+      "Cumulative correctness security bound eps_cor <= N * 2^(-64) tag budget analysis",
+      "PARTIAL"
+    ],
+    [
+      "PUB05",
+      "High-resolution hardware counter integration for latency profiling",
+      "PARTIAL"
+    ],
+    [
+      "PUB06",
+      "Controlled ablation study across all optimization layers",
+      "PARTIAL"
+    ],
+    [
+      "PUB07",
+      "Rigorous FER statistical campaign with 95% confidence intervals",
+      "PARTIAL"
+    ],
+    [
+      "PUB08",
+      "Paper manuscript drafting, target venue alignment and literature benchmarking",
+      "TODO"
+    ]
+  ]
+}

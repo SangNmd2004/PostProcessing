@@ -1,0 +1,20 @@
+{
+  "raw_replay_verified": true,
+  "source_result_sha256": "5256c197a24696d88d01245c18fcc38a72942693b79cb186c1b5ef22d9174564",
+  "uart_sha256": "4eb34f5cd32b83485e19cbfc2a2b2b0b17af6a22ac1ded9077a7fc1ca60d2e8d",
+  "commands_verified": 107,
+  "authenticated_dispatches": 24,
+  "blocks": 4,
+  "verification_used": 4,
+  "rejections": {
+    "-7": 12,
+    "-6": 4,
+    "-4": 3,
+    "-3": 1,
+    "-1": 1
+  },
+  "KEY_matches_frozen_golden_and_PA_recomputed_from_actual_KEY": true,
+  "baseline_restored": true,
+  "metadata_note": "Raw blocks.input_key_words is a mislabeled PA-output list; authoritative KEY/PA are reconstructed from MAC-covered responses; blocks.csv uses correct hashes.",
+  "scope": "Real PL IR/per-block PA behind QAS2 MAC in public-fixture lab ELF; no confidentiality, trusted provisioning, durable accounting or production security certification"
+}

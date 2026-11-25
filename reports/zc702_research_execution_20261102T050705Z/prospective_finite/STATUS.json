@@ -1,0 +1,60 @@
+{
+  "status": "VERIFIED_COMPLETE",
+  "complete": true,
+  "steps": [
+    {
+      "label": "prepare_and_freeze",
+      "command": [
+        "C:\\Program Files\\Python311\\python.exe",
+        "syn/zc702/prepare_finite_source.py",
+        "--output",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_research_execution_20261102T050705Z\\prospective_finite\\source",
+        "--seed",
+        "2026110220"
+      ]
+    },
+    {
+      "label": "board_capture",
+      "command": [
+        "C:\\Program Files\\Python311\\python.exe",
+        "syn/zc702/run_key_stream.py",
+        "--scenario",
+        "emit",
+        "--source-dir",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_research_execution_20261102T050705Z\\prospective_finite\\source"
+      ]
+    },
+    {
+      "label": "independent_raw_verify",
+      "command": [
+        "C:\\Program Files\\Python311\\python.exe",
+        "syn/zc702/report_key_stream.py",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\build\\zc702\\key_stream_runs\\20261102T061515Z"
+      ]
+    }
+  ],
+  "frozen_prediction": "reports/zc702_research_execution_20261102T050705Z/prospective_finite/source/frozen_prediction.json",
+  "frozen_prediction_sha256": "21cf49b822736fdb44d2027370b48c5532b2a8db21a0e83f06d407f750aa5d04",
+  "capture_start_monotonic_ns": 6224741586700,
+  "run": "build/zc702/key_stream_runs/20261102T061515Z",
+  "proof": "reports/zc702_key_stream_20261102T061515Z/verified_evidence.json",
+  "decisions_verified": 19,
+  "verified_blocks": 450,
+  "emissions": [
+    {
+      "input_bits": 1244250,
+      "output_bits": 153536,
+      "split": 0,
+      "tail_bits": 0,
+      "passes": 150,
+      "all_words_match": true,
+      "output_sha256": "33c1df3b82dbc9dc343fe57c81598e3729eee559f2fff119c07101fcc0d9b180"
+    }
+  ],
+  "frozen_before_capture": true,
+  "baseline_restored": true,
+  "port_released": true,
+  "source_result_sha256": "54ff50895ee365b4b419a518e6a995dbada2feb3c9e371fd13329c432390ef6d",
+  "scope": "New independent synthetic source, predeclared model output and event schedule, fresh future board observations; functional only",
+  "time_contract": "Virtual time increments per retained block, then declared idle +3601s; not prediction of optical acquisition first-EMIT distribution or wall time"
+}

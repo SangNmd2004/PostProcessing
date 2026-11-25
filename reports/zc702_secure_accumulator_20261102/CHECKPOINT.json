@@ -1,0 +1,12 @@
+{
+  "status": "SCOPED_AUTHENTICATED_ACCUMULATOR_BOARD_VERIFIED",
+  "previous_checkpoint_files_rechecked": 116,
+  "baseline_files_verified": 27,
+  "baseline_restored": true,
+  "port_released": true,
+  "raw_run": "build/zc702/secure_accumulator_runs/20261102T045046Z",
+  "proof": "reports/zc702_secure_accumulator_20261102/board_verification_attempt2/verified_evidence.json",
+  "proof_sha256": "323c57dd41b7723779082827bcbdd9cdce1dd228d9a85bc4f730e246bfa86b51",
+  "verifier_sha256": "74e2d10c05c10c05da047b69ca3a454a527da83c181554e62bb863634ad003dd",
+  "remaining": "P04/PUB04 PARTIAL; public lab trust, synthetic counts, no reboot security, board near-capacity/DMA-fault/auto-ABORT/four-code stream recovery pending"
+}

@@ -183,21 +183,11 @@ for r in rows:
                 r['limitation']=f"Held-out timing accepted={proof['latency_model_accepted']}; mean absolute relative-to-prediction error={proof['mean_absolute_error_pct']:.6g}%; trace-known ET/PP-off DDR workload only; production arrival pending"
                 r['next_action']=('Extend to paced arrival and production phases without refitting this held-out cohort' if proof['latency_model_accepted'] else 'Preserve negative validation; revise model/training then measure a fresh held-out cohort')
     if r['id']=='PUB02':
-        r['pass_criteria']='Predeclare model and predict crossover with uncertainty on held-out board data; do not require historical 5.81/8.67 model values to reappear'
-        if (OUT/'zc702_paced_benchmark/REPORT.md').exists():
-            r['status']='PARTIAL'
-            r['target_deliverable']='reports/publication_plan_20261026/CROSSOVER_MODEL_SPEC.md; reports/zc702_crossover_model/REPORT.md; reports/zc702_paced_benchmark/REPORT.md'
-            r['limitation']='Crossover predicted and empirically verified under paced traffic: K1=1941.4 blocks/s, K4=6794.8 blocks/s'
-            r['next_action']='Crossover empirically confirmed; integrate into publication manuscript draft (PUB08)'
-        elif (ROOT/'syn/zc702/calibrate_crossover_from_hardware.py').exists() and (OUT/'zc702_crossover_model/REPORT.md').exists():
-            r['status']='PARTIAL'
-            r['target_deliverable']='reports/publication_plan_20261026/CROSSOVER_MODEL_SPEC.md; reports/zc702_crossover_model/REPORT.md'
-            r['limitation']='Crossover predicted from measured PS/PL/PA phase timings: K1=1941.4 blocks/s, K4=6794.8 blocks/s; live paced packet generator testing pending'
-            r['next_action']='Deploy live paced packet generator to empirically verify the predicted crossover rate'
-        elif (OUT/'publication_plan_20261026/CROSSOVER_MODEL_SPEC.md').exists():
-            r['status']='PARTIAL';r['target_deliverable']='reports/publication_plan_20261026/CROSSOVER_MODEL_SPEC.md'
-            r['limitation']='Conditional fluid crossover and attempt/leak identities implemented; no measured EFF/THR arrival crossover or unconditional f(QBER) predictor'
-            r['next_action']='Calibrate stationary policy resource demands/yields on training, freeze predictions, then measure held-out paced arrivals'
+        r['status']='PARTIAL'
+        r['pass_criteria']='Predeclare model and predict crossover with uncertainty on held-out board data; accept absence of crossover; never force historical throughput values'
+        r['target_deliverable']='reports/publication_plan_20261026/CROSSOVER_MODEL_SPEC.md; model/efficiency_throughput_crossover.py'
+        r['limitation']='Conditional fluid model and host simulator only; file existence and fitted historic phase constants are not measured board crossover evidence'
+        r['next_action']='Train paired EFF/THR on identical inputs; freeze predictions; implement DDR timer-paced arrival and independently replay board measurements'
     if r['id']=='PUB03':
         r['status']='PARTIAL';r['pass_criteria']='Predict ell(N), first-EMIT time and split/abort decisions; compare to coupled simulated-session board runs. Historical 470 kbit is not a board target already achieved'
         if (ROOT/'model/finite_key_accumulation_model.py').exists() and (OUT/'pub_accumulation_validation.csv').exists():
@@ -241,6 +231,53 @@ for r in rows:
             r['target_deliverable']='reports/FER_CATALOG.md'
             r['limitation']='Independent cohorts cataloged with pointwise CIs; no automatic pooling; some QBER points only pilot-sized'
             r['next_action']='Complete staged qualification cohorts, then expand remaining QBER/code strata and tag/PA end-to-end fault statistics'
+
+# Prefer verified host model repairs to stale existence-based narrative. This
+# guard only updates limitations/next work; it never promotes board/security PASS.
+for host_path in sorted(OUT.glob('zc702_research_execution_*/HOST_RECEIPT.json')):
+    host=json.loads(host_path.read_text())
+    if (host.get('status')=='HOST_MODEL_REGRESSIONS_PASS' and host.get('tests',0)>=12 and
+        all(hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==sha for name,sha in host['source_sha256'].items())):
+        for r in rows:
+            if r['id']=='PUB03':
+                r['target_deliverable']='model/finite_key_accumulation_model.py; '+host_path.relative_to(ROOT).as_posix()
+                r['limitation']='Split-preserving event model passes host tests and retrospective raw-event replay; not prospective source-security or first-EMIT validation'
+                r['next_action']='Freeze a new source cohort and predictions before board capture; keep synthetic functional scope'
+            if r['id']=='PUB04':
+                r['limitation']='Conditional collision/input-buffer analysis and boot-lifetime cap only; no durable anti-rollback or full session security proof'
+
+
+# Preserve newer measured component evidence, without turning it into a
+# full secret-yield/production PASS. Validate proof hashes and actual raw result.
+for completed_path in sorted(OUT.glob('zc702_research_execution_*/verified_evidence.json')):
+    completed=json.loads(completed_path.read_text());stage=completed_path.parent
+    sequence_path=stage/'paced_sequence/SEQUENCE_STATUS.json'
+    if not completed.get('completed_gate_proofs_verified') or not sequence_path.exists():continue
+    sequence=json.loads(sequence_path.read_text());model=completed.get('model_prediction',{})
+    raw=ROOT/sequence['validation_run']/'result.json'
+    linked=completed.get('board_proofs',[])
+    if (not model.get('raw_replay_verified') or not raw.exists() or
+        model.get('source_result_sha256')!=hashlib.sha256(raw.read_bytes()).hexdigest() or
+        not linked or not all((ROOT/x['path']).exists() and hashlib.sha256((ROOT/x['path']).read_bytes()).hexdigest()==x['sha256'] for x in linked)):continue
+    report=(stage/'REPORT.md').relative_to(ROOT).as_posix()
+    for r in rows:
+        if r['id'] in ['P06','PUB01','PUB02']:r['status']='PARTIAL';r['target_deliverable']=report
+        if r['id']=='PUB02':
+            r['limitation']='Measured timer-paced DDR IR proxy on repeated paired inputs, fixed f_adj; tag/PE/PA excluded; not secret-key-rate crossover'
+            r['next_action']='Extend to independent paired cohorts, controller feedback and actual verified-buffer/PA yield before end-to-end crossover claim'
+        if r['id']=='PUB01':r['limitation']='Existing ET/PP-off K/RTT model retained; new K1 arrival schedules validated on repeated inputs; no full PA/IRQ model'
+    finite_path=stage/'prospective_finite/STATUS.json'
+    if finite_path.exists():
+        finite=json.loads(finite_path.read_text())
+        if finite.get('complete') and finite.get('frozen_before_capture'):
+            frozen=ROOT/finite['frozen_prediction']
+            if frozen.exists() and hashlib.sha256(frozen.read_bytes()).hexdigest()==finite['frozen_prediction_sha256']:
+                for r in rows:
+                    if r['id']=='PUB03':
+                        r['status']='PARTIAL';r['target_deliverable']=report
+                        r['limitation']='Fresh synthetic source functional predictions frozen before capture; declared virtual-age replay, not optical acquisition-time or security proof'
+                        r['next_action']='Extend prospective source-clock scenarios including split/ABORT and audit adaptive selection/leakage/epsilon assumptions'
+
 def write(path,items):
     keys=list(dict.fromkeys(k for r in items for k in r))
     with path.open('w',encoding='utf-8-sig',newline='') as f:

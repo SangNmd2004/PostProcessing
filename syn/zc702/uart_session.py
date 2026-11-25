@@ -7,15 +7,21 @@ ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'build/zc702'
 
 class UARTSession:
-    def __init__(self,folder,port='COM3',profile_transport=False):
+    def __init__(self,folder,port='COM3',profile_transport=False,test_elf=None):
         self.folder=Path(folder);self.port=port;self.seq=0;self.pending=bytearray();self.process=None
         self.frames=[]
         self.profile_transport=profile_transport;self.host_timings=[]
+        self.test_elf=Path(test_elf).resolve() if test_elf else None
     def __enter__(self):
         subprocess.run([sys.executable,str(ROOT/'syn/zc702/verify_bundle.py')],check=True)
         self.manifest=json.loads((OUT/'uart_firmware/manifest.json').read_text())
         for name,digest in self.manifest['files'].items():
             if hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=digest:raise ValueError('artifact/source mismatch: '+name)
+        if self.test_elf:
+            test_manifest=json.loads(self.test_elf.with_name('manifest.json').read_text())
+            if hashlib.sha256(self.test_elf.read_bytes()).hexdigest()!=test_manifest['elf_sha256']:raise ValueError('test ELF mismatch')
+            for name,digest in test_manifest['source_sha256'].items():
+                if hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=digest:raise ValueError('test source mismatch: '+name)
         self.folder.mkdir(parents=True,exist_ok=True);(self.folder/'tx_packets').mkdir()
         (self.folder/'firmware_manifest.json').write_text(json.dumps(self.manifest,indent=2)+'\n')
         self.uart=serial.Serial(self.port,115200,timeout=.1,write_timeout=5)
@@ -23,7 +29,8 @@ class UARTSession:
         try:
             self.uart.reset_input_buffer()
             with ZipFile(OUT/'qkd_zc702.xsa') as z:(OUT/'ps7_init.tcl').write_bytes(z.read('ps7_init.tcl'))
-            self.process=subprocess.Popen(['D:/Xilinx/Vitis/2020.2/bin/xsct.bat',str(ROOT/'syn/zc702/program_smoke.tcl'),'uart'],
+            argv=['D:/Xilinx/Vitis/2020.2/bin/xsct.bat',str(ROOT/'syn/zc702/program_bootstrap.tcl'),str(self.test_elf)] if self.test_elf else ['D:/Xilinx/Vitis/2020.2/bin/xsct.bat',str(ROOT/'syn/zc702/program_smoke.tcl'),'uart']
+            self.process=subprocess.Popen(argv,
                 cwd=ROOT,stdout=self.xlog,stderr=subprocess.STDOUT,creationflags=subprocess.CREATE_NO_WINDOW)
             self.expect(r'QKD_UART_READY version=1 max_words=4096',120)
             self.process.wait(timeout=30);self.xlog.flush()

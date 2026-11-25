@@ -1,0 +1,15 @@
+{
+  "status": "VALID_MAC_WRONG_PA_REJECTED",
+  "changed_command_index": 263,
+  "command": [
+    "C:\\Program Files\\Python311\\python.exe",
+    "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\syn\\zc702\\verify_secure_accumulator_board.py",
+    "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\build\\zc702\\secure_accumulator_verifier_negative\\20261102\\mutated_run",
+    "--output",
+    "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\build\\zc702\\secure_accumulator_verifier_negative\\20261102\\rejected_output"
+  ],
+  "returncode": 1,
+  "source_uart_sha256": "50c42c13bc915031fc37e5b1e41e1aa9f27b84d3fe93fdba0eeb4867802b8a29",
+  "mutated_uart_sha256": "cc05ad9a85825907a283d73e8034e500181a5ee56b43bfa2981fa4da422bab3a",
+  "scope": "Negative control: valid QAS2 MAC, unchanged runner PASS fields, one wrong PA word; semantic model rejects it"
+}

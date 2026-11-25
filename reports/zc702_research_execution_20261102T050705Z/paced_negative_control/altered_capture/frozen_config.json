@@ -1,0 +1,517 @@
+{
+  "frozen_before_capture_utc": "2026-11-02T05:36:35.204756+00:00",
+  "freeze_monotonic_ns": 3904914663800,
+  "fixture_sha256": "4d6c7e5dee33d1069f6a453d9842d1ff43bc6a36b706db46167a37277f77fd80",
+  "training_run": "build/zc702/paced_runs/20261102T053546Z",
+  "training_result_sha256": "08bca5474f966d8f942c20180474292c7bced154d0d816a609ae3aa9800dc687",
+  "params": {
+    "slot_service_us": [
+      118.0,
+      77.0,
+      1247.0,
+      91.0
+    ],
+    "profile_gap_us": [
+      4,
+      4
+    ],
+    "slot_IR_proxy_bits": [
+      2304,
+      2229,
+      2227,
+      2190
+    ]
+  },
+  "model_sha256": "893f2abcd631c89160d88c95df4a01c8577c8409dbe091f68fb364afea1c7ff7",
+  "IR_proxy_fluid_crossing_blocks_s": 1493.6515328651394,
+  "accuracy_criteria": {
+    "mean_absolute_error_pct_max": 10,
+    "max_absolute_error_pct_max": 20,
+    "IR_proxy_bits_error_pct_max": 5,
+    "denominator": "prediction",
+    "scope": "engineering tolerance; not confidence bounds"
+  },
+  "scope": "K1 DDR IR; held-out arrival schedules on repeated training inputs; fixed f_adj; no PA/secret-yield crossover claim",
+  "cases": [
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 609,
+      "capacity": 128,
+      "policy": 1,
+      "repeat": 0,
+      "phase": "arrival_held_out",
+      "arrival_factor": 1.1,
+      "prediction": {
+        "elapsed_us": 77434.0,
+        "IR_proxy_bits": 282816,
+        "IR_proxy_Mbit_s": 3.6523490972957617
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 335,
+      "capacity": 128,
+      "policy": 0,
+      "repeat": 1,
+      "phase": "arrival_held_out",
+      "arrival_factor": 2,
+      "prediction": {
+        "elapsed_us": 88081.0,
+        "IR_proxy_bits": 289984,
+        "IR_proxy_Mbit_s": 3.292242367820529
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 335,
+      "capacity": 128,
+      "policy": 1,
+      "repeat": 1,
+      "phase": "arrival_held_out",
+      "arrival_factor": 2,
+      "prediction": {
+        "elapsed_us": 42636.0,
+        "IR_proxy_bits": 282816,
+        "IR_proxy_Mbit_s": 6.6332676611314385
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 1339,
+      "capacity": 128,
+      "policy": 1,
+      "repeat": 1,
+      "phase": "arrival_held_out",
+      "arrival_factor": 0.5,
+      "prediction": {
+        "elapsed_us": 170144.0,
+        "IR_proxy_bits": 282816,
+        "IR_proxy_Mbit_s": 1.6622155350761707
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 670,
+      "capacity": 128,
+      "policy": 0,
+      "repeat": 0,
+      "phase": "arrival_held_out",
+      "arrival_factor": 1,
+      "prediction": {
+        "elapsed_us": 88416.0,
+        "IR_proxy_bits": 289984,
+        "IR_proxy_Mbit_s": 3.2797683677162506
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 744,
+      "capacity": 128,
+      "policy": 0,
+      "repeat": 0,
+      "phase": "arrival_held_out",
+      "arrival_factor": 0.9,
+      "prediction": {
+        "elapsed_us": 95735.0,
+        "IR_proxy_bits": 289984,
+        "IR_proxy_Mbit_s": 3.029028046169113
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 744,
+      "capacity": 128,
+      "policy": 0,
+      "repeat": 1,
+      "phase": "arrival_held_out",
+      "arrival_factor": 0.9,
+      "prediction": {
+        "elapsed_us": 95735.0,
+        "IR_proxy_bits": 289984,
+        "IR_proxy_Mbit_s": 3.029028046169113
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 609,
+      "capacity": 128,
+      "policy": 1,
+      "repeat": 1,
+      "phase": "arrival_held_out",
+      "arrival_factor": 1.1,
+      "prediction": {
+        "elapsed_us": 77434.0,
+        "IR_proxy_bits": 282816,
+        "IR_proxy_Mbit_s": 3.6523490972957617
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 1339,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 1,
+      "phase": "arrival_held_out",
+      "arrival_factor": 0.5,
+      "prediction": {
+        "elapsed_us": 171300.0,
+        "IR_proxy_bits": 289984,
+        "IR_proxy_Mbit_s": 1.6928429655575015
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 1339,
+      "capacity": 128,
+      "policy": 0,
+      "repeat": 0,
+      "phase": "arrival_held_out",
+      "arrival_factor": 0.5,
+      "prediction": {
+        "elapsed_us": 171300.0,
+        "IR_proxy_bits": 289984,
+        "IR_proxy_Mbit_s": 1.6928429655575015
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 744,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 0,
+      "phase": "arrival_held_out",
+      "arrival_factor": 0.9,
+      "prediction": {
+        "elapsed_us": 95735.0,
+        "IR_proxy_bits": 289984,
+        "IR_proxy_Mbit_s": 3.029028046169113
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 335,
+      "capacity": 128,
+      "policy": 1,
+      "repeat": 0,
+      "phase": "arrival_held_out",
+      "arrival_factor": 2,
+      "prediction": {
+        "elapsed_us": 42636.0,
+        "IR_proxy_bits": 282816,
+        "IR_proxy_Mbit_s": 6.6332676611314385
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 670,
+      "capacity": 128,
+      "policy": 1,
+      "repeat": 0,
+      "phase": "arrival_held_out",
+      "arrival_factor": 1,
+      "prediction": {
+        "elapsed_us": 85181.0,
+        "IR_proxy_bits": 282816,
+        "IR_proxy_Mbit_s": 3.3201770347847526
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 744,
+      "capacity": 128,
+      "policy": 1,
+      "repeat": 0,
+      "phase": "arrival_held_out",
+      "arrival_factor": 0.9,
+      "prediction": {
+        "elapsed_us": 94579.0,
+        "IR_proxy_bits": 282816,
+        "IR_proxy_Mbit_s": 2.990262108924814
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 744,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 1,
+      "phase": "arrival_held_out",
+      "arrival_factor": 0.9,
+      "prediction": {
+        "elapsed_us": 95735.0,
+        "IR_proxy_bits": 289984,
+        "IR_proxy_Mbit_s": 3.029028046169113
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 1339,
+      "capacity": 128,
+      "policy": 0,
+      "repeat": 1,
+      "phase": "arrival_held_out",
+      "arrival_factor": 0.5,
+      "prediction": {
+        "elapsed_us": 171300.0,
+        "IR_proxy_bits": 289984,
+        "IR_proxy_Mbit_s": 1.6928429655575015
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 609,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 0,
+      "phase": "arrival_held_out",
+      "arrival_factor": 1.1,
+      "prediction": {
+        "elapsed_us": 79689.0,
+        "IR_proxy_bits": 288675,
+        "IR_proxy_Mbit_s": 3.6225200466814744
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 670,
+      "capacity": 128,
+      "policy": 1,
+      "repeat": 1,
+      "phase": "arrival_held_out",
+      "arrival_factor": 1,
+      "prediction": {
+        "elapsed_us": 85181.0,
+        "IR_proxy_bits": 282816,
+        "IR_proxy_Mbit_s": 3.3201770347847526
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 1339,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 0,
+      "phase": "arrival_held_out",
+      "arrival_factor": 0.5,
+      "prediction": {
+        "elapsed_us": 171300.0,
+        "IR_proxy_bits": 289984,
+        "IR_proxy_Mbit_s": 1.6928429655575015
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 744,
+      "capacity": 128,
+      "policy": 1,
+      "repeat": 1,
+      "phase": "arrival_held_out",
+      "arrival_factor": 0.9,
+      "prediction": {
+        "elapsed_us": 94579.0,
+        "IR_proxy_bits": 282816,
+        "IR_proxy_Mbit_s": 2.990262108924814
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 670,
+      "capacity": 128,
+      "policy": 0,
+      "repeat": 1,
+      "phase": "arrival_held_out",
+      "arrival_factor": 1,
+      "prediction": {
+        "elapsed_us": 88416.0,
+        "IR_proxy_bits": 289984,
+        "IR_proxy_Mbit_s": 3.2797683677162506
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 670,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 0,
+      "phase": "arrival_held_out",
+      "arrival_factor": 1,
+      "prediction": {
+        "elapsed_us": 88416.0,
+        "IR_proxy_bits": 289984,
+        "IR_proxy_Mbit_s": 3.2797683677162506
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 335,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 0,
+      "phase": "arrival_held_out",
+      "arrival_factor": 2,
+      "prediction": {
+        "elapsed_us": 44825.0,
+        "IR_proxy_bits": 285652,
+        "IR_proxy_Mbit_s": 6.3726045733407695
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 609,
+      "capacity": 128,
+      "policy": 0,
+      "repeat": 1,
+      "phase": "arrival_held_out",
+      "arrival_factor": 1.1,
+      "prediction": {
+        "elapsed_us": 88355.0,
+        "IR_proxy_bits": 289984,
+        "IR_proxy_Mbit_s": 3.2820327089581802
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 609,
+      "capacity": 128,
+      "policy": 0,
+      "repeat": 0,
+      "phase": "arrival_held_out",
+      "arrival_factor": 1.1,
+      "prediction": {
+        "elapsed_us": 88355.0,
+        "IR_proxy_bits": 289984,
+        "IR_proxy_Mbit_s": 3.2820327089581802
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 670,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 1,
+      "phase": "arrival_held_out",
+      "arrival_factor": 1,
+      "prediction": {
+        "elapsed_us": 88416.0,
+        "IR_proxy_bits": 289984,
+        "IR_proxy_Mbit_s": 3.2797683677162506
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 335,
+      "capacity": 128,
+      "policy": 0,
+      "repeat": 0,
+      "phase": "arrival_held_out",
+      "arrival_factor": 2,
+      "prediction": {
+        "elapsed_us": 88081.0,
+        "IR_proxy_bits": 289984,
+        "IR_proxy_Mbit_s": 3.292242367820529
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 1339,
+      "capacity": 128,
+      "policy": 1,
+      "repeat": 0,
+      "phase": "arrival_held_out",
+      "arrival_factor": 0.5,
+      "prediction": {
+        "elapsed_us": 170144.0,
+        "IR_proxy_bits": 282816,
+        "IR_proxy_Mbit_s": 1.6622155350761707
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 335,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 1,
+      "phase": "arrival_held_out",
+      "arrival_factor": 2,
+      "prediction": {
+        "elapsed_us": 44825.0,
+        "IR_proxy_bits": 285652,
+        "IR_proxy_Mbit_s": 6.3726045733407695
+      }
+    },
+    {
+      "k": 1,
+      "jobs": 128,
+      "rtt": 1000,
+      "interval": 609,
+      "capacity": 128,
+      "policy": 2,
+      "repeat": 1,
+      "phase": "arrival_held_out",
+      "arrival_factor": 1.1,
+      "prediction": {
+        "elapsed_us": 79689.0,
+        "IR_proxy_bits": 288675,
+        "IR_proxy_Mbit_s": 3.6225200466814744
+      }
+    }
+  ]
+}

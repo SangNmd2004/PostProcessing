@@ -1,0 +1,10 @@
+{
+  "status": "VERIFIED_COMPLETE",
+  "script": "syn/zc702/run_secure_accumulator_board.py",
+  "pid": 14528,
+  "run_directory": "build/zc702/secure_accumulator_runs/20261102T045046Z",
+  "port": "COM3",
+  "port_released": true,
+  "baseline_restored": true,
+  "report": "reports/zc702_secure_accumulator_20261102/board_verification_attempt2/verified_evidence.json"
+}

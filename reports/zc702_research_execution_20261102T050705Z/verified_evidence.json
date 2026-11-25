@@ -1,0 +1,67 @@
+{
+  "completed_gate_proofs_verified": true,
+  "all_queued_stages_complete": false,
+  "host_tests": 12,
+  "board_proofs": [
+    {
+      "path": "reports/zc702_research_execution_20261102T050705Z/paced_sequence/pilot_verified/verified_evidence.json",
+      "sha256": "2ff2cbaf31d0633dcc9798d0458fabb46841a65e0a7cfe29f66977f76f2a42d3"
+    },
+    {
+      "path": "reports/zc702_research_execution_20261102T050705Z/paced_sequence/arrival_verified/verified_evidence.json",
+      "sha256": "2a30253e81d3e5ed3cc543f12d4a144be1732d0f2efb32ab5ee6489221dfd558"
+    },
+    {
+      "path": "reports/zc702_key_stream_20261102T061515Z/verified_evidence.json",
+      "sha256": "a458ef13fd51e10fe0f3adedd523914f66eff5de9c45e7b9095506a8d8af3810"
+    }
+  ],
+  "model_prediction": {
+    "raw_replay_verified": true,
+    "frozen_before_capture": true,
+    "model_accepted": true,
+    "measurements": 30,
+    "mean_absolute_error_pct": 0.20389796298645774,
+    "max_absolute_error_pct": 2.947016174010039,
+    "max_IR_proxy_bits_error_pct": 0.06546427121112403,
+    "source_result_sha256": "012a4aea9feafb6280737ddf29b23b6074819da4654b65aa92f3c81f789c1c30",
+    "frozen_config_sha256": "62511206f620429a8354a4d887836b5f67ed4670b83a4687eef03dd99436def9",
+    "verifier_sha256": "3f6dea2f6e4ca7fb703dc71da15a7469c37edab135e5ab2dcd22ff162e7ab4a7",
+    "scope": "K1 DDR IR; held-out arrival schedules on repeated training inputs; fixed f_adj; no PA/secret-yield crossover claim",
+    "criteria": {
+      "mean_absolute_error_pct_max": 10,
+      "max_absolute_error_pct_max": 20,
+      "IR_proxy_bits_error_pct_max": 5,
+      "denominator": "prediction",
+      "scope": "engineering tolerance; not confidence bounds"
+    }
+  },
+  "FER": [
+    {
+      "run": "build/zc702/fer_runs/20261102T053801Z",
+      "proof": "reports/zc702_fer_20261102T053801Z/verified_evidence.json",
+      "sha256": "487768ca55a928a15687d29b64a2de1573afbafa8a01f82884fcc2452c1d13e1",
+      "summary": {
+        "trials": 10000,
+        "discard": 0,
+        "wrong_codeword_ground_truth": 0,
+        "success": 10000,
+        "FER": 0.0,
+        "FER_Wilson_two_sided_95": [
+          0,
+          0.00038399837067659573
+        ],
+        "zero_failure_exact_one_sided_95_upper": 0.0002995283597766119,
+        "hardware_errors_in_completed_batches": 0,
+        "tag_rejections": "NOT_TESTED",
+        "scope": "synthetic IID BSC; one code/QBER stratum",
+        "previous_session_errors": []
+      },
+      "qber": 0.01,
+      "code": "r34"
+    }
+  ],
+  "baseline_files_verified": 27,
+  "port_released": true,
+  "scope": "Scoped functional/research evidence; canonical statuses unchanged; no full project/security completion"
+}

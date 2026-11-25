@@ -1,0 +1,12 @@
+{
+  "raw_replay_verified": true,
+  "source_result_sha256": "9b3c6df77c0dd72bd12cc060733768747129ac21d1f149d0af52e0fad3c525a8",
+  "uart_sha256": "c519c6477d39c3a9327033a21c3bddadacafa43b31b1bd84fd670a1f272c1951",
+  "tx_manifest_sha256": "6c5ac308d72ea9c973802b18795df13be80122db90f6e88db18e533bb2f7580f",
+  "measurements": 4,
+  "jobs": 20,
+  "drops": 7,
+  "baseline_restored": true,
+  "verifier_sha256": "516eb48d1346de332fa354db27eb749d32e9114f976761e6b429892037445298",
+  "scope": "PUBLIC DDR-paced IR component. Golden KEY checked by firmware bench_check; raw log holds metrics not literal DMA KEY. Two independent inputs replayed, not FER samples. No PA/secret-key throughput/crossover certification."
+}

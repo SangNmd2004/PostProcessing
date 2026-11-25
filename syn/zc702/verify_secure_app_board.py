@@ -9,7 +9,8 @@ ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'model'))
 import pa_model as pa
 
 def main():
-    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('run',type=Path);args=ap.parse_args()
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('run',type=Path)
+    ap.add_argument('--output',type=Path);ap.add_argument('--no-job-update',action='store_true');args=ap.parse_args()
     run=args.run.resolve();raw=(run/'result.json').read_bytes();result=json.loads(raw)
     assert result['complete'] and result['baseline_restored'] and not result.get('error')
     build=ROOT/result['build_manifest']['elf'];assert hashlib.sha256(build.read_bytes()).hexdigest()==result['build_manifest']['elf_sha256']
@@ -92,7 +93,7 @@ def main():
             else:raise AssertionError(cmd)
         else:raise AssertionError(op)
     assert [r['code'] for r in rows]==['r12','r23','r34','r56'] and used==4 and len(result['checks'])==78
-    report=ROOT/'reports'/('zc702_secure_app_'+result['started_utc']);report.mkdir(exist_ok=True)
+    report=args.output or ROOT/'reports'/('zc702_secure_app_'+result['started_utc']);report.mkdir(parents=True,exist_ok=True)
     with (report/'blocks.csv').open('w',encoding='utf-8-sig',newline='') as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
     proof=dict(raw_replay_verified=True,source_result_sha256=hashlib.sha256(raw).hexdigest(),
@@ -103,7 +104,7 @@ def main():
                scope='Real PL IR/per-block PA behind QAS2 MAC in public-fixture lab ELF; no confidentiality, trusted provisioning, durable accounting or production security certification')
     (report/'verified_evidence.json').write_text(json.dumps(proof,indent=2)+'\n')
     job=json.loads((ROOT/'RUNNING_JOBS.json').read_text())
-    if job.get('run_directory')==run.relative_to(ROOT).as_posix():
+    if not args.no_job_update and job.get('run_directory')==run.relative_to(ROOT).as_posix():
         job.update(status='VERIFIED_COMPLETE',report=(report/'verified_evidence.json').relative_to(ROOT).as_posix())
         write_checkpoint(ROOT/'RUNNING_JOBS.json',job)
     print('SECURE_APP_RAW_REPLAY_PASS',len(observed),'commands',dispatches,'authenticated application dispatches')

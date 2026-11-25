@@ -12,7 +12,8 @@ Mỗi dòng là một cohort đã complete và proof SHA khớp raw result. Khô
 | 5 | r12 | 1000 | 1000 | 0 | 0 | 0.00000 | [0.00000, 0.38268] | pilot | [20261027T031549Z](zc702_fer_20261027T031549Z/REPORT.md) |
 | 7 | r12 | 1000 | 995 | 5 | 0 | 0.50000 | [0.21375, 1.16510] | pilot | [20261027T031934Z](zc702_fer_20261027T031934Z/REPORT.md) |
 | 2 | r34 | 10000 | 9996 | 4 | 0 | 0.04000 | [0.01556, 0.10281] | qualification_sample_size | [20261027T032458Z](zc702_fer_20261027T032458Z/REPORT.md) |
+| 1 | r34 | 10000 | 10000 | 0 | 0 | 0.00000 | [0.00000, 0.03840] | qualification_sample_size | [20261102T053801Z](zc702_fer_20261102T053801Z/REPORT.md) |
 
-Cohort complete/postverified: 8; cohort n≥10.000: 2; run incomplete hoặc chưa postverify: 0. Ranges seed trùng trong cùng stratum: [].
+Cohort complete/postverified: 9; cohort n≥10.000: 3; run incomplete hoặc chưa postverify: 1. Ranges seed trùng trong cùng stratum: [].
 
 Một wrong codeword là hội tụ khác Alice theo ground truth. Nó không tự được gọi là lỗi tag đã bắt; ca verification thật trên wrong-key fixture có báo cáo riêng nếu đã chạy. Bring-up/resume cohorts nhỏ giữ để kiểm toán, không dùng để khẳng định FER≈10⁻³.

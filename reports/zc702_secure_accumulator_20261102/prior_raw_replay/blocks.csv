@@ -1,0 +1,5 @@
+﻿code,attempts,key_SHA256,PA_SHA256,verification_used,KEY_and_PA_bit_exact,scope
+r12,2,580e2b7875cb221470dbdef70742eef8a4e51b46b5a0424dc78cef4eb3149e8c,69550a9cd057caf007b9983dd8bdcd542a0794ddf20d82ee3bd8d6edeb81da31,1,True,"Public fixture, per-block PA1024, MAC-only lab channel"
+r23,2,79dc5514f6dfd6821571d1e5ae951850ed81df63e9b05d06aa1027f1a2ea077a,dc77b8d6bc1ffe78cef79ff928fc03e195906adcf2988d2abdee03539ffcafa0,2,True,"Public fixture, per-block PA1024, MAC-only lab channel"
+r34,1,6e5717379532875429730860b9403ee1378ab6db8a37121c8ead35bb77d6133f,0d99183feb3fb42f05228b228934e66f82a7f742e870dcb085cbcd2f456a0c6b,3,True,"Public fixture, per-block PA1024, MAC-only lab channel"
+r56,1,f20f28b0c4ab5e7f98d25b49c049b3864aad2b3631abd3b3ae07de214a1bfdfb,07d4f792f17522eb035a4eff81080e7b6989467d0f0e7fe78d4fd35b9876878f,4,True,"Public fixture, per-block PA1024, MAC-only lab channel"

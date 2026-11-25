@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\PostProcessing\PostProcessing\syn\zc702\verify_paced_board.py", line 103, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\Admin\Downloads\PostProcessing\PostProcessing\syn\zc702\verify_paced_board.py", line 93, in main
+    result,measurements,rows=verify(run)
+                             ^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\PostProcessing\PostProcessing\syn\zc702\verify_paced_board.py", line 71, in verify
+    v=vectors[r['slot']];assert r['attempts']==v['attempts'] and r['leak']==v['leak'] and r['cycles']>0
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

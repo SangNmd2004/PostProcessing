@@ -31,7 +31,12 @@ after 1000
 foreach core [targets -target-properties -filter {name =~ "*Cortex-A9*"}] {
     if {[dict get $core jtag_cable_ctx] eq $cable} {
         targets -set [dict get $core target_id]
-        stop
+        if {[catch {stop} stop_error stop_options]} {
+            if {![string match "*Already stopped*" $stop_error]} {
+                return -options $stop_options $stop_error
+            }
+            puts "ZC702_CPU_ALREADY_STOPPED"
+        }
     }
 }
 targets -set [dict get [lindex $fpgas 0] target_id]

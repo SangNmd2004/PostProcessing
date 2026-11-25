@@ -1,0 +1,13 @@
+{
+  "status": "ALTERED_UART_LEAK_REJECTED",
+  "command": [
+    "C:\\Program Files\\Python311\\python.exe",
+    "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\syn\\zc702\\verify_paced_board.py",
+    "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_research_execution_20261102T050705Z\\paced_negative_control\\altered_capture",
+    "--output",
+    "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_research_execution_20261102T050705Z\\paced_negative_control\\rejected_report",
+    "--no-job-update"
+  ],
+  "returncode": 1,
+  "runner_result_unchanged": true
+}

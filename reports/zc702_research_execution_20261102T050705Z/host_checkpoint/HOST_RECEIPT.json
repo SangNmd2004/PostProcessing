@@ -1,0 +1,17 @@
+{
+  "status": "HOST_MODEL_REGRESSIONS_PASS",
+  "tests": 12,
+  "command": [
+    "C:\\Program Files\\Python311\\python.exe",
+    "model/test_research_models.py"
+  ],
+  "returncode": 0,
+  "raw_event_split_decisions": 92,
+  "raw_event_emit_decisions": 18,
+  "scope": "host state/math and retrospective raw events; no new security/FER proof",
+  "source_sha256": {
+    "model/finite_key_accumulation_model.py": "04c7db633a7d93bab5396d393dd5ceda3265daf6e8660f7d570c4cbff2e37d56",
+    "model/verification_budget_model.py": "219d808542aa7daab3dbf793c52e386dd618cca2d6d96a2e4d2cc4d8696a91f4",
+    "model/test_research_models.py": "dd600de9989ada7258f9d869c2887cd99211f31166a9b4aadb351c617d33d2f3"
+  }
+}

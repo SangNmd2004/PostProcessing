@@ -1,0 +1,15 @@
+{
+  "status": "SCOPED_COMPLETED_GATES_WITH_RETAINED_ERRORS",
+  "previous_checkpoint_unchanged": true,
+  "host_checkpoint_unchanged": true,
+  "baseline_files_verified": 27,
+  "baseline_restored": true,
+  "port_released": true,
+  "canonical_status_counts": {
+    "PASS_FUNCTIONAL_BOARD": 13,
+    "PARTIAL": 20,
+    "TODO_RESEARCH": 1,
+    "TODO": 1
+  },
+  "raw_runs_remain_workspace_dependencies": true
+}

@@ -1,0 +1,13 @@
+{
+  "command": [
+    "reports\\zc702_research_execution_20261102T050705Z\\paced_queue_barrier_test.exe"
+  ],
+  "returncode": 0,
+  "stdout": "PACED_QUEUE_C_PASS capacities=1..128 wrap_rounds=100 FIFO/drop/empty and 256 reveal-safety states\n",
+  "exe_sha256": "0407c2fea94d8b6a516dd4818830272f043f10c16824045b08659d095543daa2",
+  "source_sha256": {
+    "firmware/zc702_uart/paced_queue.h": "03e497cf3d66362688fa1f3abc8284db86b85c0c1e08daba0575f35ffacadc9d",
+    "syn/zc702/tests/paced_queue_test.c": "ff467b2657d673e3ce4eb17343919861786e77866e17dd089489db0a8bffe5ee"
+  },
+  "scope": "C queue and active-wave reveal-preparation guard; not DMA/PL simulation"
+}

@@ -1,0 +1,105 @@
+{
+  "command": [
+    "C:\\Program Files\\Python311\\python.exe",
+    "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\reports\\zc702_math_experiment_review_20261102\\run_review_probes.py"
+  ],
+  "model_self_checks": [
+    {
+      "command": [
+        "C:\\Program Files\\Python311\\python.exe",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\model\\zc702_resource_model.py"
+      ],
+      "returncode": 0,
+      "stdout": "RESOURCE_MODEL_CAUSALITY_AND_CYCLE_CHECK_PASS; NOT_BOARD_VALIDATION\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python311\\python.exe",
+        "C:\\Users\\Admin\\Downloads\\PostProcessing\\PostProcessing\\model\\efficiency_throughput_crossover.py"
+      ],
+      "returncode": 0,
+      "stdout": "CROSSOVER_AND_BLIND_EXPECTATIONS_SELF_CHECK_PASS; SYNTHETIC_EXAMPLES_NOT_BOARD\n",
+      "stderr": ""
+    }
+  ],
+  "split_probe": {
+    "records": 92,
+    "split_indices": [
+      90
+    ],
+    "current_model_last": {
+      "block_index": 91,
+      "time_s": 91,
+      "bits": 2765,
+      "ell": 0,
+      "asym": 0.0,
+      "action": "wait",
+      "reason": ""
+    },
+    "tail_preserving_reference_last": {
+      "bits": 5530,
+      "action": "wait",
+      "split": false,
+      "emit_n": 5530
+    }
+  },
+  "buffer_budget": {
+    "current_analysis": {
+      "target_bits": 16000000,
+      "blocks_needed": 5787,
+      "rejection_rate": 0.0,
+      "total_verification_attempts": 5787,
+      "max_blocks_allowed": 18446,
+      "eps_cor_consumed": 3.137138986086807e-16,
+      "eps_cor_budget": 1e-15,
+      "budget_utilization_pct": 31.372655318226172,
+      "within_budget": true
+    },
+    "whole_blocks_that_fit": 5786,
+    "bits_that_fit": 15998290,
+    "next_block_bits": 16001055
+  },
+  "uart_8n1": {
+    "baud": 115200,
+    "max_binary_payload_bits_per_second": 92160,
+    "max_hex_binary_equivalent_bits_per_second": 46080
+  },
+  "zero_failures_10000": {
+    "wilson_two_sided95_upper": 0.00038399837067659573,
+    "exact_one_sided95_upper": 0.00029952835977664627
+  },
+  "existing_proof_result_hashes_verified": [
+    {
+      "proof": "reports/zc702_schedule_validation_20261027T044317Z/verified_evidence.json",
+      "raw": "build/zc702/schedule_validation_runs/20261027T044317Z/result.json",
+      "sha256": "3402f974dcdf18c6bc469d69d2b352c208714fffbfc8a1ec944bbd72389f8d13"
+    },
+    {
+      "proof": "reports/zc702_board_ablation_20261027T024201Z/verified_evidence.json",
+      "raw": "build/zc702/board_ablation_runs/20261027T024201Z/result.json",
+      "sha256": "835e17eb61683525754f0c40cb206356b3b3697e8522bf107a3e72b359e9de6b"
+    },
+    {
+      "proof": "reports/zc702_secure_accumulator_20261102/board_verification_attempt2/verified_evidence.json",
+      "raw": "build/zc702/secure_accumulator_runs/20261102T045046Z/result.json",
+      "sha256": "b8155f7612c04f85f5997a300a5ffc5846876703657d00782c12962f62e4dc48"
+    }
+  ],
+  "hardware_opened": false,
+  "source_sha256": "8bc94a2d878dd39e5e2d5978ee679d9f4d0bf9c26b19f272a0995e7658a73ebd",
+  "input_sha256": {
+    "MO_HINH_TOAN_HOC_VA_KE_HOACH_THUC_NGHIEM.md": "bed3bc8c88c081d9c66a8b171d52f7a4bf9667e24b8350aabb4474baba0d27ad",
+    "reports/publication_plan_20261026/EXPERIMENT_PLAN.md": "94389c4551aefa44674564dd95c71cd7e9ba2c8f61ee27182eb456edbf42e3d3",
+    "reports/publication_plan_20261026/CROSSOVER_MODEL_SPEC.md": "147649ec3d40555719bc5f473bbe8b8182e22d9d3e188c06d60af4d1086d1fee",
+    "reports/publication_plan_20261026/RESOURCE_MODEL_DERIVATION.md": "fa3e677c93bf72944442c16cc43476a882ddf22b9ab60cd74f647af18249e170",
+    "model/finite_key_accumulation_model.py": "5ef9ba51a3b2960d417d667cc523f09513582cd303db66f9531dfad8b81f242c",
+    "model/verification_budget_model.py": "af9e58618849ebe2c71b1620dbc937844247dc1f4062d84dbb63d5bdebf6f969",
+    "model/efficiency_throughput_crossover.py": "6a4fb6d6db124cabd8cf882c05047fd5a9e6887862201c4807d902791198578a",
+    "model/zc702_resource_model.py": "09638d267f711d241ec1876d180af761a28a7e2490a06b9b9eddaf92eb27c4cf",
+    "model/pa_model.py": "f2fe42d2042c383b9d80e5b11a8bc105e686adaed6940f51646f826bf504e981",
+    "reports/zc702_work_items.csv": "b3172320dd33b303aeb236017928241e3a66221a9d1f56c0de509bc13bdc41fe",
+    "reports/RECONCILIATION_CURRENT.json": "78b1b1f408b1dc5a1706a24734790dc7aeba42e90557d8446ce329a3226ac516",
+    "RUNNING_JOBS.json": "89e6e7721e0dada7e536a7577b0e0007076c02ff7a16ff3177fd3b5a5e79aa2d"
+  }
+}
